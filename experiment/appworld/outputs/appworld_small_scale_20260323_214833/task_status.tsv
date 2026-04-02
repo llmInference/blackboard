@@ -1,0 +1,4 @@
+task_id	status	finished	used_fallback_architect	finish_reason	kernel_status	output_json	stderr_log
+50e1ac9_1	failed	false				/home/syq/Documents/blackboard/experiment/appworld/outputs/appworld_small_scale_20260323_214833/50e1ac9_1.json	/home/syq/Documents/blackboard/experiment/appworld/outputs/appworld_small_scale_20260323_214833/50e1ac9_1.stderr.log
+50e1ac9_2	failed	false				/home/syq/Documents/blackboard/experiment/appworld/outputs/appworld_small_scale_20260323_214833/50e1ac9_2.json	/home/syq/Documents/blackboard/experiment/appworld/outputs/appworld_small_scale_20260323_214833/50e1ac9_2.stderr.log
+50e1ac9_3	failed	false				/home/syq/Documents/blackboard/experiment/appworld/outputs/appworld_small_scale_20260323_214833/50e1ac9_3.json	/home/syq/Documents/blackboard/experiment/appworld/outputs/appworld_small_scale_20260323_214833/50e1ac9_3.stderr.log

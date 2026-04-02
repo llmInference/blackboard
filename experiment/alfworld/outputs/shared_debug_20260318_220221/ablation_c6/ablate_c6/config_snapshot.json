@@ -1,0 +1,44 @@
+{
+  "schema_version": "experiment_result.v1",
+  "record_type": "config_snapshot",
+  "run_id": "ablate_c6",
+  "system_id": "blackboard_ablate_c6",
+  "system_family": "blackboard",
+  "env_name": "alfworld",
+  "config": {
+    "mode": "ablate_c6",
+    "data_root": "",
+    "output_dir": "experiment/alfworld/outputs/shared_debug_20260318_220221/ablation_c6/ablate_c6",
+    "gamefiles_file": "experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/selected_gamefiles.json",
+    "task_set_file": "",
+    "split": "debug",
+    "limit": 0,
+    "seed": 42,
+    "selection_meta": {
+      "selection_source": "explicit_gamefiles_file",
+      "gamefiles_file": "/home/syq/Documents/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/selected_gamefiles.json"
+    },
+    "max_steps": 20,
+    "model_name": "deepseek-v3",
+    "env_config": null,
+    "workflow_mode": "planner_llm_action",
+    "architect_mode": "llm",
+    "llm_backend": "openai_compatible",
+    "llm_model": "",
+    "llm_model_env": "ALFWORLD_LLM_MODEL",
+    "llm_base_url": "",
+    "llm_base_url_env": "ALFWORLD_LLM_BASE_URL",
+    "llm_api_key_env": "ALFWORLD_LLM_API_KEY",
+    "llm_temperature": 0.0,
+    "llm_timeout": 300.0
+  },
+  "artifacts": {
+    "legacy_episodes_path": "experiment/alfworld/outputs/shared_debug_20260318_220221/ablation_c6/ablate_c6/ablate_c6_episodes.jsonl",
+    "legacy_states_path": "experiment/alfworld/outputs/shared_debug_20260318_220221/ablation_c6/ablate_c6/ablate_c6_states.jsonl",
+    "legacy_summary_path": "experiment/alfworld/outputs/shared_debug_20260318_220221/ablation_c6/ablate_c6/ablate_c6_summary.json",
+    "episodes_path": "experiment/alfworld/outputs/shared_debug_20260318_220221/ablation_c6/ablate_c6/episode_results.jsonl",
+    "states_path": "experiment/alfworld/outputs/shared_debug_20260318_220221/ablation_c6/ablate_c6/captured_states.jsonl",
+    "summary_path": "experiment/alfworld/outputs/shared_debug_20260318_220221/ablation_c6/ablate_c6/summary.json",
+    "config_snapshot_path": "experiment/alfworld/outputs/shared_debug_20260318_220221/ablation_c6/ablate_c6/config_snapshot.json"
+  }
+}

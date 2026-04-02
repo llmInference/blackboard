@@ -1,0 +1,7 @@
+[HUMAN-AGENT] [INFO] Logging to file: /home/syq/Documents/blackboard/.tmp/webarena_demo_run/44/human_agent.log
+[HUMAN-AGENT] [INFO] Human Agent started
+[HUMAN-AGENT] [INFO] Loading agent input for task 44
+[HUMAN-AGENT] [INFO] Task sites: ['gitlab']
+[HUMAN-AGENT] [INFO] Task intent: Open my todos page
+[HUMAN-AGENT] [INFO] Start URLs: ['http://localhost:8012']
+[HUMAN-AGENT] [INFO] Performing UI login for sites: ['gitlab']

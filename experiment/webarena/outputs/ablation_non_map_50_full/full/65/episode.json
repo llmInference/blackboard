@@ -1,0 +1,259 @@
+{
+  "run_id": "ablation_non_map_50_full",
+  "system_id": "full",
+  "system_family": "blackboard",
+  "episode_id": "full:65",
+  "task_id": "65",
+  "success": false,
+  "finished": true,
+  "steps": 1,
+  "goal_condition_rate": 0.0,
+  "worker_input_tokens": 0,
+  "worker_output_tokens": 0,
+  "architect_input_tokens": 0,
+  "architect_output_tokens": 0,
+  "total_tokens": 0,
+  "fallback_action_count": 0,
+  "patch_error_count": 0,
+  "retrieval_precision": 0.0,
+  "context_fragment_count": 4.666666666666667,
+  "relevant_fragment_count": 4.666666666666667,
+  "irrelevant_fragment_count": 0.0,
+  "task_category": "retrieval",
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Get customer email(s) who completed the fifth most number of orders in the entire history",
+  "tool_call_count": 0,
+  "assistant_message_count": 0,
+  "finish_reason": "workflow_exhausted",
+  "termination_reason": "workflow_exhausted",
+  "trajectory": [],
+  "evaluation": {
+    "task_id": 65,
+    "intent_template_id": 276,
+    "sites": [
+      "shopping_admin"
+    ],
+    "task_revision": 2,
+    "status": "failure",
+    "score": 0.0,
+    "evaluators_results": [
+      {
+        "evaluator_name": "AgentResponseEvaluator",
+        "status": "failure",
+        "score": 0.0,
+        "actual": "",
+        "actual_normalized": null,
+        "expected": {
+          "task_type": "retrieve",
+          "status": "success",
+          "retrieved_data": [
+            "adam.garcia@gmail.com",
+            "jason.miller@yahoo.com",
+            "jennifer.white@yahoo.com"
+          ]
+        },
+        "assertions": [
+          {
+            "assertion_name": "agent_response_none_mismatch",
+            "status": "failure",
+            "assertion_msgs": [
+              "Expected {'task_type': NormalizedString('RETRIEVE' -> 'retrieve'), 'status': NormalizedString('SUCCESS' -> 'success'), 'retrieved_data': (NormalizedString('adam.garcia@gmail.com'), NormalizedString('jason.miller@yahoo.com'), NormalizedString('jennifer.white@yahoo.com'))}, got None"
+            ],
+            "error_msg": null
+          }
+        ],
+        "error_msg": null,
+        "should_not_exist": null
+      }
+    ],
+    "error_msg": null,
+    "webarena_verified_version": "1.2.3",
+    "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+    "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+  },
+  "communication_trace": [
+    {
+      "timestamp": "2026-03-30T06:38:55.277193+00:00",
+      "event_type": "architect",
+      "task_id": "65",
+      "selected_workers": [
+        "page_state_worker",
+        "verification_worker",
+        "argument_grounding_worker",
+        "browser_action_worker",
+        "response_worker"
+      ],
+      "workflow_id": "webarena_retrieval",
+      "used_fallback_architect": true
+    },
+    {
+      "timestamp": "2026-03-30T06:38:55.277256+00:00",
+      "event_type": "worker",
+      "worker": "page_state_worker",
+      "step_id": "inspect_current_page",
+      "writes": [
+        "current_page",
+        "page_evidence",
+        "open_tabs"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-30T06:38:55.277280+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_goal_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-30T06:38:55.277301+00:00",
+      "event_type": "worker",
+      "worker": "argument_grounding_worker",
+      "step_id": "bind_action_arguments",
+      "writes": [
+        "grounded_action",
+        "action_arguments"
+      ],
+      "tool_name": "",
+      "finished": false
+    }
+  ],
+  "run_metadata": {
+    "kernel_status": "finished",
+    "current_step_id": "",
+    "current_step": {},
+    "active_worker": "argument_grounding_worker",
+    "finish_reason": "workflow_exhausted",
+    "verification": {
+      "goal_reached": false,
+      "matched_target_url": "",
+      "requires_final_response": true,
+      "needs_response": false,
+      "progress_made": false,
+      "task_category": "retrieval",
+      "updated_at": "2026-03-30T06:38:55.277269+00:00"
+    },
+    "used_fallback_architect": true,
+    "fallback_reason": "heuristic_architect",
+    "architect_debug": {
+      "tool_names": [
+        "browser__click",
+        "browser__close_tab",
+        "browser__finish",
+        "browser__go_back",
+        "browser__goto",
+        "browser__new_tab",
+        "browser__press",
+        "browser__scroll",
+        "browser__select_option",
+        "browser__switch_tab",
+        "browser__type"
+      ],
+      "task_category": "retrieval",
+      "requires_final_response": true
+    },
+    "warnings": [],
+    "communication_trace": [
+      {
+        "timestamp": "2026-03-30T06:38:55.277193+00:00",
+        "event_type": "architect",
+        "task_id": "65",
+        "selected_workers": [
+          "page_state_worker",
+          "verification_worker",
+          "argument_grounding_worker",
+          "browser_action_worker",
+          "response_worker"
+        ],
+        "workflow_id": "webarena_retrieval",
+        "used_fallback_architect": true
+      },
+      {
+        "timestamp": "2026-03-30T06:38:55.277256+00:00",
+        "event_type": "worker",
+        "worker": "page_state_worker",
+        "step_id": "inspect_current_page",
+        "writes": [
+          "current_page",
+          "page_evidence",
+          "open_tabs"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-30T06:38:55.277280+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_goal_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-30T06:38:55.277301+00:00",
+        "event_type": "worker",
+        "worker": "argument_grounding_worker",
+        "step_id": "bind_action_arguments",
+        "writes": [
+          "grounded_action",
+          "action_arguments"
+        ],
+        "tool_name": "",
+        "finished": false
+      }
+    ],
+    "trajectory": [],
+    "goal_condition_rate": 0.0,
+    "worker_input_tokens": 0,
+    "worker_output_tokens": 0,
+    "architect_input_tokens": 0,
+    "architect_output_tokens": 0,
+    "total_tokens": 0,
+    "fallback_action_count": 0,
+    "patch_error_count": 0,
+    "retrieval_precision": 0.0,
+    "context_fragment_count": 4.666666666666667,
+    "relevant_fragment_count": 4.666666666666667,
+    "irrelevant_fragment_count": 0.0,
+    "circuit_breaker": {
+      "no_progress_count": 1,
+      "tripped": false,
+      "reason": "",
+      "last_error": ""
+    }
+  },
+  "metadata": {
+    "sites": [
+      "shopping_admin"
+    ],
+    "intent": "Get customer email(s) who completed the fifth most number of orders in the entire history",
+    "task_category": "retrieval",
+    "start_urls": [
+      "__SHOPPING_ADMIN__"
+    ],
+    "requires_final_response": true,
+    "verification": {
+      "goal_reached": false,
+      "matched_target_url": "",
+      "requires_final_response": true,
+      "needs_response": false,
+      "progress_made": false,
+      "task_category": "retrieval",
+      "updated_at": "2026-03-30T06:38:55.277269+00:00"
+    }
+  }
+}

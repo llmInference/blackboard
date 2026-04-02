@@ -1,0 +1,15 @@
+{
+  "env_name": "tau2bench",
+  "task_set": "tau2bench_formal",
+  "selection": {
+    "domain_name": "retail",
+    "task_set_name": "retail",
+    "task_split_name": "test",
+    "shuffle": true,
+    "seed": 42,
+    "limit": 10
+  },
+  "metadata": {
+    "purpose": "Default formal blackboard evaluation slice for Tau2-bench"
+  }
+}

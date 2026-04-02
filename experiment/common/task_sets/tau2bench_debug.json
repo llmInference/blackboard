@@ -1,0 +1,18 @@
+{
+  "env_name": "tau2bench",
+  "task_set": "tau2bench_debug",
+  "selection": {
+    "domain_name": "mock",
+    "task_set_name": "mock",
+    "task_ids": [
+      "create_task_1",
+      "update_task_1",
+      "impossible_task_1"
+    ],
+    "shuffle": false,
+    "seed": 42
+  },
+  "metadata": {
+    "purpose": "Stable blackboard smoke tasks for Tau2-bench integration"
+  }
+}

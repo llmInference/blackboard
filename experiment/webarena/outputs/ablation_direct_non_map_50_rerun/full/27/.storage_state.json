@@ -1,0 +1,1 @@
+{"cookies": [{"name": "_cookie_check", "value": "1", "domain": "localhost", "path": "/login", "expires": -1, "httpOnly": true, "secure": false, "sameSite": "Lax"}, {"name": "PHPSESSID", "value": "430bd66f626fba27116bb3fa7a5ad733", "domain": "localhost", "path": "/", "expires": -1, "httpOnly": true, "secure": false, "sameSite": "Lax"}], "origins": []}

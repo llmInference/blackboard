@@ -1,0 +1,63 @@
+{
+    "systems": [
+      "autogen"
+    ],
+    "n_gamefiles": 12,
+    "workflow_mode": "planner_action",
+    "architect_mode": "deterministic",
+    "gamefiles_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/system_compare/selected_gamefiles.json",
+    "config_snapshot_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/system_compare/config_snapshot.json",
+    "system_summaries": {
+      "autogen": {
+        "system": "autogen",
+        "system_output_dir": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/system_compare/autogen",
+        "result": {
+          "system": "autogen",
+          "system_id": "autogen_planner_action",
+          "system_family": "autogen",
+          "workflow_mode": "planner_action",
+          "architect_mode": "",
+          "summary": {
+            "n_episodes": 14,
+            "success_rate": 0.5,
+            "mean_steps": 9.857142857142858,
+            "mean_total_tokens": 14862.785714285714,
+            "mean_worker_input_tokens": 12500.5,
+            "mean_worker_output_tokens": 2362.285714285714,
+            "mean_architect_input_tokens": 0.0,
+            "mean_architect_output_tokens": 0.0,
+            "mean_architect_total_tokens": 0.0,
+            "mean_goal_condition_rate": 0.5,
+            "mean_fallback_rate": 0.0,
+            "mean_patch_error_rate": 0.0,
+            "mean_no_update_rate": 0.0,
+            "mean_repeat_action_rate": 0.01343101343101343,
+            "mean_repeat_observation_rate": 0.01343101343101343,
+            "mean_stagnation_rate": 0.10155677655677654,
+            "circuit_breaker_trigger_rate": 0.42857142857142855,
+            "waiting_for_user_rate": 0.0,
+            "stop_reason_breakdown": {
+              "environment_done": 7,
+              "stagnation_detected": 6,
+              "max_steps_reached": 1
+            },
+            "final_status_breakdown": {
+              "success": 7,
+              "stagnation": 6,
+              "incomplete": 1
+            },
+            "workflow_final_status_breakdown": {
+              "completed": 7,
+              "stagnation": 6,
+              "incomplete": 1
+            }
+          },
+          "episodes_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/system_compare/autogen/autogen_episodes.jsonl",
+          "summary_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/system_compare/autogen/autogen_summary.json",
+          "standard_episodes_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/system_compare/autogen/episode_results.jsonl",
+          "standard_summary_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/system_compare/autogen/summary.json",
+          "config_snapshot_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/system_compare/autogen/config_snapshot.json"
+        }
+      }
+    }
+  }

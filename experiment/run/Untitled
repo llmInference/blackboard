@@ -1,0 +1,10 @@
+experiment/run/run_webarena_experiments.sh ablation \
+    --conda-env exp \
+    --task-set-ablation /home/syq/Documents/blackboard/experiment/common/task_sets/webarena_non_map_50.json \
+    --limit 10 \
+    --ablation-modes full \
+    --max-steps 10 \
+    --max-kernel-steps 12 \
+    --llm-backend openai_compatible \
+    --llm-model openai/gpt-5.3-codex \
+    --llm-base-url https://api.qnaigc.com/v1

@@ -1,0 +1,2919 @@
+{
+  "summary_type": "ablation",
+  "execution_backend": "official_browser",
+  "workflow_mode": "webarena_blackboard",
+  "manifest_path": "/home/syq/Documents/blackboard/experiment/common/task_sets/webarena_non_map_50.json",
+  "config_path": "/home/syq/Documents/blackboard/experiment/common/configs/webarena_verified_local.example.json",
+  "modes": [
+    "full"
+  ],
+  "n_tasks": 10,
+  "summaries": {
+    "full": {
+      "mode": "full",
+      "disabled_components": [],
+      "mode_output_dir": "/home/syq/Documents/blackboard/experiment/webarena/outputs/ablation_stage_phase_non_map10/full",
+      "episodes_path": "/home/syq/Documents/blackboard/experiment/webarena/outputs/ablation_stage_phase_non_map10/full/episode_results.jsonl",
+      "standard_episodes_path": "/home/syq/Documents/blackboard/experiment/webarena/outputs/ablation_stage_phase_non_map10/full/episode_results.jsonl",
+      "summary_path": "/home/syq/Documents/blackboard/experiment/webarena/outputs/ablation_stage_phase_non_map10/full/summary.json",
+      "standard_summary_path": "/home/syq/Documents/blackboard/experiment/webarena/outputs/ablation_stage_phase_non_map10/full/summary.json",
+      "summary": {
+        "env_name": "webarena",
+        "task_set": "non_map_50",
+        "manifest_path": "/home/syq/Documents/blackboard/experiment/common/task_sets/webarena_non_map_50.json",
+        "config_path": "/home/syq/Documents/blackboard/experiment/common/configs/webarena_verified_local.example.json",
+        "n_episodes": 10,
+        "success_count": 0,
+        "finished_count": 10,
+        "success_rate": 0.0,
+        "mean_goal_condition_rate": 1.0,
+        "mean_steps": 1.0,
+        "mean_total_tokens": 0.0,
+        "mean_worker_input_tokens": 0.0,
+        "mean_worker_output_tokens": 0.0,
+        "mean_architect_input_tokens": 0.0,
+        "mean_architect_output_tokens": 0.0,
+        "mean_architect_total_tokens": 0.0,
+        "mean_tool_call_count": 0.0,
+        "mean_assistant_message_count": 1.0,
+        "mean_fallback_rate": 0.0,
+        "mean_patch_error_rate": 0.0,
+        "mean_retrieval_precision": 1.0,
+        "mean_context_fragment_count": 4.666666666666667,
+        "mean_relevant_fragment_count": 4.666666666666667,
+        "mean_irrelevant_fragment_count": 0.0,
+        "finish_reason_breakdown": {
+          "task_completed": 10
+        },
+        "task_category_breakdown": {
+          "retrieval": 10
+        },
+        "site_breakdown": {
+          "shopping_admin": 10
+        },
+        "episodes": [
+          {
+            "run_id": "ablation_stage_phase_non_map10",
+            "system_id": "full",
+            "system_family": "blackboard",
+            "episode_id": "full:0",
+            "task_id": "0",
+            "success": false,
+            "finished": true,
+            "steps": 1,
+            "goal_condition_rate": 1.0,
+            "worker_input_tokens": 0,
+            "worker_output_tokens": 0,
+            "architect_input_tokens": 0,
+            "architect_output_tokens": 0,
+            "total_tokens": 0,
+            "fallback_action_count": 0,
+            "patch_error_count": 0,
+            "retrieval_precision": 1.0,
+            "context_fragment_count": 4.666666666666667,
+            "relevant_fragment_count": 4.666666666666667,
+            "irrelevant_fragment_count": 0.0,
+            "task_category": "retrieval",
+            "sites": [
+              "shopping_admin"
+            ],
+            "intent": "Get the top-1 best-selling product name(s) in 2022",
+            "tool_call_count": 0,
+            "assistant_message_count": 1,
+            "finish_reason": "task_completed",
+            "termination_reason": "task_completed",
+            "trajectory": [],
+            "evaluation": {
+              "task_id": 0,
+              "intent_template_id": 279,
+              "sites": [
+                "shopping_admin"
+              ],
+              "task_revision": 2,
+              "status": "failure",
+              "score": 0.0,
+              "evaluators_results": [
+                {
+                  "evaluator_name": "AgentResponseEvaluator",
+                  "status": "failure",
+                  "score": 0.0,
+                  "actual": "{\"task_type\": \"RETRIEVE\", \"status\": \"SUCCESS\", \"retrieved_data\": [\"DASHBOARD SALES CATALOG CUSTOMERS MARKETING CONTENT REPORTS STORES SYSTEM FIND PARTNERS & EXTENSIONS Dashboard admin Scope: All Store Views What is this? Reload Data Advanced Repor...\"], \"error_details\": null}",
+                  "actual_normalized": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": [
+                      "dashboard sales catalog customers marketing content reports stores system find partners & extensions dashboard admin scope: all store views what is this? reload data advanced repor..."
+                    ]
+                  },
+                  "expected": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": [
+                      "quest lumaflex band"
+                    ]
+                  },
+                  "assertions": [
+                    {
+                      "assertion_name": "retrieved_data_array_values_mismatch",
+                      "status": "failure",
+                      "assertion_msgs": [
+                        "Array value mismatch (unordered). Matched (0/1), Missing: 1, Extra: 1",
+                        "Expected: [quest lumaflex band], Got: [dashboard sales catalog customers marketing content reports stores system find partners & extensions dashboard admin scope: all store views what is this? reload data advanced repor...]"
+                      ],
+                      "error_msg": null
+                    }
+                  ],
+                  "error_msg": null,
+                  "should_not_exist": null
+                }
+              ],
+              "error_msg": null,
+              "webarena_verified_version": "1.2.3",
+              "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+              "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+            },
+            "communication_trace": [
+              {
+                "timestamp": "2026-03-30T13:58:49.971557+00:00",
+                "event_type": "architect",
+                "task_id": "0",
+                "selected_workers": [
+                  "page_state_worker",
+                  "verification_worker",
+                  "argument_grounding_worker",
+                  "browser_action_worker",
+                  "response_worker"
+                ],
+                "workflow_id": "webarena_retrieval",
+                "used_fallback_architect": true
+              },
+              {
+                "timestamp": "2026-03-30T13:58:49.971775+00:00",
+                "event_type": "worker",
+                "worker": "page_state_worker",
+                "step_id": "inspect_current_page",
+                "writes": [
+                  "current_page",
+                  "page_evidence",
+                  "open_tabs"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:58:49.971833+00:00",
+                "event_type": "worker",
+                "worker": "verification_worker",
+                "step_id": "verify_goal_progress",
+                "writes": [
+                  "verification",
+                  "finish",
+                  "finish_reason"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:58:49.971961+00:00",
+                "event_type": "worker",
+                "worker": "response_worker",
+                "step_id": "compose_final_answer",
+                "writes": [
+                  "assistant_response"
+                ],
+                "tool_name": "",
+                "finished": true
+              }
+            ],
+            "run_metadata": {
+              "kernel_status": "finished",
+              "current_step_id": "",
+              "current_step": {},
+              "active_worker": "response_worker",
+              "finish_reason": "task_completed",
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:58:49.971816+00:00"
+              },
+              "used_fallback_architect": true,
+              "fallback_reason": "heuristic_architect",
+              "architect_debug": {
+                "tool_names": [
+                  "browser__click",
+                  "browser__close_tab",
+                  "browser__finish",
+                  "browser__go_back",
+                  "browser__goto",
+                  "browser__new_tab",
+                  "browser__press",
+                  "browser__scroll",
+                  "browser__select_option",
+                  "browser__switch_tab",
+                  "browser__type"
+                ],
+                "task_category": "retrieval",
+                "requires_final_response": true,
+                "planner": "heuristic",
+                "stage_policy": {
+                  "phase_order": [
+                    "evidence",
+                    "respond"
+                  ],
+                  "initial_phase": "evidence"
+                }
+              },
+              "warnings": [],
+              "communication_trace": [
+                {
+                  "timestamp": "2026-03-30T13:58:49.971557+00:00",
+                  "event_type": "architect",
+                  "task_id": "0",
+                  "selected_workers": [
+                    "page_state_worker",
+                    "verification_worker",
+                    "argument_grounding_worker",
+                    "browser_action_worker",
+                    "response_worker"
+                  ],
+                  "workflow_id": "webarena_retrieval",
+                  "used_fallback_architect": true
+                },
+                {
+                  "timestamp": "2026-03-30T13:58:49.971775+00:00",
+                  "event_type": "worker",
+                  "worker": "page_state_worker",
+                  "step_id": "inspect_current_page",
+                  "writes": [
+                    "current_page",
+                    "page_evidence",
+                    "open_tabs"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:58:49.971833+00:00",
+                  "event_type": "worker",
+                  "worker": "verification_worker",
+                  "step_id": "verify_goal_progress",
+                  "writes": [
+                    "verification",
+                    "finish",
+                    "finish_reason"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:58:49.971961+00:00",
+                  "event_type": "worker",
+                  "worker": "response_worker",
+                  "step_id": "compose_final_answer",
+                  "writes": [
+                    "assistant_response"
+                  ],
+                  "tool_name": "",
+                  "finished": true
+                }
+              ],
+              "trajectory": [],
+              "goal_condition_rate": 1.0,
+              "worker_input_tokens": 0,
+              "worker_output_tokens": 0,
+              "architect_input_tokens": 0,
+              "architect_output_tokens": 0,
+              "total_tokens": 0,
+              "fallback_action_count": 0,
+              "patch_error_count": 0,
+              "retrieval_precision": 1.0,
+              "context_fragment_count": 4.666666666666667,
+              "relevant_fragment_count": 4.666666666666667,
+              "irrelevant_fragment_count": 0.0,
+              "circuit_breaker": {
+                "no_progress_count": 0,
+                "tripped": false,
+                "reason": "",
+                "last_error": ""
+              }
+            },
+            "metadata": {
+              "sites": [
+                "shopping_admin"
+              ],
+              "intent": "Get the top-1 best-selling product name(s) in 2022",
+              "task_category": "retrieval",
+              "start_urls": [
+                "__SHOPPING_ADMIN__"
+              ],
+              "requires_final_response": true,
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:58:49.971816+00:00"
+              }
+            }
+          },
+          {
+            "run_id": "ablation_stage_phase_non_map10",
+            "system_id": "full",
+            "system_family": "blackboard",
+            "episode_id": "full:1",
+            "task_id": "1",
+            "success": false,
+            "finished": true,
+            "steps": 1,
+            "goal_condition_rate": 1.0,
+            "worker_input_tokens": 0,
+            "worker_output_tokens": 0,
+            "architect_input_tokens": 0,
+            "architect_output_tokens": 0,
+            "total_tokens": 0,
+            "fallback_action_count": 0,
+            "patch_error_count": 0,
+            "retrieval_precision": 1.0,
+            "context_fragment_count": 4.666666666666667,
+            "relevant_fragment_count": 4.666666666666667,
+            "irrelevant_fragment_count": 0.0,
+            "task_category": "retrieval",
+            "sites": [
+              "shopping_admin"
+            ],
+            "intent": "Get the top-1 best-selling brand name(s) in Quarter 1 2022",
+            "tool_call_count": 0,
+            "assistant_message_count": 1,
+            "finish_reason": "task_completed",
+            "termination_reason": "task_completed",
+            "trajectory": [],
+            "evaluation": {
+              "task_id": 1,
+              "intent_template_id": 279,
+              "sites": [
+                "shopping_admin"
+              ],
+              "task_revision": 2,
+              "status": "failure",
+              "score": 0.0,
+              "evaluators_results": [
+                {
+                  "evaluator_name": "AgentResponseEvaluator",
+                  "status": "failure",
+                  "score": 0.0,
+                  "actual": "{\"task_type\": \"RETRIEVE\", \"status\": \"SUCCESS\", \"retrieved_data\": [\"DASHBOARD SALES CATALOG CUSTOMERS MARKETING CONTENT REPORTS STORES SYSTEM FIND PARTNERS & EXTENSIONS Dashboard admin Scope: All Store Views What is this? Reload Data Advanced Repor...\"], \"error_details\": null}",
+                  "actual_normalized": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": [
+                      "dashboard sales catalog customers marketing content reports stores system find partners & extensions dashboard admin scope: all store views what is this? reload data advanced repor..."
+                    ]
+                  },
+                  "expected": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": [
+                      "sprite"
+                    ]
+                  },
+                  "assertions": [
+                    {
+                      "assertion_name": "retrieved_data_array_values_mismatch",
+                      "status": "failure",
+                      "assertion_msgs": [
+                        "Array value mismatch (unordered). Matched (0/1), Missing: 1, Extra: 1",
+                        "Expected: [sprite], Got: [dashboard sales catalog customers marketing content reports stores system find partners & extensions dashboard admin scope: all store views what is this? reload data advanced repor...]"
+                      ],
+                      "error_msg": null
+                    }
+                  ],
+                  "error_msg": null,
+                  "should_not_exist": null
+                }
+              ],
+              "error_msg": null,
+              "webarena_verified_version": "1.2.3",
+              "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+              "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+            },
+            "communication_trace": [
+              {
+                "timestamp": "2026-03-30T13:58:52.006996+00:00",
+                "event_type": "architect",
+                "task_id": "1",
+                "selected_workers": [
+                  "page_state_worker",
+                  "verification_worker",
+                  "argument_grounding_worker",
+                  "browser_action_worker",
+                  "response_worker"
+                ],
+                "workflow_id": "webarena_retrieval",
+                "used_fallback_architect": true
+              },
+              {
+                "timestamp": "2026-03-30T13:58:52.007112+00:00",
+                "event_type": "worker",
+                "worker": "page_state_worker",
+                "step_id": "inspect_current_page",
+                "writes": [
+                  "current_page",
+                  "page_evidence",
+                  "open_tabs"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:58:52.007158+00:00",
+                "event_type": "worker",
+                "worker": "verification_worker",
+                "step_id": "verify_goal_progress",
+                "writes": [
+                  "verification",
+                  "finish",
+                  "finish_reason"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:58:52.007225+00:00",
+                "event_type": "worker",
+                "worker": "response_worker",
+                "step_id": "compose_final_answer",
+                "writes": [
+                  "assistant_response"
+                ],
+                "tool_name": "",
+                "finished": true
+              }
+            ],
+            "run_metadata": {
+              "kernel_status": "finished",
+              "current_step_id": "",
+              "current_step": {},
+              "active_worker": "response_worker",
+              "finish_reason": "task_completed",
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:58:52.007144+00:00"
+              },
+              "used_fallback_architect": true,
+              "fallback_reason": "heuristic_architect",
+              "architect_debug": {
+                "tool_names": [
+                  "browser__click",
+                  "browser__close_tab",
+                  "browser__finish",
+                  "browser__go_back",
+                  "browser__goto",
+                  "browser__new_tab",
+                  "browser__press",
+                  "browser__scroll",
+                  "browser__select_option",
+                  "browser__switch_tab",
+                  "browser__type"
+                ],
+                "task_category": "retrieval",
+                "requires_final_response": true,
+                "planner": "heuristic",
+                "stage_policy": {
+                  "phase_order": [
+                    "evidence",
+                    "respond"
+                  ],
+                  "initial_phase": "evidence"
+                }
+              },
+              "warnings": [],
+              "communication_trace": [
+                {
+                  "timestamp": "2026-03-30T13:58:52.006996+00:00",
+                  "event_type": "architect",
+                  "task_id": "1",
+                  "selected_workers": [
+                    "page_state_worker",
+                    "verification_worker",
+                    "argument_grounding_worker",
+                    "browser_action_worker",
+                    "response_worker"
+                  ],
+                  "workflow_id": "webarena_retrieval",
+                  "used_fallback_architect": true
+                },
+                {
+                  "timestamp": "2026-03-30T13:58:52.007112+00:00",
+                  "event_type": "worker",
+                  "worker": "page_state_worker",
+                  "step_id": "inspect_current_page",
+                  "writes": [
+                    "current_page",
+                    "page_evidence",
+                    "open_tabs"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:58:52.007158+00:00",
+                  "event_type": "worker",
+                  "worker": "verification_worker",
+                  "step_id": "verify_goal_progress",
+                  "writes": [
+                    "verification",
+                    "finish",
+                    "finish_reason"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:58:52.007225+00:00",
+                  "event_type": "worker",
+                  "worker": "response_worker",
+                  "step_id": "compose_final_answer",
+                  "writes": [
+                    "assistant_response"
+                  ],
+                  "tool_name": "",
+                  "finished": true
+                }
+              ],
+              "trajectory": [],
+              "goal_condition_rate": 1.0,
+              "worker_input_tokens": 0,
+              "worker_output_tokens": 0,
+              "architect_input_tokens": 0,
+              "architect_output_tokens": 0,
+              "total_tokens": 0,
+              "fallback_action_count": 0,
+              "patch_error_count": 0,
+              "retrieval_precision": 1.0,
+              "context_fragment_count": 4.666666666666667,
+              "relevant_fragment_count": 4.666666666666667,
+              "irrelevant_fragment_count": 0.0,
+              "circuit_breaker": {
+                "no_progress_count": 0,
+                "tripped": false,
+                "reason": "",
+                "last_error": ""
+              }
+            },
+            "metadata": {
+              "sites": [
+                "shopping_admin"
+              ],
+              "intent": "Get the top-1 best-selling brand name(s) in Quarter 1 2022",
+              "task_category": "retrieval",
+              "start_urls": [
+                "__SHOPPING_ADMIN__"
+              ],
+              "requires_final_response": true,
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:58:52.007144+00:00"
+              }
+            }
+          },
+          {
+            "run_id": "ablation_stage_phase_non_map10",
+            "system_id": "full",
+            "system_family": "blackboard",
+            "episode_id": "full:2",
+            "task_id": "2",
+            "success": false,
+            "finished": true,
+            "steps": 1,
+            "goal_condition_rate": 1.0,
+            "worker_input_tokens": 0,
+            "worker_output_tokens": 0,
+            "architect_input_tokens": 0,
+            "architect_output_tokens": 0,
+            "total_tokens": 0,
+            "fallback_action_count": 0,
+            "patch_error_count": 0,
+            "retrieval_precision": 1.0,
+            "context_fragment_count": 4.666666666666667,
+            "relevant_fragment_count": 4.666666666666667,
+            "irrelevant_fragment_count": 0.0,
+            "task_category": "retrieval",
+            "sites": [
+              "shopping_admin"
+            ],
+            "intent": "Get the top-1 best-selling product type name(s) in Quarter 1 2022",
+            "tool_call_count": 0,
+            "assistant_message_count": 1,
+            "finish_reason": "task_completed",
+            "termination_reason": "task_completed",
+            "trajectory": [],
+            "evaluation": {
+              "task_id": 2,
+              "intent_template_id": 279,
+              "sites": [
+                "shopping_admin"
+              ],
+              "task_revision": 2,
+              "status": "failure",
+              "score": 0.0,
+              "evaluators_results": [
+                {
+                  "evaluator_name": "AgentResponseEvaluator",
+                  "status": "failure",
+                  "score": 0.0,
+                  "actual": "{\"task_type\": \"RETRIEVE\", \"status\": \"SUCCESS\", \"retrieved_data\": [\"DASHBOARD SALES CATALOG CUSTOMERS MARKETING CONTENT REPORTS STORES SYSTEM FIND PARTNERS & EXTENSIONS Dashboard admin Scope: All Store Views What is this? Reload Data Advanced Repor...\"], \"error_details\": null}",
+                  "actual_normalized": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": [
+                      "dashboard sales catalog customers marketing content reports stores system find partners & extensions dashboard admin scope: all store views what is this? reload data advanced repor..."
+                    ]
+                  },
+                  "expected": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": [
+                      "digital watch"
+                    ]
+                  },
+                  "assertions": [
+                    {
+                      "assertion_name": "retrieved_data_array_values_mismatch",
+                      "status": "failure",
+                      "assertion_msgs": [
+                        "Array value mismatch (unordered). Matched (0/1), Missing: 1, Extra: 1",
+                        "Expected: [digital watch], Got: [dashboard sales catalog customers marketing content reports stores system find partners & extensions dashboard admin scope: all store views what is this? reload data advanced repor...]"
+                      ],
+                      "error_msg": null
+                    }
+                  ],
+                  "error_msg": null,
+                  "should_not_exist": null
+                }
+              ],
+              "error_msg": null,
+              "webarena_verified_version": "1.2.3",
+              "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+              "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+            },
+            "communication_trace": [
+              {
+                "timestamp": "2026-03-30T13:58:53.717193+00:00",
+                "event_type": "architect",
+                "task_id": "2",
+                "selected_workers": [
+                  "page_state_worker",
+                  "verification_worker",
+                  "argument_grounding_worker",
+                  "browser_action_worker",
+                  "response_worker"
+                ],
+                "workflow_id": "webarena_retrieval",
+                "used_fallback_architect": true
+              },
+              {
+                "timestamp": "2026-03-30T13:58:53.717318+00:00",
+                "event_type": "worker",
+                "worker": "page_state_worker",
+                "step_id": "inspect_current_page",
+                "writes": [
+                  "current_page",
+                  "page_evidence",
+                  "open_tabs"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:58:53.717370+00:00",
+                "event_type": "worker",
+                "worker": "verification_worker",
+                "step_id": "verify_goal_progress",
+                "writes": [
+                  "verification",
+                  "finish",
+                  "finish_reason"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:58:53.717439+00:00",
+                "event_type": "worker",
+                "worker": "response_worker",
+                "step_id": "compose_final_answer",
+                "writes": [
+                  "assistant_response"
+                ],
+                "tool_name": "",
+                "finished": true
+              }
+            ],
+            "run_metadata": {
+              "kernel_status": "finished",
+              "current_step_id": "",
+              "current_step": {},
+              "active_worker": "response_worker",
+              "finish_reason": "task_completed",
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:58:53.717356+00:00"
+              },
+              "used_fallback_architect": true,
+              "fallback_reason": "heuristic_architect",
+              "architect_debug": {
+                "tool_names": [
+                  "browser__click",
+                  "browser__close_tab",
+                  "browser__finish",
+                  "browser__go_back",
+                  "browser__goto",
+                  "browser__new_tab",
+                  "browser__press",
+                  "browser__scroll",
+                  "browser__select_option",
+                  "browser__switch_tab",
+                  "browser__type"
+                ],
+                "task_category": "retrieval",
+                "requires_final_response": true,
+                "planner": "heuristic",
+                "stage_policy": {
+                  "phase_order": [
+                    "evidence",
+                    "respond"
+                  ],
+                  "initial_phase": "evidence"
+                }
+              },
+              "warnings": [],
+              "communication_trace": [
+                {
+                  "timestamp": "2026-03-30T13:58:53.717193+00:00",
+                  "event_type": "architect",
+                  "task_id": "2",
+                  "selected_workers": [
+                    "page_state_worker",
+                    "verification_worker",
+                    "argument_grounding_worker",
+                    "browser_action_worker",
+                    "response_worker"
+                  ],
+                  "workflow_id": "webarena_retrieval",
+                  "used_fallback_architect": true
+                },
+                {
+                  "timestamp": "2026-03-30T13:58:53.717318+00:00",
+                  "event_type": "worker",
+                  "worker": "page_state_worker",
+                  "step_id": "inspect_current_page",
+                  "writes": [
+                    "current_page",
+                    "page_evidence",
+                    "open_tabs"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:58:53.717370+00:00",
+                  "event_type": "worker",
+                  "worker": "verification_worker",
+                  "step_id": "verify_goal_progress",
+                  "writes": [
+                    "verification",
+                    "finish",
+                    "finish_reason"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:58:53.717439+00:00",
+                  "event_type": "worker",
+                  "worker": "response_worker",
+                  "step_id": "compose_final_answer",
+                  "writes": [
+                    "assistant_response"
+                  ],
+                  "tool_name": "",
+                  "finished": true
+                }
+              ],
+              "trajectory": [],
+              "goal_condition_rate": 1.0,
+              "worker_input_tokens": 0,
+              "worker_output_tokens": 0,
+              "architect_input_tokens": 0,
+              "architect_output_tokens": 0,
+              "total_tokens": 0,
+              "fallback_action_count": 0,
+              "patch_error_count": 0,
+              "retrieval_precision": 1.0,
+              "context_fragment_count": 4.666666666666667,
+              "relevant_fragment_count": 4.666666666666667,
+              "irrelevant_fragment_count": 0.0,
+              "circuit_breaker": {
+                "no_progress_count": 0,
+                "tripped": false,
+                "reason": "",
+                "last_error": ""
+              }
+            },
+            "metadata": {
+              "sites": [
+                "shopping_admin"
+              ],
+              "intent": "Get the top-1 best-selling product type name(s) in Quarter 1 2022",
+              "task_category": "retrieval",
+              "start_urls": [
+                "__SHOPPING_ADMIN__"
+              ],
+              "requires_final_response": true,
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:58:53.717356+00:00"
+              }
+            }
+          },
+          {
+            "run_id": "ablation_stage_phase_non_map10",
+            "system_id": "full",
+            "system_family": "blackboard",
+            "episode_id": "full:3",
+            "task_id": "3",
+            "success": false,
+            "finished": true,
+            "steps": 1,
+            "goal_condition_rate": 1.0,
+            "worker_input_tokens": 0,
+            "worker_output_tokens": 0,
+            "architect_input_tokens": 0,
+            "architect_output_tokens": 0,
+            "total_tokens": 0,
+            "fallback_action_count": 0,
+            "patch_error_count": 0,
+            "retrieval_precision": 1.0,
+            "context_fragment_count": 4.666666666666667,
+            "relevant_fragment_count": 4.666666666666667,
+            "irrelevant_fragment_count": 0.0,
+            "task_category": "retrieval",
+            "sites": [
+              "shopping_admin"
+            ],
+            "intent": "Get the top-2 best-selling product name(s) in 2022",
+            "tool_call_count": 0,
+            "assistant_message_count": 1,
+            "finish_reason": "task_completed",
+            "termination_reason": "task_completed",
+            "trajectory": [],
+            "evaluation": {
+              "task_id": 3,
+              "intent_template_id": 279,
+              "sites": [
+                "shopping_admin"
+              ],
+              "task_revision": 2,
+              "status": "failure",
+              "score": 0.0,
+              "evaluators_results": [
+                {
+                  "evaluator_name": "AgentResponseEvaluator",
+                  "status": "failure",
+                  "score": 0.0,
+                  "actual": "{\"task_type\": \"RETRIEVE\", \"status\": \"SUCCESS\", \"retrieved_data\": [\"DASHBOARD SALES CATALOG CUSTOMERS MARKETING CONTENT REPORTS STORES SYSTEM FIND PARTNERS & EXTENSIONS Dashboard admin Scope: All Store Views What is this? Reload Data Advanced Repor...\"], \"error_details\": null}",
+                  "actual_normalized": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": [
+                      "dashboard sales catalog customers marketing content reports stores system find partners & extensions dashboard admin scope: all store views what is this? reload data advanced repor..."
+                    ]
+                  },
+                  "expected": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": [
+                      "quest lumaflex band",
+                      "sprite stasis ball 65 cm"
+                    ]
+                  },
+                  "assertions": [
+                    {
+                      "assertion_name": "retrieved_data_array_values_mismatch",
+                      "status": "failure",
+                      "assertion_msgs": [
+                        "Array value mismatch (unordered). Matched (0/2), Missing: 2, Extra: 1",
+                        "Expected: [quest lumaflex band, sprite stasis ball 65 cm], Got: [dashboard sales catalog customers marketing content reports stores system find partners & extensions dashboard admin scope: all store views what is this? reload data advanced repor...]"
+                      ],
+                      "error_msg": null
+                    }
+                  ],
+                  "error_msg": null,
+                  "should_not_exist": null
+                }
+              ],
+              "error_msg": null,
+              "webarena_verified_version": "1.2.3",
+              "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+              "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+            },
+            "communication_trace": [
+              {
+                "timestamp": "2026-03-30T13:58:55.704008+00:00",
+                "event_type": "architect",
+                "task_id": "3",
+                "selected_workers": [
+                  "page_state_worker",
+                  "verification_worker",
+                  "argument_grounding_worker",
+                  "browser_action_worker",
+                  "response_worker"
+                ],
+                "workflow_id": "webarena_retrieval",
+                "used_fallback_architect": true
+              },
+              {
+                "timestamp": "2026-03-30T13:58:55.704118+00:00",
+                "event_type": "worker",
+                "worker": "page_state_worker",
+                "step_id": "inspect_current_page",
+                "writes": [
+                  "current_page",
+                  "page_evidence",
+                  "open_tabs"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:58:55.704160+00:00",
+                "event_type": "worker",
+                "worker": "verification_worker",
+                "step_id": "verify_goal_progress",
+                "writes": [
+                  "verification",
+                  "finish",
+                  "finish_reason"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:58:55.704230+00:00",
+                "event_type": "worker",
+                "worker": "response_worker",
+                "step_id": "compose_final_answer",
+                "writes": [
+                  "assistant_response"
+                ],
+                "tool_name": "",
+                "finished": true
+              }
+            ],
+            "run_metadata": {
+              "kernel_status": "finished",
+              "current_step_id": "",
+              "current_step": {},
+              "active_worker": "response_worker",
+              "finish_reason": "task_completed",
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:58:55.704147+00:00"
+              },
+              "used_fallback_architect": true,
+              "fallback_reason": "heuristic_architect",
+              "architect_debug": {
+                "tool_names": [
+                  "browser__click",
+                  "browser__close_tab",
+                  "browser__finish",
+                  "browser__go_back",
+                  "browser__goto",
+                  "browser__new_tab",
+                  "browser__press",
+                  "browser__scroll",
+                  "browser__select_option",
+                  "browser__switch_tab",
+                  "browser__type"
+                ],
+                "task_category": "retrieval",
+                "requires_final_response": true,
+                "planner": "heuristic",
+                "stage_policy": {
+                  "phase_order": [
+                    "evidence",
+                    "respond"
+                  ],
+                  "initial_phase": "evidence"
+                }
+              },
+              "warnings": [],
+              "communication_trace": [
+                {
+                  "timestamp": "2026-03-30T13:58:55.704008+00:00",
+                  "event_type": "architect",
+                  "task_id": "3",
+                  "selected_workers": [
+                    "page_state_worker",
+                    "verification_worker",
+                    "argument_grounding_worker",
+                    "browser_action_worker",
+                    "response_worker"
+                  ],
+                  "workflow_id": "webarena_retrieval",
+                  "used_fallback_architect": true
+                },
+                {
+                  "timestamp": "2026-03-30T13:58:55.704118+00:00",
+                  "event_type": "worker",
+                  "worker": "page_state_worker",
+                  "step_id": "inspect_current_page",
+                  "writes": [
+                    "current_page",
+                    "page_evidence",
+                    "open_tabs"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:58:55.704160+00:00",
+                  "event_type": "worker",
+                  "worker": "verification_worker",
+                  "step_id": "verify_goal_progress",
+                  "writes": [
+                    "verification",
+                    "finish",
+                    "finish_reason"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:58:55.704230+00:00",
+                  "event_type": "worker",
+                  "worker": "response_worker",
+                  "step_id": "compose_final_answer",
+                  "writes": [
+                    "assistant_response"
+                  ],
+                  "tool_name": "",
+                  "finished": true
+                }
+              ],
+              "trajectory": [],
+              "goal_condition_rate": 1.0,
+              "worker_input_tokens": 0,
+              "worker_output_tokens": 0,
+              "architect_input_tokens": 0,
+              "architect_output_tokens": 0,
+              "total_tokens": 0,
+              "fallback_action_count": 0,
+              "patch_error_count": 0,
+              "retrieval_precision": 1.0,
+              "context_fragment_count": 4.666666666666667,
+              "relevant_fragment_count": 4.666666666666667,
+              "irrelevant_fragment_count": 0.0,
+              "circuit_breaker": {
+                "no_progress_count": 0,
+                "tripped": false,
+                "reason": "",
+                "last_error": ""
+              }
+            },
+            "metadata": {
+              "sites": [
+                "shopping_admin"
+              ],
+              "intent": "Get the top-2 best-selling product name(s) in 2022",
+              "task_category": "retrieval",
+              "start_urls": [
+                "__SHOPPING_ADMIN__"
+              ],
+              "requires_final_response": true,
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:58:55.704147+00:00"
+              }
+            }
+          },
+          {
+            "run_id": "ablation_stage_phase_non_map10",
+            "system_id": "full",
+            "system_family": "blackboard",
+            "episode_id": "full:4",
+            "task_id": "4",
+            "success": false,
+            "finished": true,
+            "steps": 1,
+            "goal_condition_rate": 1.0,
+            "worker_input_tokens": 0,
+            "worker_output_tokens": 0,
+            "architect_input_tokens": 0,
+            "architect_output_tokens": 0,
+            "total_tokens": 0,
+            "fallback_action_count": 0,
+            "patch_error_count": 0,
+            "retrieval_precision": 1.0,
+            "context_fragment_count": 4.666666666666667,
+            "relevant_fragment_count": 4.666666666666667,
+            "irrelevant_fragment_count": 0.0,
+            "task_category": "retrieval",
+            "sites": [
+              "shopping_admin"
+            ],
+            "intent": "Get the top-3 best-selling product name(s) in Jan 2023",
+            "tool_call_count": 0,
+            "assistant_message_count": 1,
+            "finish_reason": "task_completed",
+            "termination_reason": "task_completed",
+            "trajectory": [],
+            "evaluation": {
+              "task_id": 4,
+              "intent_template_id": 279,
+              "sites": [
+                "shopping_admin"
+              ],
+              "task_revision": 2,
+              "status": "failure",
+              "score": 0.0,
+              "evaluators_results": [
+                {
+                  "evaluator_name": "AgentResponseEvaluator",
+                  "status": "failure",
+                  "score": 0.0,
+                  "actual": "{\"task_type\": \"RETRIEVE\", \"status\": \"SUCCESS\", \"retrieved_data\": [\"DASHBOARD SALES CATALOG CUSTOMERS MARKETING CONTENT REPORTS STORES SYSTEM FIND PARTNERS & EXTENSIONS Dashboard admin Scope: All Store Views What is this? Reload Data Advanced Repor...\"], \"error_details\": null}",
+                  "actual_normalized": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": [
+                      "dashboard sales catalog customers marketing content reports stores system find partners & extensions dashboard admin scope: all store views what is this? reload data advanced repor..."
+                    ]
+                  },
+                  "expected": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": [
+                      "impulse duffle",
+                      "overnight duffle",
+                      "hawkeye yoga short 32 blue"
+                    ]
+                  },
+                  "assertions": [
+                    {
+                      "assertion_name": "retrieved_data_array_values_mismatch",
+                      "status": "failure",
+                      "assertion_msgs": [
+                        "Array value mismatch (unordered). Matched (0/3), Missing: 3, Extra: 1",
+                        "Expected: [impulse duffle, overnight duffle, hawkeye yoga short 32 blue], Got: [dashboard sales catalog customers marketing content reports stores system find partners & extensions dashboard admin scope: all store views what is this? reload data advanced repor...]"
+                      ],
+                      "error_msg": null
+                    }
+                  ],
+                  "error_msg": null,
+                  "should_not_exist": null
+                }
+              ],
+              "error_msg": null,
+              "webarena_verified_version": "1.2.3",
+              "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+              "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+            },
+            "communication_trace": [
+              {
+                "timestamp": "2026-03-30T13:58:57.506702+00:00",
+                "event_type": "architect",
+                "task_id": "4",
+                "selected_workers": [
+                  "page_state_worker",
+                  "verification_worker",
+                  "argument_grounding_worker",
+                  "browser_action_worker",
+                  "response_worker"
+                ],
+                "workflow_id": "webarena_retrieval",
+                "used_fallback_architect": true
+              },
+              {
+                "timestamp": "2026-03-30T13:58:57.506814+00:00",
+                "event_type": "worker",
+                "worker": "page_state_worker",
+                "step_id": "inspect_current_page",
+                "writes": [
+                  "current_page",
+                  "page_evidence",
+                  "open_tabs"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:58:57.506856+00:00",
+                "event_type": "worker",
+                "worker": "verification_worker",
+                "step_id": "verify_goal_progress",
+                "writes": [
+                  "verification",
+                  "finish",
+                  "finish_reason"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:58:57.506920+00:00",
+                "event_type": "worker",
+                "worker": "response_worker",
+                "step_id": "compose_final_answer",
+                "writes": [
+                  "assistant_response"
+                ],
+                "tool_name": "",
+                "finished": true
+              }
+            ],
+            "run_metadata": {
+              "kernel_status": "finished",
+              "current_step_id": "",
+              "current_step": {},
+              "active_worker": "response_worker",
+              "finish_reason": "task_completed",
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:58:57.506844+00:00"
+              },
+              "used_fallback_architect": true,
+              "fallback_reason": "heuristic_architect",
+              "architect_debug": {
+                "tool_names": [
+                  "browser__click",
+                  "browser__close_tab",
+                  "browser__finish",
+                  "browser__go_back",
+                  "browser__goto",
+                  "browser__new_tab",
+                  "browser__press",
+                  "browser__scroll",
+                  "browser__select_option",
+                  "browser__switch_tab",
+                  "browser__type"
+                ],
+                "task_category": "retrieval",
+                "requires_final_response": true,
+                "planner": "heuristic",
+                "stage_policy": {
+                  "phase_order": [
+                    "evidence",
+                    "respond"
+                  ],
+                  "initial_phase": "evidence"
+                }
+              },
+              "warnings": [],
+              "communication_trace": [
+                {
+                  "timestamp": "2026-03-30T13:58:57.506702+00:00",
+                  "event_type": "architect",
+                  "task_id": "4",
+                  "selected_workers": [
+                    "page_state_worker",
+                    "verification_worker",
+                    "argument_grounding_worker",
+                    "browser_action_worker",
+                    "response_worker"
+                  ],
+                  "workflow_id": "webarena_retrieval",
+                  "used_fallback_architect": true
+                },
+                {
+                  "timestamp": "2026-03-30T13:58:57.506814+00:00",
+                  "event_type": "worker",
+                  "worker": "page_state_worker",
+                  "step_id": "inspect_current_page",
+                  "writes": [
+                    "current_page",
+                    "page_evidence",
+                    "open_tabs"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:58:57.506856+00:00",
+                  "event_type": "worker",
+                  "worker": "verification_worker",
+                  "step_id": "verify_goal_progress",
+                  "writes": [
+                    "verification",
+                    "finish",
+                    "finish_reason"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:58:57.506920+00:00",
+                  "event_type": "worker",
+                  "worker": "response_worker",
+                  "step_id": "compose_final_answer",
+                  "writes": [
+                    "assistant_response"
+                  ],
+                  "tool_name": "",
+                  "finished": true
+                }
+              ],
+              "trajectory": [],
+              "goal_condition_rate": 1.0,
+              "worker_input_tokens": 0,
+              "worker_output_tokens": 0,
+              "architect_input_tokens": 0,
+              "architect_output_tokens": 0,
+              "total_tokens": 0,
+              "fallback_action_count": 0,
+              "patch_error_count": 0,
+              "retrieval_precision": 1.0,
+              "context_fragment_count": 4.666666666666667,
+              "relevant_fragment_count": 4.666666666666667,
+              "irrelevant_fragment_count": 0.0,
+              "circuit_breaker": {
+                "no_progress_count": 0,
+                "tripped": false,
+                "reason": "",
+                "last_error": ""
+              }
+            },
+            "metadata": {
+              "sites": [
+                "shopping_admin"
+              ],
+              "intent": "Get the top-3 best-selling product name(s) in Jan 2023",
+              "task_category": "retrieval",
+              "start_urls": [
+                "__SHOPPING_ADMIN__"
+              ],
+              "requires_final_response": true,
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:58:57.506844+00:00"
+              }
+            }
+          },
+          {
+            "run_id": "ablation_stage_phase_non_map10",
+            "system_id": "full",
+            "system_family": "blackboard",
+            "episode_id": "full:5",
+            "task_id": "5",
+            "success": false,
+            "finished": true,
+            "steps": 1,
+            "goal_condition_rate": 1.0,
+            "worker_input_tokens": 0,
+            "worker_output_tokens": 0,
+            "architect_input_tokens": 0,
+            "architect_output_tokens": 0,
+            "total_tokens": 0,
+            "fallback_action_count": 0,
+            "patch_error_count": 0,
+            "retrieval_precision": 1.0,
+            "context_fragment_count": 4.666666666666667,
+            "relevant_fragment_count": 4.666666666666667,
+            "irrelevant_fragment_count": 0.0,
+            "task_category": "retrieval",
+            "sites": [
+              "shopping_admin"
+            ],
+            "intent": "Get the top-1 best-selling product type name(s) in Jan 2023",
+            "tool_call_count": 0,
+            "assistant_message_count": 1,
+            "finish_reason": "task_completed",
+            "termination_reason": "task_completed",
+            "trajectory": [],
+            "evaluation": {
+              "task_id": 5,
+              "intent_template_id": 279,
+              "sites": [
+                "shopping_admin"
+              ],
+              "task_revision": 2,
+              "status": "failure",
+              "score": 0.0,
+              "evaluators_results": [
+                {
+                  "evaluator_name": "AgentResponseEvaluator",
+                  "status": "failure",
+                  "score": 0.0,
+                  "actual": "{\"task_type\": \"RETRIEVE\", \"status\": \"SUCCESS\", \"retrieved_data\": [\"DASHBOARD SALES CATALOG CUSTOMERS MARKETING CONTENT REPORTS STORES SYSTEM FIND PARTNERS & EXTENSIONS Dashboard admin Scope: All Store Views What is this? Reload Data Advanced Repor...\"], \"error_details\": null}",
+                  "actual_normalized": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": [
+                      "dashboard sales catalog customers marketing content reports stores system find partners & extensions dashboard admin scope: all store views what is this? reload data advanced repor..."
+                    ]
+                  },
+                  "expected": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": [
+                      "duffle"
+                    ]
+                  },
+                  "assertions": [
+                    {
+                      "assertion_name": "retrieved_data_array_values_mismatch",
+                      "status": "failure",
+                      "assertion_msgs": [
+                        "Array value mismatch (unordered). Matched (0/1), Missing: 1, Extra: 1",
+                        "Expected: [duffle], Got: [dashboard sales catalog customers marketing content reports stores system find partners & extensions dashboard admin scope: all store views what is this? reload data advanced repor...]"
+                      ],
+                      "error_msg": null
+                    }
+                  ],
+                  "error_msg": null,
+                  "should_not_exist": null
+                }
+              ],
+              "error_msg": null,
+              "webarena_verified_version": "1.2.3",
+              "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+              "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+            },
+            "communication_trace": [
+              {
+                "timestamp": "2026-03-30T13:58:59.192435+00:00",
+                "event_type": "architect",
+                "task_id": "5",
+                "selected_workers": [
+                  "page_state_worker",
+                  "verification_worker",
+                  "argument_grounding_worker",
+                  "browser_action_worker",
+                  "response_worker"
+                ],
+                "workflow_id": "webarena_retrieval",
+                "used_fallback_architect": true
+              },
+              {
+                "timestamp": "2026-03-30T13:58:59.192541+00:00",
+                "event_type": "worker",
+                "worker": "page_state_worker",
+                "step_id": "inspect_current_page",
+                "writes": [
+                  "current_page",
+                  "page_evidence",
+                  "open_tabs"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:58:59.192583+00:00",
+                "event_type": "worker",
+                "worker": "verification_worker",
+                "step_id": "verify_goal_progress",
+                "writes": [
+                  "verification",
+                  "finish",
+                  "finish_reason"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:58:59.192644+00:00",
+                "event_type": "worker",
+                "worker": "response_worker",
+                "step_id": "compose_final_answer",
+                "writes": [
+                  "assistant_response"
+                ],
+                "tool_name": "",
+                "finished": true
+              }
+            ],
+            "run_metadata": {
+              "kernel_status": "finished",
+              "current_step_id": "",
+              "current_step": {},
+              "active_worker": "response_worker",
+              "finish_reason": "task_completed",
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:58:59.192571+00:00"
+              },
+              "used_fallback_architect": true,
+              "fallback_reason": "heuristic_architect",
+              "architect_debug": {
+                "tool_names": [
+                  "browser__click",
+                  "browser__close_tab",
+                  "browser__finish",
+                  "browser__go_back",
+                  "browser__goto",
+                  "browser__new_tab",
+                  "browser__press",
+                  "browser__scroll",
+                  "browser__select_option",
+                  "browser__switch_tab",
+                  "browser__type"
+                ],
+                "task_category": "retrieval",
+                "requires_final_response": true,
+                "planner": "heuristic",
+                "stage_policy": {
+                  "phase_order": [
+                    "evidence",
+                    "respond"
+                  ],
+                  "initial_phase": "evidence"
+                }
+              },
+              "warnings": [],
+              "communication_trace": [
+                {
+                  "timestamp": "2026-03-30T13:58:59.192435+00:00",
+                  "event_type": "architect",
+                  "task_id": "5",
+                  "selected_workers": [
+                    "page_state_worker",
+                    "verification_worker",
+                    "argument_grounding_worker",
+                    "browser_action_worker",
+                    "response_worker"
+                  ],
+                  "workflow_id": "webarena_retrieval",
+                  "used_fallback_architect": true
+                },
+                {
+                  "timestamp": "2026-03-30T13:58:59.192541+00:00",
+                  "event_type": "worker",
+                  "worker": "page_state_worker",
+                  "step_id": "inspect_current_page",
+                  "writes": [
+                    "current_page",
+                    "page_evidence",
+                    "open_tabs"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:58:59.192583+00:00",
+                  "event_type": "worker",
+                  "worker": "verification_worker",
+                  "step_id": "verify_goal_progress",
+                  "writes": [
+                    "verification",
+                    "finish",
+                    "finish_reason"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:58:59.192644+00:00",
+                  "event_type": "worker",
+                  "worker": "response_worker",
+                  "step_id": "compose_final_answer",
+                  "writes": [
+                    "assistant_response"
+                  ],
+                  "tool_name": "",
+                  "finished": true
+                }
+              ],
+              "trajectory": [],
+              "goal_condition_rate": 1.0,
+              "worker_input_tokens": 0,
+              "worker_output_tokens": 0,
+              "architect_input_tokens": 0,
+              "architect_output_tokens": 0,
+              "total_tokens": 0,
+              "fallback_action_count": 0,
+              "patch_error_count": 0,
+              "retrieval_precision": 1.0,
+              "context_fragment_count": 4.666666666666667,
+              "relevant_fragment_count": 4.666666666666667,
+              "irrelevant_fragment_count": 0.0,
+              "circuit_breaker": {
+                "no_progress_count": 0,
+                "tripped": false,
+                "reason": "",
+                "last_error": ""
+              }
+            },
+            "metadata": {
+              "sites": [
+                "shopping_admin"
+              ],
+              "intent": "Get the top-1 best-selling product type name(s) in Jan 2023",
+              "task_category": "retrieval",
+              "start_urls": [
+                "__SHOPPING_ADMIN__"
+              ],
+              "requires_final_response": true,
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:58:59.192571+00:00"
+              }
+            }
+          },
+          {
+            "run_id": "ablation_stage_phase_non_map10",
+            "system_id": "full",
+            "system_family": "blackboard",
+            "episode_id": "full:6",
+            "task_id": "6",
+            "success": false,
+            "finished": true,
+            "steps": 1,
+            "goal_condition_rate": 1.0,
+            "worker_input_tokens": 0,
+            "worker_output_tokens": 0,
+            "architect_input_tokens": 0,
+            "architect_output_tokens": 0,
+            "total_tokens": 0,
+            "fallback_action_count": 0,
+            "patch_error_count": 0,
+            "retrieval_precision": 1.0,
+            "context_fragment_count": 4.666666666666667,
+            "relevant_fragment_count": 4.666666666666667,
+            "irrelevant_fragment_count": 0.0,
+            "task_category": "retrieval",
+            "sites": [
+              "shopping_admin"
+            ],
+            "intent": "Get the top-2 best-selling product name(s) in 2023",
+            "tool_call_count": 0,
+            "assistant_message_count": 1,
+            "finish_reason": "task_completed",
+            "termination_reason": "task_completed",
+            "trajectory": [],
+            "evaluation": {
+              "task_id": 6,
+              "intent_template_id": 279,
+              "sites": [
+                "shopping_admin"
+              ],
+              "task_revision": 2,
+              "status": "failure",
+              "score": 0.0,
+              "evaluators_results": [
+                {
+                  "evaluator_name": "AgentResponseEvaluator",
+                  "status": "failure",
+                  "score": 0.0,
+                  "actual": "{\"task_type\": \"RETRIEVE\", \"status\": \"SUCCESS\", \"retrieved_data\": [\"DASHBOARD SALES CATALOG CUSTOMERS MARKETING CONTENT REPORTS STORES SYSTEM FIND PARTNERS & EXTENSIONS Dashboard admin Scope: All Store Views What is this? Reload Data Advanced Repor...\"], \"error_details\": null}",
+                  "actual_normalized": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": [
+                      "dashboard sales catalog customers marketing content reports stores system find partners & extensions dashboard admin scope: all store views what is this? reload data advanced repor..."
+                    ]
+                  },
+                  "expected": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": [
+                      "sprite yoga strap 6 foot",
+                      "overnight duffle"
+                    ]
+                  },
+                  "assertions": [
+                    {
+                      "assertion_name": "retrieved_data_array_values_mismatch",
+                      "status": "failure",
+                      "assertion_msgs": [
+                        "Array value mismatch (unordered). Matched (0/2), Missing: 2, Extra: 1",
+                        "Expected: [sprite yoga strap 6 foot, overnight duffle], Got: [dashboard sales catalog customers marketing content reports stores system find partners & extensions dashboard admin scope: all store views what is this? reload data advanced repor...]"
+                      ],
+                      "error_msg": null
+                    }
+                  ],
+                  "error_msg": null,
+                  "should_not_exist": null
+                }
+              ],
+              "error_msg": null,
+              "webarena_verified_version": "1.2.3",
+              "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+              "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+            },
+            "communication_trace": [
+              {
+                "timestamp": "2026-03-30T13:59:01.180020+00:00",
+                "event_type": "architect",
+                "task_id": "6",
+                "selected_workers": [
+                  "page_state_worker",
+                  "verification_worker",
+                  "argument_grounding_worker",
+                  "browser_action_worker",
+                  "response_worker"
+                ],
+                "workflow_id": "webarena_retrieval",
+                "used_fallback_architect": true
+              },
+              {
+                "timestamp": "2026-03-30T13:59:01.180127+00:00",
+                "event_type": "worker",
+                "worker": "page_state_worker",
+                "step_id": "inspect_current_page",
+                "writes": [
+                  "current_page",
+                  "page_evidence",
+                  "open_tabs"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:59:01.180168+00:00",
+                "event_type": "worker",
+                "worker": "verification_worker",
+                "step_id": "verify_goal_progress",
+                "writes": [
+                  "verification",
+                  "finish",
+                  "finish_reason"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:59:01.180234+00:00",
+                "event_type": "worker",
+                "worker": "response_worker",
+                "step_id": "compose_final_answer",
+                "writes": [
+                  "assistant_response"
+                ],
+                "tool_name": "",
+                "finished": true
+              }
+            ],
+            "run_metadata": {
+              "kernel_status": "finished",
+              "current_step_id": "",
+              "current_step": {},
+              "active_worker": "response_worker",
+              "finish_reason": "task_completed",
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:59:01.180155+00:00"
+              },
+              "used_fallback_architect": true,
+              "fallback_reason": "heuristic_architect",
+              "architect_debug": {
+                "tool_names": [
+                  "browser__click",
+                  "browser__close_tab",
+                  "browser__finish",
+                  "browser__go_back",
+                  "browser__goto",
+                  "browser__new_tab",
+                  "browser__press",
+                  "browser__scroll",
+                  "browser__select_option",
+                  "browser__switch_tab",
+                  "browser__type"
+                ],
+                "task_category": "retrieval",
+                "requires_final_response": true,
+                "planner": "heuristic",
+                "stage_policy": {
+                  "phase_order": [
+                    "evidence",
+                    "respond"
+                  ],
+                  "initial_phase": "evidence"
+                }
+              },
+              "warnings": [],
+              "communication_trace": [
+                {
+                  "timestamp": "2026-03-30T13:59:01.180020+00:00",
+                  "event_type": "architect",
+                  "task_id": "6",
+                  "selected_workers": [
+                    "page_state_worker",
+                    "verification_worker",
+                    "argument_grounding_worker",
+                    "browser_action_worker",
+                    "response_worker"
+                  ],
+                  "workflow_id": "webarena_retrieval",
+                  "used_fallback_architect": true
+                },
+                {
+                  "timestamp": "2026-03-30T13:59:01.180127+00:00",
+                  "event_type": "worker",
+                  "worker": "page_state_worker",
+                  "step_id": "inspect_current_page",
+                  "writes": [
+                    "current_page",
+                    "page_evidence",
+                    "open_tabs"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:59:01.180168+00:00",
+                  "event_type": "worker",
+                  "worker": "verification_worker",
+                  "step_id": "verify_goal_progress",
+                  "writes": [
+                    "verification",
+                    "finish",
+                    "finish_reason"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:59:01.180234+00:00",
+                  "event_type": "worker",
+                  "worker": "response_worker",
+                  "step_id": "compose_final_answer",
+                  "writes": [
+                    "assistant_response"
+                  ],
+                  "tool_name": "",
+                  "finished": true
+                }
+              ],
+              "trajectory": [],
+              "goal_condition_rate": 1.0,
+              "worker_input_tokens": 0,
+              "worker_output_tokens": 0,
+              "architect_input_tokens": 0,
+              "architect_output_tokens": 0,
+              "total_tokens": 0,
+              "fallback_action_count": 0,
+              "patch_error_count": 0,
+              "retrieval_precision": 1.0,
+              "context_fragment_count": 4.666666666666667,
+              "relevant_fragment_count": 4.666666666666667,
+              "irrelevant_fragment_count": 0.0,
+              "circuit_breaker": {
+                "no_progress_count": 0,
+                "tripped": false,
+                "reason": "",
+                "last_error": ""
+              }
+            },
+            "metadata": {
+              "sites": [
+                "shopping_admin"
+              ],
+              "intent": "Get the top-2 best-selling product name(s) in 2023",
+              "task_category": "retrieval",
+              "start_urls": [
+                "__SHOPPING_ADMIN__"
+              ],
+              "requires_final_response": true,
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:59:01.180155+00:00"
+              }
+            }
+          },
+          {
+            "run_id": "ablation_stage_phase_non_map10",
+            "system_id": "full",
+            "system_family": "blackboard",
+            "episode_id": "full:11",
+            "task_id": "11",
+            "success": false,
+            "finished": true,
+            "steps": 1,
+            "goal_condition_rate": 1.0,
+            "worker_input_tokens": 0,
+            "worker_output_tokens": 0,
+            "architect_input_tokens": 0,
+            "architect_output_tokens": 0,
+            "total_tokens": 0,
+            "fallback_action_count": 0,
+            "patch_error_count": 0,
+            "retrieval_precision": 1.0,
+            "context_fragment_count": 4.666666666666667,
+            "relevant_fragment_count": 4.666666666666667,
+            "irrelevant_fragment_count": 0.0,
+            "task_category": "retrieval",
+            "sites": [
+              "shopping_admin"
+            ],
+            "intent": "Get the total number of reviews that our store received so far that mention term \"disappointed\"",
+            "tool_call_count": 0,
+            "assistant_message_count": 1,
+            "finish_reason": "task_completed",
+            "termination_reason": "task_completed",
+            "trajectory": [],
+            "evaluation": {
+              "task_id": 11,
+              "intent_template_id": 288,
+              "sites": [
+                "shopping_admin"
+              ],
+              "task_revision": 2,
+              "status": "failure",
+              "score": 0.0,
+              "evaluators_results": [
+                {
+                  "evaluator_name": "AgentResponseEvaluator",
+                  "status": "failure",
+                  "score": 0.0,
+                  "actual": "{\"task_type\": \"RETRIEVE\", \"status\": \"SUCCESS\", \"retrieved_data\": [], \"error_details\": null}",
+                  "actual_normalized": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": null
+                  },
+                  "expected": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": [
+                      6.0
+                    ]
+                  },
+                  "assertions": [
+                    {
+                      "assertion_name": "retrieved_data_missing_or_null",
+                      "status": "failure",
+                      "assertion_msgs": [
+                        "Expected retrieved_data to be (Number(6.0),), but got None or empty"
+                      ],
+                      "error_msg": null
+                    }
+                  ],
+                  "error_msg": null,
+                  "should_not_exist": null
+                }
+              ],
+              "error_msg": null,
+              "webarena_verified_version": "1.2.3",
+              "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+              "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+            },
+            "communication_trace": [
+              {
+                "timestamp": "2026-03-30T13:59:02.789814+00:00",
+                "event_type": "architect",
+                "task_id": "11",
+                "selected_workers": [
+                  "page_state_worker",
+                  "verification_worker",
+                  "argument_grounding_worker",
+                  "browser_action_worker",
+                  "response_worker"
+                ],
+                "workflow_id": "webarena_retrieval",
+                "used_fallback_architect": true
+              },
+              {
+                "timestamp": "2026-03-30T13:59:02.789925+00:00",
+                "event_type": "worker",
+                "worker": "page_state_worker",
+                "step_id": "inspect_current_page",
+                "writes": [
+                  "current_page",
+                  "page_evidence",
+                  "open_tabs"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:59:02.789971+00:00",
+                "event_type": "worker",
+                "worker": "verification_worker",
+                "step_id": "verify_goal_progress",
+                "writes": [
+                  "verification",
+                  "finish",
+                  "finish_reason"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:59:02.790032+00:00",
+                "event_type": "worker",
+                "worker": "response_worker",
+                "step_id": "compose_final_answer",
+                "writes": [
+                  "assistant_response"
+                ],
+                "tool_name": "",
+                "finished": true
+              }
+            ],
+            "run_metadata": {
+              "kernel_status": "finished",
+              "current_step_id": "",
+              "current_step": {},
+              "active_worker": "response_worker",
+              "finish_reason": "task_completed",
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:59:02.789957+00:00"
+              },
+              "used_fallback_architect": true,
+              "fallback_reason": "heuristic_architect",
+              "architect_debug": {
+                "tool_names": [
+                  "browser__click",
+                  "browser__close_tab",
+                  "browser__finish",
+                  "browser__go_back",
+                  "browser__goto",
+                  "browser__new_tab",
+                  "browser__press",
+                  "browser__scroll",
+                  "browser__select_option",
+                  "browser__switch_tab",
+                  "browser__type"
+                ],
+                "task_category": "retrieval",
+                "requires_final_response": true,
+                "planner": "heuristic",
+                "stage_policy": {
+                  "phase_order": [
+                    "evidence",
+                    "respond"
+                  ],
+                  "initial_phase": "evidence"
+                }
+              },
+              "warnings": [],
+              "communication_trace": [
+                {
+                  "timestamp": "2026-03-30T13:59:02.789814+00:00",
+                  "event_type": "architect",
+                  "task_id": "11",
+                  "selected_workers": [
+                    "page_state_worker",
+                    "verification_worker",
+                    "argument_grounding_worker",
+                    "browser_action_worker",
+                    "response_worker"
+                  ],
+                  "workflow_id": "webarena_retrieval",
+                  "used_fallback_architect": true
+                },
+                {
+                  "timestamp": "2026-03-30T13:59:02.789925+00:00",
+                  "event_type": "worker",
+                  "worker": "page_state_worker",
+                  "step_id": "inspect_current_page",
+                  "writes": [
+                    "current_page",
+                    "page_evidence",
+                    "open_tabs"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:59:02.789971+00:00",
+                  "event_type": "worker",
+                  "worker": "verification_worker",
+                  "step_id": "verify_goal_progress",
+                  "writes": [
+                    "verification",
+                    "finish",
+                    "finish_reason"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:59:02.790032+00:00",
+                  "event_type": "worker",
+                  "worker": "response_worker",
+                  "step_id": "compose_final_answer",
+                  "writes": [
+                    "assistant_response"
+                  ],
+                  "tool_name": "",
+                  "finished": true
+                }
+              ],
+              "trajectory": [],
+              "goal_condition_rate": 1.0,
+              "worker_input_tokens": 0,
+              "worker_output_tokens": 0,
+              "architect_input_tokens": 0,
+              "architect_output_tokens": 0,
+              "total_tokens": 0,
+              "fallback_action_count": 0,
+              "patch_error_count": 0,
+              "retrieval_precision": 1.0,
+              "context_fragment_count": 4.666666666666667,
+              "relevant_fragment_count": 4.666666666666667,
+              "irrelevant_fragment_count": 0.0,
+              "circuit_breaker": {
+                "no_progress_count": 0,
+                "tripped": false,
+                "reason": "",
+                "last_error": ""
+              }
+            },
+            "metadata": {
+              "sites": [
+                "shopping_admin"
+              ],
+              "intent": "Get the total number of reviews that our store received so far that mention term \"disappointed\"",
+              "task_category": "retrieval",
+              "start_urls": [
+                "__SHOPPING_ADMIN__"
+              ],
+              "requires_final_response": true,
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:59:02.789957+00:00"
+              }
+            }
+          },
+          {
+            "run_id": "ablation_stage_phase_non_map10",
+            "system_id": "full",
+            "system_family": "blackboard",
+            "episode_id": "full:12",
+            "task_id": "12",
+            "success": false,
+            "finished": true,
+            "steps": 1,
+            "goal_condition_rate": 1.0,
+            "worker_input_tokens": 0,
+            "worker_output_tokens": 0,
+            "architect_input_tokens": 0,
+            "architect_output_tokens": 0,
+            "total_tokens": 0,
+            "fallback_action_count": 0,
+            "patch_error_count": 0,
+            "retrieval_precision": 1.0,
+            "context_fragment_count": 4.666666666666667,
+            "relevant_fragment_count": 4.666666666666667,
+            "irrelevant_fragment_count": 0.0,
+            "task_category": "retrieval",
+            "sites": [
+              "shopping_admin"
+            ],
+            "intent": "Get the total number of reviews that our store received so far that mention term \"satisfied\"",
+            "tool_call_count": 0,
+            "assistant_message_count": 1,
+            "finish_reason": "task_completed",
+            "termination_reason": "task_completed",
+            "trajectory": [],
+            "evaluation": {
+              "task_id": 12,
+              "intent_template_id": 288,
+              "sites": [
+                "shopping_admin"
+              ],
+              "task_revision": 2,
+              "status": "failure",
+              "score": 0.0,
+              "evaluators_results": [
+                {
+                  "evaluator_name": "AgentResponseEvaluator",
+                  "status": "failure",
+                  "score": 0.0,
+                  "actual": "{\"task_type\": \"RETRIEVE\", \"status\": \"SUCCESS\", \"retrieved_data\": [], \"error_details\": null}",
+                  "actual_normalized": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": null
+                  },
+                  "expected": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": [
+                      2.0
+                    ]
+                  },
+                  "assertions": [
+                    {
+                      "assertion_name": "retrieved_data_missing_or_null",
+                      "status": "failure",
+                      "assertion_msgs": [
+                        "Expected retrieved_data to be (Number(2.0),), but got None or empty"
+                      ],
+                      "error_msg": null
+                    }
+                  ],
+                  "error_msg": null,
+                  "should_not_exist": null
+                }
+              ],
+              "error_msg": null,
+              "webarena_verified_version": "1.2.3",
+              "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+              "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+            },
+            "communication_trace": [
+              {
+                "timestamp": "2026-03-30T13:59:04.506841+00:00",
+                "event_type": "architect",
+                "task_id": "12",
+                "selected_workers": [
+                  "page_state_worker",
+                  "verification_worker",
+                  "argument_grounding_worker",
+                  "browser_action_worker",
+                  "response_worker"
+                ],
+                "workflow_id": "webarena_retrieval",
+                "used_fallback_architect": true
+              },
+              {
+                "timestamp": "2026-03-30T13:59:04.506955+00:00",
+                "event_type": "worker",
+                "worker": "page_state_worker",
+                "step_id": "inspect_current_page",
+                "writes": [
+                  "current_page",
+                  "page_evidence",
+                  "open_tabs"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:59:04.507003+00:00",
+                "event_type": "worker",
+                "worker": "verification_worker",
+                "step_id": "verify_goal_progress",
+                "writes": [
+                  "verification",
+                  "finish",
+                  "finish_reason"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:59:04.507071+00:00",
+                "event_type": "worker",
+                "worker": "response_worker",
+                "step_id": "compose_final_answer",
+                "writes": [
+                  "assistant_response"
+                ],
+                "tool_name": "",
+                "finished": true
+              }
+            ],
+            "run_metadata": {
+              "kernel_status": "finished",
+              "current_step_id": "",
+              "current_step": {},
+              "active_worker": "response_worker",
+              "finish_reason": "task_completed",
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:59:04.506988+00:00"
+              },
+              "used_fallback_architect": true,
+              "fallback_reason": "heuristic_architect",
+              "architect_debug": {
+                "tool_names": [
+                  "browser__click",
+                  "browser__close_tab",
+                  "browser__finish",
+                  "browser__go_back",
+                  "browser__goto",
+                  "browser__new_tab",
+                  "browser__press",
+                  "browser__scroll",
+                  "browser__select_option",
+                  "browser__switch_tab",
+                  "browser__type"
+                ],
+                "task_category": "retrieval",
+                "requires_final_response": true,
+                "planner": "heuristic",
+                "stage_policy": {
+                  "phase_order": [
+                    "evidence",
+                    "respond"
+                  ],
+                  "initial_phase": "evidence"
+                }
+              },
+              "warnings": [],
+              "communication_trace": [
+                {
+                  "timestamp": "2026-03-30T13:59:04.506841+00:00",
+                  "event_type": "architect",
+                  "task_id": "12",
+                  "selected_workers": [
+                    "page_state_worker",
+                    "verification_worker",
+                    "argument_grounding_worker",
+                    "browser_action_worker",
+                    "response_worker"
+                  ],
+                  "workflow_id": "webarena_retrieval",
+                  "used_fallback_architect": true
+                },
+                {
+                  "timestamp": "2026-03-30T13:59:04.506955+00:00",
+                  "event_type": "worker",
+                  "worker": "page_state_worker",
+                  "step_id": "inspect_current_page",
+                  "writes": [
+                    "current_page",
+                    "page_evidence",
+                    "open_tabs"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:59:04.507003+00:00",
+                  "event_type": "worker",
+                  "worker": "verification_worker",
+                  "step_id": "verify_goal_progress",
+                  "writes": [
+                    "verification",
+                    "finish",
+                    "finish_reason"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:59:04.507071+00:00",
+                  "event_type": "worker",
+                  "worker": "response_worker",
+                  "step_id": "compose_final_answer",
+                  "writes": [
+                    "assistant_response"
+                  ],
+                  "tool_name": "",
+                  "finished": true
+                }
+              ],
+              "trajectory": [],
+              "goal_condition_rate": 1.0,
+              "worker_input_tokens": 0,
+              "worker_output_tokens": 0,
+              "architect_input_tokens": 0,
+              "architect_output_tokens": 0,
+              "total_tokens": 0,
+              "fallback_action_count": 0,
+              "patch_error_count": 0,
+              "retrieval_precision": 1.0,
+              "context_fragment_count": 4.666666666666667,
+              "relevant_fragment_count": 4.666666666666667,
+              "irrelevant_fragment_count": 0.0,
+              "circuit_breaker": {
+                "no_progress_count": 0,
+                "tripped": false,
+                "reason": "",
+                "last_error": ""
+              }
+            },
+            "metadata": {
+              "sites": [
+                "shopping_admin"
+              ],
+              "intent": "Get the total number of reviews that our store received so far that mention term \"satisfied\"",
+              "task_category": "retrieval",
+              "start_urls": [
+                "__SHOPPING_ADMIN__"
+              ],
+              "requires_final_response": true,
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:59:04.506988+00:00"
+              }
+            }
+          },
+          {
+            "run_id": "ablation_stage_phase_non_map10",
+            "system_id": "full",
+            "system_family": "blackboard",
+            "episode_id": "full:13",
+            "task_id": "13",
+            "success": false,
+            "finished": true,
+            "steps": 1,
+            "goal_condition_rate": 1.0,
+            "worker_input_tokens": 0,
+            "worker_output_tokens": 0,
+            "architect_input_tokens": 0,
+            "architect_output_tokens": 0,
+            "total_tokens": 0,
+            "fallback_action_count": 0,
+            "patch_error_count": 0,
+            "retrieval_precision": 1.0,
+            "context_fragment_count": 4.666666666666667,
+            "relevant_fragment_count": 4.666666666666667,
+            "irrelevant_fragment_count": 0.0,
+            "task_category": "retrieval",
+            "sites": [
+              "shopping_admin"
+            ],
+            "intent": "Get the total number of reviews that our store received so far that mention term \"decent\"",
+            "tool_call_count": 0,
+            "assistant_message_count": 1,
+            "finish_reason": "task_completed",
+            "termination_reason": "task_completed",
+            "trajectory": [],
+            "evaluation": {
+              "task_id": 13,
+              "intent_template_id": 288,
+              "sites": [
+                "shopping_admin"
+              ],
+              "task_revision": 2,
+              "status": "failure",
+              "score": 0.0,
+              "evaluators_results": [
+                {
+                  "evaluator_name": "AgentResponseEvaluator",
+                  "status": "failure",
+                  "score": 0.0,
+                  "actual": "{\"task_type\": \"RETRIEVE\", \"status\": \"SUCCESS\", \"retrieved_data\": [], \"error_details\": null}",
+                  "actual_normalized": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": null
+                  },
+                  "expected": {
+                    "task_type": "retrieve",
+                    "status": "success",
+                    "retrieved_data": [
+                      2.0
+                    ]
+                  },
+                  "assertions": [
+                    {
+                      "assertion_name": "retrieved_data_missing_or_null",
+                      "status": "failure",
+                      "assertion_msgs": [
+                        "Expected retrieved_data to be (Number(2.0),), but got None or empty"
+                      ],
+                      "error_msg": null
+                    }
+                  ],
+                  "error_msg": null,
+                  "should_not_exist": null
+                }
+              ],
+              "error_msg": null,
+              "webarena_verified_version": "1.2.3",
+              "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+              "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+            },
+            "communication_trace": [
+              {
+                "timestamp": "2026-03-30T13:59:06.237099+00:00",
+                "event_type": "architect",
+                "task_id": "13",
+                "selected_workers": [
+                  "page_state_worker",
+                  "verification_worker",
+                  "argument_grounding_worker",
+                  "browser_action_worker",
+                  "response_worker"
+                ],
+                "workflow_id": "webarena_retrieval",
+                "used_fallback_architect": true
+              },
+              {
+                "timestamp": "2026-03-30T13:59:06.237217+00:00",
+                "event_type": "worker",
+                "worker": "page_state_worker",
+                "step_id": "inspect_current_page",
+                "writes": [
+                  "current_page",
+                  "page_evidence",
+                  "open_tabs"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:59:06.237264+00:00",
+                "event_type": "worker",
+                "worker": "verification_worker",
+                "step_id": "verify_goal_progress",
+                "writes": [
+                  "verification",
+                  "finish",
+                  "finish_reason"
+                ],
+                "tool_name": "",
+                "finished": false
+              },
+              {
+                "timestamp": "2026-03-30T13:59:06.237327+00:00",
+                "event_type": "worker",
+                "worker": "response_worker",
+                "step_id": "compose_final_answer",
+                "writes": [
+                  "assistant_response"
+                ],
+                "tool_name": "",
+                "finished": true
+              }
+            ],
+            "run_metadata": {
+              "kernel_status": "finished",
+              "current_step_id": "",
+              "current_step": {},
+              "active_worker": "response_worker",
+              "finish_reason": "task_completed",
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:59:06.237251+00:00"
+              },
+              "used_fallback_architect": true,
+              "fallback_reason": "heuristic_architect",
+              "architect_debug": {
+                "tool_names": [
+                  "browser__click",
+                  "browser__close_tab",
+                  "browser__finish",
+                  "browser__go_back",
+                  "browser__goto",
+                  "browser__new_tab",
+                  "browser__press",
+                  "browser__scroll",
+                  "browser__select_option",
+                  "browser__switch_tab",
+                  "browser__type"
+                ],
+                "task_category": "retrieval",
+                "requires_final_response": true,
+                "planner": "heuristic",
+                "stage_policy": {
+                  "phase_order": [
+                    "evidence",
+                    "respond"
+                  ],
+                  "initial_phase": "evidence"
+                }
+              },
+              "warnings": [],
+              "communication_trace": [
+                {
+                  "timestamp": "2026-03-30T13:59:06.237099+00:00",
+                  "event_type": "architect",
+                  "task_id": "13",
+                  "selected_workers": [
+                    "page_state_worker",
+                    "verification_worker",
+                    "argument_grounding_worker",
+                    "browser_action_worker",
+                    "response_worker"
+                  ],
+                  "workflow_id": "webarena_retrieval",
+                  "used_fallback_architect": true
+                },
+                {
+                  "timestamp": "2026-03-30T13:59:06.237217+00:00",
+                  "event_type": "worker",
+                  "worker": "page_state_worker",
+                  "step_id": "inspect_current_page",
+                  "writes": [
+                    "current_page",
+                    "page_evidence",
+                    "open_tabs"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:59:06.237264+00:00",
+                  "event_type": "worker",
+                  "worker": "verification_worker",
+                  "step_id": "verify_goal_progress",
+                  "writes": [
+                    "verification",
+                    "finish",
+                    "finish_reason"
+                  ],
+                  "tool_name": "",
+                  "finished": false
+                },
+                {
+                  "timestamp": "2026-03-30T13:59:06.237327+00:00",
+                  "event_type": "worker",
+                  "worker": "response_worker",
+                  "step_id": "compose_final_answer",
+                  "writes": [
+                    "assistant_response"
+                  ],
+                  "tool_name": "",
+                  "finished": true
+                }
+              ],
+              "trajectory": [],
+              "goal_condition_rate": 1.0,
+              "worker_input_tokens": 0,
+              "worker_output_tokens": 0,
+              "architect_input_tokens": 0,
+              "architect_output_tokens": 0,
+              "total_tokens": 0,
+              "fallback_action_count": 0,
+              "patch_error_count": 0,
+              "retrieval_precision": 1.0,
+              "context_fragment_count": 4.666666666666667,
+              "relevant_fragment_count": 4.666666666666667,
+              "irrelevant_fragment_count": 0.0,
+              "circuit_breaker": {
+                "no_progress_count": 0,
+                "tripped": false,
+                "reason": "",
+                "last_error": ""
+              }
+            },
+            "metadata": {
+              "sites": [
+                "shopping_admin"
+              ],
+              "intent": "Get the total number of reviews that our store received so far that mention term \"decent\"",
+              "task_category": "retrieval",
+              "start_urls": [
+                "__SHOPPING_ADMIN__"
+              ],
+              "requires_final_response": true,
+              "verification": {
+                "goal_reached": true,
+                "matched_target_url": "http://localhost:7780/admin/admin/dashboard",
+                "requires_final_response": true,
+                "needs_response": true,
+                "progress_made": true,
+                "evidence_ready": true,
+                "answer_ready": true,
+                "action_count": 0,
+                "facts_count": 1,
+                "number_mentions_count": 0,
+                "current_url": "http://localhost:7780/admin/admin/dashboard",
+                "previous_url": "",
+                "phase": "respond",
+                "task_category": "retrieval",
+                "updated_at": "2026-03-30T13:59:06.237251+00:00"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "communication_analysis": {
+    "summary_path": "/home/syq/Documents/blackboard/experiment/webarena/outputs/ablation_stage_phase_non_map10/comm_summary.json",
+    "trace_path": "/home/syq/Documents/blackboard/experiment/webarena/outputs/ablation_stage_phase_non_map10/comm_trace.jsonl",
+    "judge_path": "/home/syq/Documents/blackboard/experiment/webarena/outputs/ablation_stage_phase_non_map10/comm_judge.jsonl"
+  }
+}

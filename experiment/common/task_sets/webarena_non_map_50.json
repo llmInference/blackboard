@@ -1,0 +1,79 @@
+{
+  "env_name": "webarena",
+  "task_set": "non_map_50",
+  "root_dir": "../../../webarena-verified/assets/dataset",
+  "selection": {
+    "mode": "explicit",
+    "items": [
+      "webarena-verified.json"
+    ],
+    "seed": 42
+  },
+  "metadata": {
+    "benchmark_variant": "webarena-verified",
+    "dataset_file": "webarena-verified.json",
+    "description": "固定的 50 题 non-map WebArena-Verified 子集，排除了所有 sites 包含 map 的任务。",
+    "excluded_sites": [
+      "map"
+    ],
+    "task_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      11,
+      12,
+      13,
+      14,
+      15,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      77,
+      78,
+      79,
+      94,
+      95,
+      96,
+      102,
+      103
+    ],
+    "site_breakdown": {
+      "shopping_admin": 24,
+      "shopping": 12,
+      "reddit": 9,
+      "gitlab": 5
+    },
+    "config_template": "../configs/webarena_verified_local.example.json"
+  }
+}

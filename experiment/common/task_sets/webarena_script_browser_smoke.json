@@ -1,0 +1,19 @@
+{
+  "env_name": "webarena",
+  "task_set": "script_browser_smoke",
+  "root_dir": "../../../webarena-verified/assets/dataset",
+  "selection": {
+    "mode": "explicit",
+    "items": [
+      "webarena-verified.json"
+    ],
+    "seed": 42
+  },
+  "metadata": {
+    "benchmark_variant": "webarena-verified",
+    "dataset_file": "webarena-verified.json",
+    "task_ids": [44],
+    "config_template": "../configs/webarena_verified_local.example.json",
+    "description": "单任务 WebArena-Verified smoke manifest。当前选用官方 GitLab demo task_id=44。"
+  }
+}

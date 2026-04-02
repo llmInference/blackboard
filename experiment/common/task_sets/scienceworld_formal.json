@@ -1,0 +1,22 @@
+{
+  "env_name": "scienceworld",
+  "task_set": "formal",
+  "root_dir": "../../scienceworld/configs",
+  "selection": {
+    "mode": "explicit",
+    "items": [
+      "boil_var0.json",
+      "melt_var0.json",
+      "power_component_var0.json",
+      "find_living_thing_var0.json",
+      "freeze_var1.json",
+      "use_thermometer_var0.json",
+      "grow_plant_var0.json",
+      "chemistry_mix_var0.json"
+    ],
+    "seed": 42
+  },
+  "metadata": {
+    "description": "ScienceWorld formal subset using checked-in task configs."
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "modes": [
+    "full",
+    "ablate_c1",
+    "ablate_c2",
+    "ablate_c3",
+    "ablate_c4",
+    "ablate_c5"
+  ],
+  "n_gamefiles": 12,
+  "workflow_mode": "planner_llm_action",
+  "architect_mode": "llm",
+  "gamefiles_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/selected_gamefiles.json",
+  "config_snapshot_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/config_snapshot.json",
+  "summaries": {
+    "full": {
+      "n_episodes": 12,
+      "success_rate": 0.5833333333333334,
+      "mean_steps": 10.25,
+      "mean_total_tokens": 51166.583333333336,
+      "mean_worker_input_tokens": 35162.5,
+      "mean_worker_output_tokens": 787.5,
+      "mean_architect_input_tokens": 12528.916666666666,
+      "mean_architect_output_tokens": 2687.6666666666665,
+      "mean_architect_total_tokens": 15216.583333333332,
+      "mean_goal_condition_rate": 0.5833333333333334,
+      "mean_fallback_rate": 0.0,
+      "mean_patch_error_rate": 0.0,
+      "mean_no_update_rate": 0.0,
+      "mean_repeat_action_rate": 0.0,
+      "mean_repeat_observation_rate": 0.0,
+      "mean_stagnation_rate": 0.10186480186480186,
+      "circuit_breaker_trigger_rate": 0.25,
+      "waiting_for_user_rate": 0.0,
+      "stop_reason_breakdown": {
+        "environment_done": 7,
+        "max_steps_reached": 2,
+        "stagnation_detected": 3
+      },
+      "final_status_breakdown": {
+        "success": 7,
+        "incomplete": 2,
+        "stagnation": 3
+      },
+      "workflow_final_status_breakdown": {
+        "completed": 12
+      },
+      "mode": "full",
+      "disabled_components": [],
+      "n_gamefiles": 12,
+      "episodes_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/full/full_episodes.jsonl",
+      "summary_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/full/full_summary.json",
+      "standard_episodes_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/full/episode_results.jsonl",
+      "standard_summary_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/full/summary.json",
+      "config_snapshot_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/full/config_snapshot.json"
+    },
+    "ablate_c1": {
+      "n_episodes": 12,
+      "success_rate": 0.0,
+      "mean_steps": 3.0,
+      "mean_total_tokens": 12682.416666666666,
+      "mean_worker_input_tokens": 7872.75,
+      "mean_worker_output_tokens": 457.1666666666667,
+      "mean_architect_input_tokens": 3587.5833333333335,
+      "mean_architect_output_tokens": 764.9166666666666,
+      "mean_architect_total_tokens": 4352.5,
+      "mean_goal_condition_rate": 0.0,
+      "mean_fallback_rate": 1.0,
+      "mean_patch_error_rate": 0.0,
+      "mean_no_update_rate": 0.0,
+      "mean_repeat_action_rate": 0.6666666666666666,
+      "mean_repeat_observation_rate": 0.6666666666666666,
+      "mean_stagnation_rate": 0.6666666666666666,
+      "circuit_breaker_trigger_rate": 1.0,
+      "waiting_for_user_rate": 0.0,
+      "stop_reason_breakdown": {
+        "stagnation_detected": 12
+      },
+      "final_status_breakdown": {
+        "stagnation": 12
+      },
+      "workflow_final_status_breakdown": {
+        "completed": 12
+      },
+      "mode": "ablate_c1",
+      "disabled_components": [
+        "C1"
+      ],
+      "n_gamefiles": 12,
+      "episodes_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c1/ablate_c1_episodes.jsonl",
+      "summary_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c1/ablate_c1_summary.json",
+      "standard_episodes_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c1/episode_results.jsonl",
+      "standard_summary_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c1/summary.json",
+      "config_snapshot_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c1/config_snapshot.json"
+    },
+    "ablate_c2": {
+      "n_episodes": 12,
+      "success_rate": 0.75,
+      "mean_steps": 9.916666666666666,
+      "mean_total_tokens": 49966.75,
+      "mean_worker_input_tokens": 34292.083333333336,
+      "mean_worker_output_tokens": 765.25,
+      "mean_architect_input_tokens": 12282.333333333334,
+      "mean_architect_output_tokens": 2627.0833333333335,
+      "mean_architect_total_tokens": 14909.416666666668,
+      "mean_goal_condition_rate": 0.75,
+      "mean_fallback_rate": 0.0,
+      "mean_patch_error_rate": 0.0,
+      "mean_no_update_rate": 0.0,
+      "mean_repeat_action_rate": 0.0,
+      "mean_repeat_observation_rate": 0.0,
+      "mean_stagnation_rate": 0.05819088319088319,
+      "circuit_breaker_trigger_rate": 0.08333333333333333,
+      "waiting_for_user_rate": 0.0,
+      "stop_reason_breakdown": {
+        "environment_done": 9,
+        "max_steps_reached": 2,
+        "stagnation_detected": 1
+      },
+      "final_status_breakdown": {
+        "success": 9,
+        "incomplete": 2,
+        "stagnation": 1
+      },
+      "workflow_final_status_breakdown": {
+        "completed": 12
+      },
+      "mode": "ablate_c2",
+      "disabled_components": [
+        "C2"
+      ],
+      "n_gamefiles": 12,
+      "episodes_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c2/ablate_c2_episodes.jsonl",
+      "summary_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c2/ablate_c2_summary.json",
+      "standard_episodes_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c2/episode_results.jsonl",
+      "standard_summary_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c2/summary.json",
+      "config_snapshot_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c2/config_snapshot.json"
+    },
+    "ablate_c3": {
+      "n_episodes": 12,
+      "success_rate": 0.6666666666666666,
+      "mean_steps": 11.5,
+      "mean_total_tokens": 57582.666666666664,
+      "mean_worker_input_tokens": 39628.166666666664,
+      "mean_worker_output_tokens": 897.0,
+      "mean_architect_input_tokens": 13944.916666666666,
+      "mean_architect_output_tokens": 3112.5833333333335,
+      "mean_architect_total_tokens": 17057.5,
+      "mean_goal_condition_rate": 0.6666666666666666,
+      "mean_fallback_rate": 0.0,
+      "mean_patch_error_rate": 0.0,
+      "mean_no_update_rate": 0.0,
+      "mean_repeat_action_rate": 0.004166666666666667,
+      "mean_repeat_observation_rate": 0.004166666666666667,
+      "mean_stagnation_rate": 0.08674242424242425,
+      "circuit_breaker_trigger_rate": 0.0,
+      "waiting_for_user_rate": 0.0,
+      "stop_reason_breakdown": {
+        "environment_done": 8,
+        "max_steps_reached": 4
+      },
+      "final_status_breakdown": {
+        "success": 8,
+        "incomplete": 4
+      },
+      "workflow_final_status_breakdown": {
+        "completed": 12
+      },
+      "mode": "ablate_c3",
+      "disabled_components": [
+        "C3"
+      ],
+      "n_gamefiles": 12,
+      "episodes_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c3/ablate_c3_episodes.jsonl",
+      "summary_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c3/ablate_c3_summary.json",
+      "standard_episodes_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c3/episode_results.jsonl",
+      "standard_summary_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c3/summary.json",
+      "config_snapshot_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c3/config_snapshot.json"
+    },
+    "ablate_c4": {
+      "n_episodes": 12,
+      "success_rate": 0.4166666666666667,
+      "mean_steps": 11.75,
+      "mean_total_tokens": 66233.41666666667,
+      "mean_worker_input_tokens": 47652.916666666664,
+      "mean_worker_output_tokens": 1218.25,
+      "mean_architect_input_tokens": 14231.166666666666,
+      "mean_architect_output_tokens": 3131.0833333333335,
+      "mean_architect_total_tokens": 17362.25,
+      "mean_goal_condition_rate": 0.4166666666666667,
+      "mean_fallback_rate": 0.10540824915824916,
+      "mean_patch_error_rate": 0.07093855218855219,
+      "mean_no_update_rate": 0.0,
+      "mean_repeat_action_rate": 0.019318181818181818,
+      "mean_repeat_observation_rate": 0.019318181818181818,
+      "mean_stagnation_rate": 0.06797014260249555,
+      "circuit_breaker_trigger_rate": 0.4166666666666667,
+      "waiting_for_user_rate": 0.0,
+      "stop_reason_breakdown": {
+        "environment_done": 5,
+        "stagnation_detected": 5,
+        "max_steps_reached": 2
+      },
+      "final_status_breakdown": {
+        "success": 5,
+        "stagnation": 5,
+        "incomplete": 2
+      },
+      "workflow_final_status_breakdown": {
+        "completed": 11,
+        "acting": 1
+      },
+      "mode": "ablate_c4",
+      "disabled_components": [
+        "C4"
+      ],
+      "n_gamefiles": 12,
+      "episodes_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c4/ablate_c4_episodes.jsonl",
+      "summary_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c4/ablate_c4_summary.json",
+      "standard_episodes_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c4/episode_results.jsonl",
+      "standard_summary_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c4/summary.json",
+      "config_snapshot_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c4/config_snapshot.json"
+    },
+    "ablate_c5": {
+      "n_episodes": 12,
+      "success_rate": 0.5,
+      "mean_steps": 8.916666666666666,
+      "mean_total_tokens": 0.0,
+      "mean_worker_input_tokens": 0.0,
+      "mean_worker_output_tokens": 0.0,
+      "mean_architect_input_tokens": 0.0,
+      "mean_architect_output_tokens": 0.0,
+      "mean_architect_total_tokens": 0.0,
+      "mean_goal_condition_rate": 0.5,
+      "mean_fallback_rate": 0.0,
+      "mean_patch_error_rate": 0.0,
+      "mean_no_update_rate": 0.0,
+      "mean_repeat_action_rate": 0.0,
+      "mean_repeat_observation_rate": 0.0,
+      "mean_stagnation_rate": 0.27905242905242905,
+      "circuit_breaker_trigger_rate": 0.5,
+      "waiting_for_user_rate": 0.0,
+      "stop_reason_breakdown": {
+        "stagnation_detected": 6,
+        "environment_done": 6
+      },
+      "final_status_breakdown": {
+        "stagnation": 6,
+        "success": 6
+      },
+      "workflow_final_status_breakdown": {
+        "completed": 12
+      },
+      "mode": "ablate_c5",
+      "disabled_components": [
+        "C5"
+      ],
+      "n_gamefiles": 12,
+      "episodes_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c5/ablate_c5_episodes.jsonl",
+      "summary_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c5/ablate_c5_summary.json",
+      "standard_episodes_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c5/episode_results.jsonl",
+      "standard_summary_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c5/summary.json",
+      "config_snapshot_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation/ablate_c5/config_snapshot.json"
+    }
+  }
+}

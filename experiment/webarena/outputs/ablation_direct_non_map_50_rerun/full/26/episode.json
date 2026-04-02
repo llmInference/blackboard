@@ -1,0 +1,369 @@
+{
+  "run_id": "ablation_direct_non_map_50_rerun",
+  "system_id": "full",
+  "system_family": "blackboard",
+  "episode_id": "full:26",
+  "task_id": "26",
+  "success": false,
+  "finished": true,
+  "steps": 1,
+  "goal_condition_rate": 0.0,
+  "worker_input_tokens": 32355,
+  "worker_output_tokens": 1163,
+  "architect_input_tokens": 0,
+  "architect_output_tokens": 0,
+  "total_tokens": 33518,
+  "fallback_action_count": 0,
+  "patch_error_count": 0,
+  "retrieval_precision": 0.0,
+  "context_fragment_count": 5.166666666666667,
+  "relevant_fragment_count": 5.166666666666667,
+  "irrelevant_fragment_count": 0.0,
+  "task_category": "retrieval",
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Get name(s) of reviewer(s) who mention complain of the customer service for the product on the current page",
+  "tool_call_count": 0,
+  "assistant_message_count": 0,
+  "finish_reason": "no_progress_threshold_exceeded",
+  "termination_reason": "no_progress_threshold_exceeded",
+  "trajectory": [],
+  "evaluation": {
+    "task_id": 26,
+    "intent_template_id": 222,
+    "sites": [
+      "shopping"
+    ],
+    "task_revision": 2,
+    "status": "failure",
+    "score": 0.0,
+    "evaluators_results": [
+      {
+        "evaluator_name": "AgentResponseEvaluator",
+        "status": "failure",
+        "score": 0.0,
+        "actual": "",
+        "actual_normalized": null,
+        "expected": {
+          "task_type": "retrieve",
+          "status": "success",
+          "retrieved_data": [
+            "remyrremyr",
+            "bob in vegas"
+          ]
+        },
+        "assertions": [
+          {
+            "assertion_name": "agent_response_none_mismatch",
+            "status": "failure",
+            "assertion_msgs": [
+              "Expected {'task_type': NormalizedString('RETRIEVE' -> 'retrieve'), 'status': NormalizedString('SUCCESS' -> 'success'), 'retrieved_data': (NormalizedString('RemyRRemyR' -> 'remyrremyr'), NormalizedString('Bob in Vegas' -> 'bob in vegas'))}, got None"
+            ],
+            "error_msg": null
+          }
+        ],
+        "error_msg": null,
+        "should_not_exist": null
+      }
+    ],
+    "error_msg": null,
+    "webarena_verified_version": "1.2.3",
+    "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+    "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+  },
+  "communication_trace": [
+    {
+      "timestamp": "2026-03-30T11:06:09.245847+00:00",
+      "event_type": "architect",
+      "task_id": "26",
+      "selected_workers": [
+        "page_state_worker",
+        "verification_worker",
+        "argument_grounding_worker",
+        "browser_action_worker",
+        "response_worker"
+      ],
+      "workflow_id": "webarena_retrieval",
+      "used_fallback_architect": true
+    },
+    {
+      "timestamp": "2026-03-30T11:06:18.358161+00:00",
+      "event_type": "worker",
+      "worker": "page_state_worker",
+      "step_id": "inspect_current_page",
+      "writes": [
+        "current_page",
+        "page_evidence",
+        "open_tabs"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-30T11:06:21.346992+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_goal_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-30T11:06:21.347242+00:00",
+      "event_type": "worker",
+      "worker": "argument_grounding_worker",
+      "step_id": "bind_action_arguments",
+      "writes": [
+        "grounded_action",
+        "action_arguments"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-30T11:06:23.864174+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_goal_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-30T11:06:23.864456+00:00",
+      "event_type": "worker",
+      "worker": "argument_grounding_worker",
+      "step_id": "bind_action_arguments",
+      "writes": [
+        "grounded_action",
+        "action_arguments"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-30T11:06:26.207273+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_goal_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    }
+  ],
+  "run_metadata": {
+    "kernel_status": "finished",
+    "current_step_id": "verify_goal_progress",
+    "current_step": {
+      "id": "verify_goal_progress",
+      "worker": "verification_worker",
+      "purpose": "Judge whether task goal is reached or additional action is needed.",
+      "reads": [
+        "task_constraints",
+        "current_page",
+        "page_evidence",
+        "last_observation",
+        "action_history"
+      ],
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "exit_conditions": [
+        "verification updated"
+      ],
+      "next": [
+        {
+          "condition": "goal_reached_and_requires_response",
+          "step": "compose_final_answer"
+        },
+        {
+          "condition": "goal_reached",
+          "step": ""
+        },
+        {
+          "condition": "needs_action",
+          "step": "bind_action_arguments"
+        }
+      ]
+    },
+    "active_worker": "verification_worker",
+    "finish_reason": "no_progress_threshold_exceeded",
+    "verification": {
+      "goal_reached": false,
+      "progress_made": false,
+      "matched_target_url": false,
+      "requires_final_response": true,
+      "needs_response": false,
+      "task_category": "retrieval"
+    },
+    "used_fallback_architect": true,
+    "fallback_reason": "architect_llm_error:ValueError",
+    "architect_debug": {
+      "tool_names": [
+        "browser__click",
+        "browser__close_tab",
+        "browser__finish",
+        "browser__go_back",
+        "browser__goto",
+        "browser__new_tab",
+        "browser__press",
+        "browser__scroll",
+        "browser__select_option",
+        "browser__switch_tab",
+        "browser__type"
+      ],
+      "task_category": "retrieval",
+      "requires_final_response": true,
+      "planner": "heuristic",
+      "llm_error": "ValueError: dictionary update sequence element #0 has length 1; 2 is required"
+    },
+    "warnings": [
+      "architect llm planning failed; heuristic fallback applied"
+    ],
+    "communication_trace": [
+      {
+        "timestamp": "2026-03-30T11:06:09.245847+00:00",
+        "event_type": "architect",
+        "task_id": "26",
+        "selected_workers": [
+          "page_state_worker",
+          "verification_worker",
+          "argument_grounding_worker",
+          "browser_action_worker",
+          "response_worker"
+        ],
+        "workflow_id": "webarena_retrieval",
+        "used_fallback_architect": true
+      },
+      {
+        "timestamp": "2026-03-30T11:06:18.358161+00:00",
+        "event_type": "worker",
+        "worker": "page_state_worker",
+        "step_id": "inspect_current_page",
+        "writes": [
+          "current_page",
+          "page_evidence",
+          "open_tabs"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-30T11:06:21.346992+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_goal_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-30T11:06:21.347242+00:00",
+        "event_type": "worker",
+        "worker": "argument_grounding_worker",
+        "step_id": "bind_action_arguments",
+        "writes": [
+          "grounded_action",
+          "action_arguments"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-30T11:06:23.864174+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_goal_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-30T11:06:23.864456+00:00",
+        "event_type": "worker",
+        "worker": "argument_grounding_worker",
+        "step_id": "bind_action_arguments",
+        "writes": [
+          "grounded_action",
+          "action_arguments"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-30T11:06:26.207273+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_goal_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      }
+    ],
+    "trajectory": [],
+    "goal_condition_rate": 0.0,
+    "worker_input_tokens": 32355,
+    "worker_output_tokens": 1163,
+    "architect_input_tokens": 0,
+    "architect_output_tokens": 0,
+    "total_tokens": 33518,
+    "fallback_action_count": 0,
+    "patch_error_count": 0,
+    "retrieval_precision": 0.0,
+    "context_fragment_count": 5.166666666666667,
+    "relevant_fragment_count": 5.166666666666667,
+    "irrelevant_fragment_count": 0.0,
+    "circuit_breaker": {
+      "no_progress_count": 3,
+      "tripped": true,
+      "reason": "no_progress_threshold_exceeded",
+      "last_error": ""
+    }
+  },
+  "metadata": {
+    "sites": [
+      "shopping"
+    ],
+    "intent": "Get name(s) of reviewer(s) who mention complain of the customer service for the product on the current page",
+    "task_category": "retrieval",
+    "start_urls": [
+      "__SHOPPING__/epson-workforce-wf-3620-wifi-direct-all-in-one-color-inkjet-printer-copier-scanner-amazon-dash-replenishment-ready.html"
+    ],
+    "requires_final_response": true,
+    "verification": {
+      "goal_reached": false,
+      "progress_made": false,
+      "matched_target_url": false,
+      "requires_final_response": true,
+      "needs_response": false,
+      "task_category": "retrieval"
+    }
+  }
+}

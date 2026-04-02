@@ -1,0 +1,55 @@
+{
+  "modes": [
+    "ablate_c5"
+  ],
+  "n_gamefiles": 12,
+  "workflow_mode": "planner_llm_action",
+  "architect_mode": "llm",
+  "gamefiles_path": "/home/syq/Documents/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation_c5_rerun/selected_gamefiles.json",
+  "config_snapshot_path": "/home/syq/Documents/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation_c5_rerun/config_snapshot.json",
+  "summaries": {
+    "ablate_c5": {
+      "n_episodes": 12,
+      "success_rate": 0.75,
+      "mean_steps": 9.833333333333334,
+      "mean_total_tokens": 34428.583333333336,
+      "mean_worker_input_tokens": 33680.333333333336,
+      "mean_worker_output_tokens": 748.25,
+      "mean_architect_input_tokens": 0.0,
+      "mean_architect_output_tokens": 0.0,
+      "mean_architect_total_tokens": 0.0,
+      "mean_goal_condition_rate": 0.75,
+      "mean_fallback_rate": 0.0,
+      "mean_patch_error_rate": 0.0,
+      "mean_no_update_rate": 0.0,
+      "mean_repeat_action_rate": 0.0,
+      "mean_repeat_observation_rate": 0.0,
+      "mean_stagnation_rate": 0.052403846153846155,
+      "circuit_breaker_trigger_rate": 0.08333333333333333,
+      "waiting_for_user_rate": 0.0,
+      "stop_reason_breakdown": {
+        "environment_done": 9,
+        "max_steps_reached": 2,
+        "stagnation_detected": 1
+      },
+      "final_status_breakdown": {
+        "success": 9,
+        "incomplete": 2,
+        "stagnation": 1
+      },
+      "workflow_final_status_breakdown": {
+        "completed": 12
+      },
+      "mode": "ablate_c5",
+      "disabled_components": [
+        "C5"
+      ],
+      "n_gamefiles": 12,
+      "episodes_path": "/home/syq/Documents/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation_c5_rerun/ablate_c5/ablate_c5_episodes.jsonl",
+      "summary_path": "/home/syq/Documents/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation_c5_rerun/ablate_c5/ablate_c5_summary.json",
+      "standard_episodes_path": "/home/syq/Documents/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation_c5_rerun/ablate_c5/episode_results.jsonl",
+      "standard_summary_path": "/home/syq/Documents/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation_c5_rerun/ablate_c5/summary.json",
+      "config_snapshot_path": "/home/syq/Documents/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220221/ablation_c5_rerun/ablate_c5/config_snapshot.json"
+    }
+  }
+}

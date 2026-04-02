@@ -1,0 +1,531 @@
+{
+  "run_id": "ablation_20260331_110032",
+  "system_id": "full",
+  "system_family": "blackboard",
+  "episode_id": "full:4",
+  "task_id": "4",
+  "success": false,
+  "finished": true,
+  "steps": 1,
+  "goal_condition_rate": 0.0,
+  "worker_input_tokens": 35863,
+  "worker_output_tokens": 1202,
+  "architect_input_tokens": 2404,
+  "architect_output_tokens": 1993,
+  "total_tokens": 41462,
+  "fallback_action_count": 0,
+  "patch_error_count": 0,
+  "retrieval_precision": 0.0,
+  "context_fragment_count": 5.75,
+  "relevant_fragment_count": 5.75,
+  "irrelevant_fragment_count": 0.0,
+  "task_category": "retrieval",
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Get the top-3 best-selling product name(s) in Jan 2023",
+  "tool_call_count": 0,
+  "assistant_message_count": 0,
+  "finish_reason": "max_kernel_steps_exceeded",
+  "termination_reason": "max_kernel_steps_exceeded",
+  "trajectory": [],
+  "evaluation": {
+    "task_id": 4,
+    "intent_template_id": 279,
+    "sites": [
+      "shopping_admin"
+    ],
+    "task_revision": 2,
+    "status": "failure",
+    "score": 0.0,
+    "evaluators_results": [
+      {
+        "evaluator_name": "AgentResponseEvaluator",
+        "status": "failure",
+        "score": 0.0,
+        "actual": "",
+        "actual_normalized": null,
+        "expected": {
+          "task_type": "retrieve",
+          "status": "success",
+          "retrieved_data": [
+            "impulse duffle",
+            "overnight duffle",
+            "hawkeye yoga short 32 blue"
+          ]
+        },
+        "assertions": [
+          {
+            "assertion_name": "agent_response_none_mismatch",
+            "status": "failure",
+            "assertion_msgs": [
+              "Expected {'task_type': NormalizedString('RETRIEVE' -> 'retrieve'), 'status': NormalizedString('SUCCESS' -> 'success'), 'retrieved_data': (NormalizedString('Impulse Duffle' -> 'impulse duffle'), NormalizedString('Overnight Duffle' -> 'overnight duffle'), NormalizedString('Hawkeye Yoga Short-32-Blue' -> 'hawkeye yoga short 32 blue'))}, got None"
+            ],
+            "error_msg": null
+          }
+        ],
+        "error_msg": null,
+        "should_not_exist": null
+      }
+    ],
+    "error_msg": null,
+    "webarena_verified_version": "1.2.3",
+    "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+    "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+  },
+  "communication_trace": [
+    {
+      "timestamp": "2026-03-31T03:06:36.164955+00:00",
+      "event_type": "architect",
+      "task_id": "4",
+      "selected_workers": [
+        "page_state_worker",
+        "verification_worker",
+        "argument_grounding_worker",
+        "browser_action_worker",
+        "response_worker"
+      ],
+      "workflow_id": "webarena_retrieval_shopping_admin_top3_jan2023",
+      "used_fallback_architect": false
+    },
+    {
+      "timestamp": "2026-03-31T03:06:47.345031+00:00",
+      "event_type": "worker",
+      "worker": "page_state_worker",
+      "step_id": "inspect_page",
+      "writes": [
+        "current_page",
+        "page_evidence",
+        "open_tabs"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-31T03:06:50.576548+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-31T03:06:50.576950+00:00",
+      "event_type": "worker",
+      "worker": "argument_grounding_worker",
+      "step_id": "ground_next_action",
+      "writes": [
+        "grounded_action",
+        "action_arguments"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-31T03:06:53.981614+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-31T03:06:53.981963+00:00",
+      "event_type": "worker",
+      "worker": "argument_grounding_worker",
+      "step_id": "ground_next_action",
+      "writes": [
+        "grounded_action",
+        "action_arguments"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-31T03:06:58.550439+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-31T03:06:58.550796+00:00",
+      "event_type": "worker",
+      "worker": "argument_grounding_worker",
+      "step_id": "ground_next_action",
+      "writes": [
+        "grounded_action",
+        "action_arguments"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-31T03:07:01.968673+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-31T03:07:01.969053+00:00",
+      "event_type": "worker",
+      "worker": "argument_grounding_worker",
+      "step_id": "ground_next_action",
+      "writes": [
+        "grounded_action",
+        "action_arguments"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-31T03:07:05.655204+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-31T03:07:05.655555+00:00",
+      "event_type": "worker",
+      "worker": "argument_grounding_worker",
+      "step_id": "ground_next_action",
+      "writes": [
+        "grounded_action",
+        "action_arguments"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-31T03:07:08.785382+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    }
+  ],
+  "run_metadata": {
+    "kernel_status": "finished",
+    "current_step_id": "ground_next_action",
+    "current_step": {
+      "id": "ground_next_action",
+      "worker": "argument_grounding_worker",
+      "purpose": "Bind one precise browser action to reach sales/best-seller analytics in shopping_admin, apply Jan 2023 time constraint, and expose top-3 product names.",
+      "reads": [
+        "task_constraints",
+        "current_page",
+        "page_evidence",
+        "verification",
+        "action_history"
+      ],
+      "writes": [
+        "grounded_action",
+        "action_arguments"
+      ],
+      "exit_conditions": [
+        "next action and arguments grounded"
+      ],
+      "next": [
+        {
+          "condition": "has_grounded_action",
+          "step": "execute_action"
+        },
+        {
+          "condition": "always",
+          "step": "verify_progress"
+        }
+      ]
+    },
+    "active_worker": "verification_worker",
+    "finish_reason": "max_kernel_steps_exceeded",
+    "verification": {
+      "goal_reached": false,
+      "progress_made": true,
+      "matched_target_url": false,
+      "requires_final_response": true,
+      "needs_response": false,
+      "task_category": "retrieval",
+      "evidence_ready": false,
+      "answer_ready": false,
+      "phase": "evidence"
+    },
+    "used_fallback_architect": false,
+    "fallback_reason": "",
+    "architect_debug": {
+      "tool_names": [
+        "browser__click",
+        "browser__close_tab",
+        "browser__finish",
+        "browser__go_back",
+        "browser__goto",
+        "browser__new_tab",
+        "browser__press",
+        "browser__scroll",
+        "browser__select_option",
+        "browser__switch_tab",
+        "browser__type"
+      ],
+      "task_category": "retrieval",
+      "requires_final_response": true,
+      "planner": "llm",
+      "stage_policy": {
+        "phase_order": [
+          "evidence",
+          "respond"
+        ],
+        "initial_phase": "evidence"
+      },
+      "retry_attempt": 1,
+      "retry_max": 3
+    },
+    "warnings": [
+      "Best-selling metric ambiguity (quantity vs revenue) may exist; rely on the page's default/explicit best-seller definition and capture that in evidence.",
+      "Ensure date filter is strictly Jan 2023 before accepting extracted top-3.",
+      "Do not finalize from partial tables or unverified sorting state."
+    ],
+    "communication_trace": [
+      {
+        "timestamp": "2026-03-31T03:06:36.164955+00:00",
+        "event_type": "architect",
+        "task_id": "4",
+        "selected_workers": [
+          "page_state_worker",
+          "verification_worker",
+          "argument_grounding_worker",
+          "browser_action_worker",
+          "response_worker"
+        ],
+        "workflow_id": "webarena_retrieval_shopping_admin_top3_jan2023",
+        "used_fallback_architect": false
+      },
+      {
+        "timestamp": "2026-03-31T03:06:47.345031+00:00",
+        "event_type": "worker",
+        "worker": "page_state_worker",
+        "step_id": "inspect_page",
+        "writes": [
+          "current_page",
+          "page_evidence",
+          "open_tabs"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-31T03:06:50.576548+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-31T03:06:50.576950+00:00",
+        "event_type": "worker",
+        "worker": "argument_grounding_worker",
+        "step_id": "ground_next_action",
+        "writes": [
+          "grounded_action",
+          "action_arguments"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-31T03:06:53.981614+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-31T03:06:53.981963+00:00",
+        "event_type": "worker",
+        "worker": "argument_grounding_worker",
+        "step_id": "ground_next_action",
+        "writes": [
+          "grounded_action",
+          "action_arguments"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-31T03:06:58.550439+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-31T03:06:58.550796+00:00",
+        "event_type": "worker",
+        "worker": "argument_grounding_worker",
+        "step_id": "ground_next_action",
+        "writes": [
+          "grounded_action",
+          "action_arguments"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-31T03:07:01.968673+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-31T03:07:01.969053+00:00",
+        "event_type": "worker",
+        "worker": "argument_grounding_worker",
+        "step_id": "ground_next_action",
+        "writes": [
+          "grounded_action",
+          "action_arguments"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-31T03:07:05.655204+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-31T03:07:05.655555+00:00",
+        "event_type": "worker",
+        "worker": "argument_grounding_worker",
+        "step_id": "ground_next_action",
+        "writes": [
+          "grounded_action",
+          "action_arguments"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-31T03:07:08.785382+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      }
+    ],
+    "trajectory": [],
+    "goal_condition_rate": 0.0,
+    "worker_input_tokens": 35863,
+    "worker_output_tokens": 1202,
+    "architect_input_tokens": 2404,
+    "architect_output_tokens": 1993,
+    "total_tokens": 41462,
+    "fallback_action_count": 0,
+    "patch_error_count": 0,
+    "retrieval_precision": 0.0,
+    "context_fragment_count": 5.75,
+    "relevant_fragment_count": 5.75,
+    "irrelevant_fragment_count": 0.0,
+    "circuit_breaker": {
+      "no_progress_count": 0,
+      "tripped": true,
+      "reason": "max_kernel_steps_exceeded",
+      "last_error": ""
+    }
+  },
+  "metadata": {
+    "sites": [
+      "shopping_admin"
+    ],
+    "intent": "Get the top-3 best-selling product name(s) in Jan 2023",
+    "task_category": "retrieval",
+    "start_urls": [
+      "__SHOPPING_ADMIN__"
+    ],
+    "requires_final_response": true,
+    "verification": {
+      "goal_reached": false,
+      "progress_made": true,
+      "matched_target_url": false,
+      "requires_final_response": true,
+      "needs_response": false,
+      "task_category": "retrieval",
+      "evidence_ready": false,
+      "answer_ready": false,
+      "phase": "evidence"
+    }
+  }
+}

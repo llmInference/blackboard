@@ -1,0 +1,17 @@
+{
+  "env_name": "alfworld",
+  "task_set": "debug",
+  "root_dir": "${ALFWORLD_DATA}/json_2.1.1/valid_seen",
+  "selection": {
+    "mode": "group_sample",
+    "patterns": [
+      "**/game.tw-pddl"
+    ],
+    "group_by": "alfworld_task_type",
+    "n_per_group": 2,
+    "seed": 42
+  },
+  "metadata": {
+    "description": "ALFWorld debug subset, sampled uniformly by task family."
+  }
+}

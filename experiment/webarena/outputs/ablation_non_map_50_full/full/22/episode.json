@@ -1,0 +1,270 @@
+{
+  "run_id": "ablation_non_map_50_full",
+  "system_id": "full",
+  "system_family": "blackboard",
+  "episode_id": "full:22",
+  "task_id": "22",
+  "success": false,
+  "finished": true,
+  "steps": 1,
+  "goal_condition_rate": 0.0,
+  "worker_input_tokens": 0,
+  "worker_output_tokens": 0,
+  "architect_input_tokens": 0,
+  "architect_output_tokens": 0,
+  "total_tokens": 0,
+  "fallback_action_count": 0,
+  "patch_error_count": 0,
+  "retrieval_precision": 0.0,
+  "context_fragment_count": 4.666666666666667,
+  "relevant_fragment_count": 4.666666666666667,
+  "irrelevant_fragment_count": 0.0,
+  "task_category": "interaction",
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Get name(s) of reviewer(s) who mention under water photo for the product on the current page",
+  "tool_call_count": 0,
+  "assistant_message_count": 0,
+  "finish_reason": "workflow_exhausted",
+  "termination_reason": "workflow_exhausted",
+  "trajectory": [],
+  "evaluation": {
+    "task_id": 22,
+    "intent_template_id": 222,
+    "sites": [
+      "shopping"
+    ],
+    "task_revision": 2,
+    "status": "failure",
+    "score": 0.0,
+    "evaluators_results": [
+      {
+        "evaluator_name": "AgentResponseEvaluator",
+        "status": "failure",
+        "score": 0.0,
+        "actual": {
+          "task_type": "MUTATE",
+          "status": "UNKNOWN_ERROR",
+          "retrieved_data": null,
+          "error_details": "Expected one of [] but the final URL was <empty>."
+        },
+        "actual_normalized": {
+          "status": "unknown_error",
+          "retrieved_data": null,
+          "task_type": "mutate"
+        },
+        "expected": {
+          "task_type": "retrieve",
+          "status": "not_found_error",
+          "retrieved_data": null
+        },
+        "assertions": [
+          {
+            "assertion_name": "agent_response.status_mismatch",
+            "status": "failure",
+            "assertion_msgs": [
+              "Expected not_found_error, got unknown_error"
+            ],
+            "error_msg": null
+          },
+          {
+            "assertion_name": "agent_response.task_type_mismatch",
+            "status": "failure",
+            "assertion_msgs": [
+              "Expected retrieve, got mutate"
+            ],
+            "error_msg": null
+          }
+        ],
+        "error_msg": null,
+        "should_not_exist": null
+      }
+    ],
+    "error_msg": null,
+    "webarena_verified_version": "1.2.3",
+    "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+    "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+  },
+  "communication_trace": [
+    {
+      "timestamp": "2026-03-30T06:37:52.657547+00:00",
+      "event_type": "architect",
+      "task_id": "22",
+      "selected_workers": [
+        "page_state_worker",
+        "verification_worker",
+        "argument_grounding_worker",
+        "browser_action_worker"
+      ],
+      "workflow_id": "webarena_interaction",
+      "used_fallback_architect": true
+    },
+    {
+      "timestamp": "2026-03-30T06:37:52.657629+00:00",
+      "event_type": "worker",
+      "worker": "page_state_worker",
+      "step_id": "inspect_current_page",
+      "writes": [
+        "current_page",
+        "page_evidence",
+        "open_tabs"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-30T06:37:52.657652+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_goal_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-30T06:37:52.657670+00:00",
+      "event_type": "worker",
+      "worker": "argument_grounding_worker",
+      "step_id": "bind_action_arguments",
+      "writes": [
+        "grounded_action",
+        "action_arguments"
+      ],
+      "tool_name": "",
+      "finished": false
+    }
+  ],
+  "run_metadata": {
+    "kernel_status": "finished",
+    "current_step_id": "",
+    "current_step": {},
+    "active_worker": "argument_grounding_worker",
+    "finish_reason": "workflow_exhausted",
+    "verification": {
+      "goal_reached": false,
+      "matched_target_url": "",
+      "requires_final_response": false,
+      "needs_response": false,
+      "progress_made": false,
+      "task_category": "interaction",
+      "updated_at": "2026-03-30T06:37:52.657641+00:00"
+    },
+    "used_fallback_architect": true,
+    "fallback_reason": "heuristic_architect",
+    "architect_debug": {
+      "tool_names": [
+        "browser__click",
+        "browser__close_tab",
+        "browser__finish",
+        "browser__go_back",
+        "browser__goto",
+        "browser__new_tab",
+        "browser__press",
+        "browser__scroll",
+        "browser__select_option",
+        "browser__switch_tab",
+        "browser__type"
+      ],
+      "task_category": "interaction",
+      "requires_final_response": false
+    },
+    "warnings": [],
+    "communication_trace": [
+      {
+        "timestamp": "2026-03-30T06:37:52.657547+00:00",
+        "event_type": "architect",
+        "task_id": "22",
+        "selected_workers": [
+          "page_state_worker",
+          "verification_worker",
+          "argument_grounding_worker",
+          "browser_action_worker"
+        ],
+        "workflow_id": "webarena_interaction",
+        "used_fallback_architect": true
+      },
+      {
+        "timestamp": "2026-03-30T06:37:52.657629+00:00",
+        "event_type": "worker",
+        "worker": "page_state_worker",
+        "step_id": "inspect_current_page",
+        "writes": [
+          "current_page",
+          "page_evidence",
+          "open_tabs"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-30T06:37:52.657652+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_goal_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-30T06:37:52.657670+00:00",
+        "event_type": "worker",
+        "worker": "argument_grounding_worker",
+        "step_id": "bind_action_arguments",
+        "writes": [
+          "grounded_action",
+          "action_arguments"
+        ],
+        "tool_name": "",
+        "finished": false
+      }
+    ],
+    "trajectory": [],
+    "goal_condition_rate": 0.0,
+    "worker_input_tokens": 0,
+    "worker_output_tokens": 0,
+    "architect_input_tokens": 0,
+    "architect_output_tokens": 0,
+    "total_tokens": 0,
+    "fallback_action_count": 0,
+    "patch_error_count": 0,
+    "retrieval_precision": 0.0,
+    "context_fragment_count": 4.666666666666667,
+    "relevant_fragment_count": 4.666666666666667,
+    "irrelevant_fragment_count": 0.0,
+    "circuit_breaker": {
+      "no_progress_count": 1,
+      "tripped": false,
+      "reason": "",
+      "last_error": ""
+    }
+  },
+  "metadata": {
+    "sites": [
+      "shopping"
+    ],
+    "intent": "Get name(s) of reviewer(s) who mention under water photo for the product on the current page",
+    "task_category": "interaction",
+    "start_urls": [
+      "__SHOPPING__/fujifilm-finepix-z200fd-10mp-digital-camera-with-5x-optical-dual-image-stabilized-zoom-black.html"
+    ],
+    "requires_final_response": false,
+    "verification": {
+      "goal_reached": false,
+      "matched_target_url": "",
+      "requires_final_response": false,
+      "needs_response": false,
+      "progress_made": false,
+      "task_category": "interaction",
+      "updated_at": "2026-03-30T06:37:52.657641+00:00"
+    }
+  }
+}

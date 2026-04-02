@@ -1,0 +1,40 @@
+{
+  "n_episodes": 12,
+  "success_rate": 0.5833333333333334,
+  "mean_steps": 11.416666666666666,
+  "mean_total_tokens": 55046.25,
+  "mean_worker_input_tokens": 36925.083333333336,
+  "mean_worker_output_tokens": 1023.0,
+  "mean_architect_input_tokens": 14285.583333333334,
+  "mean_architect_output_tokens": 2812.5833333333335,
+  "mean_architect_total_tokens": 17098.166666666668,
+  "mean_goal_condition_rate": 0.5833333333333334,
+  "mean_fallback_rate": 0.0,
+  "mean_patch_error_rate": 0.0,
+  "mean_no_update_rate": 0.0,
+  "mean_repeat_action_rate": 0.006944444444444444,
+  "mean_repeat_observation_rate": 0.006944444444444444,
+  "mean_stagnation_rate": 0.05046296296296296,
+  "circuit_breaker_trigger_rate": 0.3333333333333333,
+  "waiting_for_user_rate": 0.0,
+  "stop_reason_breakdown": {
+    "environment_done": 7,
+    "stagnation_detected": 4,
+    "max_steps_reached": 1
+  },
+  "final_status_breakdown": {
+    "success": 7,
+    "stagnation": 4,
+    "incomplete": 1
+  },
+  "workflow_final_status_breakdown": {
+    "completed": 12
+  },
+  "schema_version": "experiment_result.v1",
+  "record_type": "summary",
+  "run_id": "langgraph",
+  "system_id": "langgraph_planner_llm_action",
+  "system_family": "langgraph",
+  "env_name": "alfworld",
+  "metadata": {}
+}

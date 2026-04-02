@@ -1,0 +1,248 @@
+{
+  "run_id": "ablation_20260331_163847",
+  "system_id": "full",
+  "system_family": "blackboard",
+  "episode_id": "full:6",
+  "task_id": "6",
+  "success": false,
+  "finished": true,
+  "steps": 1,
+  "goal_condition_rate": 1.0,
+  "worker_input_tokens": 7314,
+  "worker_output_tokens": 635,
+  "architect_input_tokens": 2228,
+  "architect_output_tokens": 1908,
+  "total_tokens": 12085,
+  "fallback_action_count": 0,
+  "patch_error_count": 0,
+  "retrieval_precision": 1.0,
+  "context_fragment_count": 9.0,
+  "relevant_fragment_count": 9.0,
+  "irrelevant_fragment_count": 0.0,
+  "task_category": "retrieval",
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Get the top-2 best-selling product name(s) in 2023",
+  "tool_call_count": 0,
+  "assistant_message_count": 0,
+  "finish_reason": "Sufficient evidence collected from dashboard bestseller quantities to provide final top-2 product names.",
+  "termination_reason": "Sufficient evidence collected from dashboard bestseller quantities to provide final top-2 product names.",
+  "trajectory": [],
+  "evaluation": {
+    "task_id": 6,
+    "intent_template_id": 279,
+    "sites": [
+      "shopping_admin"
+    ],
+    "task_revision": 2,
+    "status": "failure",
+    "score": 0.0,
+    "evaluators_results": [
+      {
+        "evaluator_name": "AgentResponseEvaluator",
+        "status": "failure",
+        "score": 0.0,
+        "actual": "",
+        "actual_normalized": null,
+        "expected": {
+          "task_type": "retrieve",
+          "status": "success",
+          "retrieved_data": [
+            "sprite yoga strap 6 foot",
+            "overnight duffle"
+          ]
+        },
+        "assertions": [
+          {
+            "assertion_name": "agent_response_none_mismatch",
+            "status": "failure",
+            "assertion_msgs": [
+              "Expected {'task_type': NormalizedString('RETRIEVE' -> 'retrieve'), 'status': NormalizedString('SUCCESS' -> 'success'), 'retrieved_data': (NormalizedString('Sprite Yoga Strap 6 foot' -> 'sprite yoga strap 6 foot'), NormalizedString(['Overnight Duffle', 'Ida Workout Parachute Pant-29-Purple'] -> 'overnight duffle, or ida workout parachute pant 29 purple'))}, got None"
+            ],
+            "error_msg": null
+          }
+        ],
+        "error_msg": null,
+        "should_not_exist": null
+      }
+    ],
+    "error_msg": null,
+    "webarena_verified_version": "1.2.3",
+    "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+    "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+  },
+  "communication_trace": [
+    {
+      "timestamp": "2026-03-31T08:47:38.606349+00:00",
+      "event_type": "architect",
+      "task_id": "6",
+      "selected_workers": [
+        "page_state_worker",
+        "argument_grounding_worker",
+        "browser_action_worker",
+        "response_worker"
+      ],
+      "workflow_id": "webarena_retrieval_shopping_admin_top2_2023",
+      "used_fallback_architect": false
+    },
+    {
+      "timestamp": "2026-03-31T08:47:48.118549+00:00",
+      "event_type": "worker",
+      "worker": "page_state_worker",
+      "step_id": "inspect_state",
+      "writes": [
+        "current_page",
+        "page_evidence",
+        "open_tabs",
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    }
+  ],
+  "run_metadata": {
+    "kernel_status": "finished",
+    "current_step_id": "compose_response",
+    "current_step": {
+      "id": "compose_response",
+      "worker": "response_worker",
+      "purpose": "Return the final response as an array of the top-2 best-selling product names in 2023 from verified evidence.",
+      "reads": [
+        "verification",
+        "page_evidence",
+        "current_page"
+      ],
+      "writes": [
+        "assistant_response"
+      ],
+      "exit_conditions": [
+        "final response composed per required schema"
+      ],
+      "next": [
+        {
+          "condition": "finished",
+          "step": ""
+        }
+      ]
+    },
+    "active_worker": "page_state_worker",
+    "finish_reason": "Sufficient evidence collected from dashboard bestseller quantities to provide final top-2 product names.",
+    "verification": {
+      "goal_reached": true,
+      "requires_final_response": true,
+      "needs_response": true,
+      "progress_made": true,
+      "evidence_ready": true,
+      "answer_ready": true,
+      "phase": "respond"
+    },
+    "used_fallback_architect": false,
+    "fallback_reason": "",
+    "architect_debug": {
+      "tool_names": [
+        "browser__click",
+        "browser__close_tab",
+        "browser__finish",
+        "browser__go_back",
+        "browser__goto",
+        "browser__new_tab",
+        "browser__press",
+        "browser__scroll",
+        "browser__select_option",
+        "browser__switch_tab",
+        "browser__type"
+      ],
+      "task_category": "retrieval",
+      "requires_final_response": true,
+      "planner": "llm",
+      "stage_policy": {
+        "phase_order": [
+          "evidence",
+          "respond"
+        ],
+        "initial_phase": "evidence"
+      },
+      "retry_attempt": 1,
+      "retry_max": 3
+    },
+    "warnings": [
+      "UI labels for best-seller reports may vary in shopping_admin; grounding should adapt to available navigation terms (Reports, Sales, Products, Ordered Qty, Revenue).",
+      "Ensure disambiguation between global best-sellers and year-specific best-sellers; 2023 constraint is mandatory.",
+      "Some views may paginate/sort by default differently; verify ranking order before finalizing top-2."
+    ],
+    "communication_trace": [
+      {
+        "timestamp": "2026-03-31T08:47:38.606349+00:00",
+        "event_type": "architect",
+        "task_id": "6",
+        "selected_workers": [
+          "page_state_worker",
+          "argument_grounding_worker",
+          "browser_action_worker",
+          "response_worker"
+        ],
+        "workflow_id": "webarena_retrieval_shopping_admin_top2_2023",
+        "used_fallback_architect": false
+      },
+      {
+        "timestamp": "2026-03-31T08:47:48.118549+00:00",
+        "event_type": "worker",
+        "worker": "page_state_worker",
+        "step_id": "inspect_state",
+        "writes": [
+          "current_page",
+          "page_evidence",
+          "open_tabs",
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      }
+    ],
+    "trajectory": [],
+    "goal_condition_rate": 1.0,
+    "worker_input_tokens": 7314,
+    "worker_output_tokens": 635,
+    "architect_input_tokens": 2228,
+    "architect_output_tokens": 1908,
+    "total_tokens": 12085,
+    "fallback_action_count": 0,
+    "patch_error_count": 0,
+    "worker_retry_count": 0,
+    "retrieval_precision": 1.0,
+    "context_fragment_count": 9.0,
+    "relevant_fragment_count": 9.0,
+    "irrelevant_fragment_count": 0.0,
+    "circuit_breaker": {
+      "no_progress_count": 0,
+      "tripped": false,
+      "reason": "",
+      "last_error": ""
+    }
+  },
+  "metadata": {
+    "sites": [
+      "shopping_admin"
+    ],
+    "intent": "Get the top-2 best-selling product name(s) in 2023",
+    "task_category": "retrieval",
+    "start_urls": [
+      "__SHOPPING_ADMIN__"
+    ],
+    "requires_final_response": true,
+    "verification": {
+      "goal_reached": true,
+      "requires_final_response": true,
+      "needs_response": true,
+      "progress_made": true,
+      "evidence_ready": true,
+      "answer_ready": true,
+      "phase": "respond"
+    }
+  }
+}

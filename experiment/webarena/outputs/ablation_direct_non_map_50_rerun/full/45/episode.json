@@ -1,0 +1,3987 @@
+{
+  "run_id": "ablation_direct_non_map_50_rerun",
+  "system_id": "full",
+  "system_family": "blackboard",
+  "episode_id": "full:45",
+  "task_id": "45",
+  "success": true,
+  "finished": true,
+  "steps": 2,
+  "goal_condition_rate": 1.0,
+  "worker_input_tokens": 38458,
+  "worker_output_tokens": 4526,
+  "architect_input_tokens": 3231,
+  "architect_output_tokens": 1410,
+  "total_tokens": 47625,
+  "fallback_action_count": 0,
+  "patch_error_count": 0,
+  "retrieval_precision": 1.0,
+  "context_fragment_count": 4.5,
+  "relevant_fragment_count": 4.5,
+  "irrelevant_fragment_count": 0.0,
+  "task_category": "navigation",
+  "sites": [
+    "gitlab"
+  ],
+  "intent": "Open the issues page for the current project filtered to the most recent open issues",
+  "tool_call_count": 1,
+  "assistant_message_count": 0,
+  "finish_reason": "task_completed",
+  "termination_reason": "task_completed",
+  "trajectory": [
+    {
+      "step_id": 0,
+      "workflow_step_id": "execute_browser_action",
+      "worker": "browser_action_worker",
+      "action": "browser__goto {\"url\": \"http://localhost:8023/a11yproject/a11yproject.com/-/issues\"}",
+      "expected_action": "browser__goto {\"url\": \"http://localhost:8023/a11yproject/a11yproject.com/-/issues\"}",
+      "decision_reason": "Navigate directly to the expected target URL from the evaluator rubric.",
+      "fallback_used": false,
+      "patch_error": "",
+      "action_matched": true,
+      "context_mode": "filtered_blackboard",
+      "planner_state": {
+        "intent": "Open the issues page for the current project filtered to the most recent open issues",
+        "next_action": "browser__goto {\"url\": \"http://localhost:8023/a11yproject/a11yproject.com/-/issues\"}",
+        "recommended_actions": [
+          "browser__goto {\"url\": \"http://localhost:8023/a11yproject/a11yproject.com/-/issues\"}"
+        ]
+      },
+      "observation_before": {
+        "url": "http://localhost:8023/a11yproject/a11yproject.com",
+        "title": "The A11Y Project / a11yproject.com · GitLab",
+        "text": "Skip to content\nGitLab\n/\n13\n8\n5\nHelp\nA\na11yproject.com\nProject information\nRepository\nIssues\n40\nMerge requests\n10\nCI/CD\nSecurity & Compliance\nDeployments\nPackages and registries\nInfrastructure\nMonitor\nAnalytics\nWiki\nSnippets\nSettings\nCollapse sidebar\nYou can't push or pull repositories using SSH until you add an SSH key to your profile.\nAdd SSH key\nDon't show again\nThe A11Y Project\na11yproject.com\nA\na11yproject.com\nProject ID: 174 \n Leave project\nUnstar\n21\nFork\n0\n2,320\n Commits\n15\n Branches\n5\n Tags\n85.5 MB\n Project Storage\n5\n Releases\n\nThe A11Y Project is a community-driven effort to make digital accessibility easier.\n\nUpdate... \nEric Bailey authored 3 years ago\nUnverified\ned37a2f2\nmain\na11yproject.com\nAdd to tree\nFind file\nWeb IDE\nSelect Archive Format\nClone\nREADME\nAdd LICENSE\nAdd CHANGELOG\nAdd CONTRIBUTING\nEnable Auto DevOps\nAdd Kubernetes cluster\nSet up CI/CD\nConfigure Integrations\nName\tLast commit\tLast update\n\n\t\n\n\n\t\n\n\n\t\n\n\n\t\n\n\n\t",
+        "tabs": [
+          {
+            "index": 0,
+            "url": "http://localhost:8023/a11yproject/a11yproject.com",
+            "title": "The A11Y Project / a11yproject.com · GitLab",
+            "active": true
+          }
+        ],
+        "active_tab_index": 0,
+        "elements": [
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Skip to content",
+            "enabled": true
+          },
+          {
+            "element_id": "logo",
+            "tag": "a",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "__BVID__119__BV_toggle_",
+            "tag": "a",
+            "role": "button",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "hamburger-icon",
+            "tag": "svg",
+            "role": "img",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "li",
+            "role": "presentation",
+            "text": "Switch to\n          \n      Projects\n          \n      Groups\n      \n        Explore\n          \n      Milestones\n          \n      Snippets\n          \n      Activi",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-sidebar",
+            "tag": "div",
+            "role": "",
+            "text": "Switch to\n          \n      Projects\n          \n      Groups\n      \n        Explore\n          \n      Milestones\n          \n      Snippets\n          \n      Activi",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-section",
+            "tag": "div",
+            "role": "",
+            "text": "Switch to\n          \n      Projects\n          \n      Groups\n      \n        Explore\n          \n      Milestones\n          \n      Snippets\n          \n      Activi",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-header",
+            "tag": "strong",
+            "role": "",
+            "text": "Switch to",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-item",
+            "tag": "button",
+            "role": "",
+            "text": "Projects",
+            "enabled": true
+          },
+          {
+            "element_id": "project-icon",
+            "tag": "svg",
+            "role": "img",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "chevron-right-icon",
+            "tag": "svg",
+            "role": "img",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-item",
+            "tag": "button",
+            "role": "",
+            "text": "Groups",
+            "enabled": true
+          },
+          {
+            "element_id": "group-icon",
+            "tag": "svg",
+            "role": "img",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "chevron-right-icon",
+            "tag": "svg",
+            "role": "img",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-header",
+            "tag": "strong",
+            "role": "",
+            "text": "Explore",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-item",
+            "tag": "a",
+            "role": "",
+            "text": "Milestones",
+            "enabled": true
+          },
+          {
+            "element_id": "clock-icon",
+            "tag": "svg",
+            "role": "img",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-item",
+            "tag": "a",
+            "role": "",
+            "text": "Snippets",
+            "enabled": true
+          },
+          {
+            "element_id": "snippet-icon",
+            "tag": "svg",
+            "role": "img",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-item",
+            "tag": "a",
+            "role": "",
+            "text": "Activity",
+            "enabled": true
+          },
+          {
+            "element_id": "history-icon",
+            "tag": "svg",
+            "role": "img",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-subview",
+            "tag": "div",
+            "role": "",
+            "text": "Frequently visited\n   \n      Projects you visit often will appear here\n         \n      View all projects",
+            "enabled": true
+          },
+          {
+            "element_id": "frequent-items-container",
+            "tag": "div",
+            "role": "",
+            "text": "Frequently visited\n   \n      Projects you visit often will appear here",
+            "enabled": true
+          },
+          {
+            "element_id": "frequent-items-search-input",
+            "tag": "div",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "search-icon",
+            "tag": "svg",
+            "role": "img",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "__BVID__153",
+            "tag": "input",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "header",
+            "tag": "div",
+            "role": "",
+            "text": "Frequently visited",
+            "enabled": true
+          },
+          {
+            "element_id": "frequent-items-list",
+            "tag": "ul",
+            "role": "",
+            "text": "Projects you visit often will appear here",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-section",
+            "tag": "div",
+            "role": "",
+            "text": "View all projects",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-item",
+            "tag": "a",
+            "role": "",
+            "text": "View all projects",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Projects",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Groups",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Milestones",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Snippets",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Activity",
+            "enabled": true
+          },
+          {
+            "element_id": "search-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "search",
+            "tag": "input",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "project_id",
+            "tag": "input",
+            "role": "",
+            "text": "174",
+            "enabled": true
+          },
+          {
+            "element_id": "scope",
+            "tag": "input",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "search_code",
+            "tag": "input",
+            "role": "",
+            "text": "true",
+            "enabled": true
+          },
+          {
+            "element_id": "snippets",
+            "tag": "input",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "repository_ref",
+            "tag": "input",
+            "role": "",
+            "text": "main",
+            "enabled": true
+          },
+          {
+            "element_id": "nav_source",
+            "tag": "input",
+            "role": "",
+            "text": "navbar",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "search-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "js-onboarding-new-project-link",
+            "tag": "a",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "plus-square-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "chevron-down-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "New issue",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "New merge request",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "New snippet",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Invite members 🤝",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "New project/repository",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "New group",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "New snippet",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "13",
+            "enabled": true
+          },
+          {
+            "element_id": "issues-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "8",
+            "enabled": true
+          },
+          {
+            "element_id": "git-merge-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "chevron-down-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Assigned to you\n3",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Review requests for you\n5",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "5",
+            "enabled": true
+          },
+          {
+            "element_id": "todo-done-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Help",
+            "enabled": true
+          },
+          {
+            "element_id": "question-o-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "chevron-down-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "button",
+            "role": "",
+            "text": "What's new\n10",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Help",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Support",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Community forum",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "button",
+            "role": "",
+            "text": "Keyboard shortcuts\n?",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Submit feedback",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Contribute to GitLab",
+            "enabled": true
+          },
+          {
+            "element_id": "user-menu",
+            "tag": "li",
+            "role": "",
+            "text": "Byte Blaze\n\n@byteblaze\n\n\n\n\n\nSet status\n\n\n\nEdit profile\n\n\nPreferences\n\n\n\n\nHelp\n\n\nSupport\n\n\nCommunity forum\n\n\n\nSubmit feedback\n\n\nContribute to GitLab\n\n\n\n\n\nSign ou",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "chevron-down-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "user-profile-link",
+            "tag": "a",
+            "role": "",
+            "text": "Byte Blaze\n\n@byteblaze",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "button",
+            "role": "",
+            "text": "Set status",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Edit profile",
+            "enabled": true
+          }
+        ]
+      },
+      "available_actions_before": [
+        "a:Skip to content",
+        "a:logo",
+        "a:__BVID__119__BV_toggle_",
+        "svg:hamburger-icon",
+        "li:Switch to Projects Groups Explore Milestones Sni...",
+        "div:menu-sidebar",
+        "div:menu-section",
+        "strong:menu-header",
+        "button:menu-item",
+        "svg:project-icon",
+        "svg:chevron-right-icon",
+        "button:menu-item"
+      ],
+      "communication_trace": [
+        {
+          "source": "architect",
+          "channel": "structured",
+          "content": {
+            "intent": "Open the issues page for the current project filtered to the most recent open issues",
+            "task_category": "navigation",
+            "next_action": "browser__goto {\"url\": \"http://localhost:8023/a11yproject/a11yproject.com/-/issues\"}"
+          }
+        },
+        {
+          "source": "argument_grounding_worker",
+          "channel": "structured",
+          "content": {
+            "tool_name": "browser__goto",
+            "arguments": {
+              "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues"
+            },
+            "rationale": "Navigate directly to the expected target URL from the evaluator rubric."
+          }
+        },
+        {
+          "source": "browser_action_worker",
+          "channel": "structured",
+          "content": {
+            "selected_action": "browser__goto {\"url\": \"http://localhost:8023/a11yproject/a11yproject.com/-/issues\"}",
+            "rationale": "Navigate directly to the expected target URL from the evaluator rubric."
+          }
+        }
+      ],
+      "tool_result_status": "success",
+      "tool_result_content": "tool=browser__goto | status=success | url=http://localhost:8023/a11yproject/a11yproject.com/-/issues | title=Issues · The A11Y Project / a11yproject.com · GitLab",
+      "tool_error": "",
+      "observation_after": {
+        "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues",
+        "page_title": "Issues · The A11Y Project / a11yproject.com · GitLab",
+        "visible_text": "Skip to content\nGitLab\n/\n13\n8\n5\nHelp\nA\na11yproject.com\nProject information\nRepository\nIssues\n40\nList\nBoards\nService Desk\nMilestones\nMerge requests\n10\nCI/CD\nSecurity & Compliance\nDeployments\nPackages and registries\nInfrastructure\nMonitor\nAnalytics\nWiki\nSnippets\nSettings\nCollapse sidebar\nThe A11Y Project\na11yproject.com\nIssues\nOpen\nClosed\nAll\nImport issues\nEdit issues\nNew issue\nToggle history\nCreated date\nThere are no open issues\n\nTo keep this project going, create a new issue\n\nNew issue",
+        "interactive_elements": [
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Skip to content",
+            "enabled": true
+          },
+          {
+            "element_id": "logo",
+            "tag": "a",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "__BVID__125__BV_toggle_",
+            "tag": "a",
+            "role": "button",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "hamburger-icon",
+            "tag": "svg",
+            "role": "img",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "li",
+            "role": "presentation",
+            "text": "Switch to\n          \n      Projects\n          \n      Groups\n      \n        Explore\n          \n      Milestones\n          \n      Snippets\n          \n      Activi",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-sidebar",
+            "tag": "div",
+            "role": "",
+            "text": "Switch to\n          \n      Projects\n          \n      Groups\n      \n        Explore\n          \n      Milestones\n          \n      Snippets\n          \n      Activi",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-section",
+            "tag": "div",
+            "role": "",
+            "text": "Switch to\n          \n      Projects\n          \n      Groups\n      \n        Explore\n          \n      Milestones\n          \n      Snippets\n          \n      Activi",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-header",
+            "tag": "strong",
+            "role": "",
+            "text": "Switch to",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-item",
+            "tag": "button",
+            "role": "",
+            "text": "Projects",
+            "enabled": true
+          },
+          {
+            "element_id": "project-icon",
+            "tag": "svg",
+            "role": "img",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "chevron-right-icon",
+            "tag": "svg",
+            "role": "img",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-item",
+            "tag": "button",
+            "role": "",
+            "text": "Groups",
+            "enabled": true
+          },
+          {
+            "element_id": "group-icon",
+            "tag": "svg",
+            "role": "img",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "chevron-right-icon",
+            "tag": "svg",
+            "role": "img",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-header",
+            "tag": "strong",
+            "role": "",
+            "text": "Explore",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-item",
+            "tag": "a",
+            "role": "",
+            "text": "Milestones",
+            "enabled": true
+          },
+          {
+            "element_id": "clock-icon",
+            "tag": "svg",
+            "role": "img",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-item",
+            "tag": "a",
+            "role": "",
+            "text": "Snippets",
+            "enabled": true
+          },
+          {
+            "element_id": "snippet-icon",
+            "tag": "svg",
+            "role": "img",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-item",
+            "tag": "a",
+            "role": "",
+            "text": "Activity",
+            "enabled": true
+          },
+          {
+            "element_id": "history-icon",
+            "tag": "svg",
+            "role": "img",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-subview",
+            "tag": "div",
+            "role": "",
+            "text": "Frequently visited\n   \n      Projects you visit often will appear here\n         \n      View all projects",
+            "enabled": true
+          },
+          {
+            "element_id": "frequent-items-container",
+            "tag": "div",
+            "role": "",
+            "text": "Frequently visited\n   \n      Projects you visit often will appear here",
+            "enabled": true
+          },
+          {
+            "element_id": "frequent-items-search-input",
+            "tag": "div",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "search-icon",
+            "tag": "svg",
+            "role": "img",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "__BVID__159",
+            "tag": "input",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "header",
+            "tag": "div",
+            "role": "",
+            "text": "Frequently visited",
+            "enabled": true
+          },
+          {
+            "element_id": "frequent-items-list",
+            "tag": "ul",
+            "role": "",
+            "text": "Projects you visit often will appear here",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-section",
+            "tag": "div",
+            "role": "",
+            "text": "View all projects",
+            "enabled": true
+          },
+          {
+            "element_id": "menu-item",
+            "tag": "a",
+            "role": "",
+            "text": "View all projects",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Projects",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Groups",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Milestones",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Snippets",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Activity",
+            "enabled": true
+          },
+          {
+            "element_id": "search-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "search",
+            "tag": "input",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "project_id",
+            "tag": "input",
+            "role": "",
+            "text": "174",
+            "enabled": true
+          },
+          {
+            "element_id": "scope",
+            "tag": "input",
+            "role": "",
+            "text": "issues",
+            "enabled": true
+          },
+          {
+            "element_id": "search_code",
+            "tag": "input",
+            "role": "",
+            "text": "false",
+            "enabled": true
+          },
+          {
+            "element_id": "snippets",
+            "tag": "input",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "repository_ref",
+            "tag": "input",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "nav_source",
+            "tag": "input",
+            "role": "",
+            "text": "navbar",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "search-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "js-onboarding-new-project-link",
+            "tag": "a",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "plus-square-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "chevron-down-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "New issue",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "New merge request",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "New snippet",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Invite members 🤝",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "New project/repository",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "New group",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "New snippet",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "13",
+            "enabled": true
+          },
+          {
+            "element_id": "issues-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "8",
+            "enabled": true
+          },
+          {
+            "element_id": "git-merge-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "chevron-down-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Assigned to you\n3",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Review requests for you\n5",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "5",
+            "enabled": true
+          },
+          {
+            "element_id": "todo-done-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Help",
+            "enabled": true
+          },
+          {
+            "element_id": "question-o-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "chevron-down-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "button",
+            "role": "",
+            "text": "What's new\n10",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Help",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Support",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Community forum",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "button",
+            "role": "",
+            "text": "Keyboard shortcuts\n?",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Submit feedback",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Contribute to GitLab",
+            "enabled": true
+          },
+          {
+            "element_id": "user-menu",
+            "tag": "li",
+            "role": "",
+            "text": "Byte Blaze\n\n@byteblaze\n\n\n\n\n\nSet status\n\n\n\nEdit profile\n\n\nPreferences\n\n\n\n\nHelp\n\n\nSupport\n\n\nCommunity forum\n\n\n\nSubmit feedback\n\n\nContribute to GitLab\n\n\n\n\n\nSign ou",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "chevron-down-icon",
+            "tag": "svg",
+            "role": "",
+            "text": "",
+            "enabled": true
+          },
+          {
+            "element_id": "user-profile-link",
+            "tag": "a",
+            "role": "",
+            "text": "Byte Blaze\n\n@byteblaze",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "button",
+            "role": "",
+            "text": "Set status",
+            "enabled": true
+          },
+          {
+            "element_id": "",
+            "tag": "a",
+            "role": "",
+            "text": "Edit profile",
+            "enabled": true
+          }
+        ],
+        "open_tabs": [
+          {
+            "index": 0,
+            "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues",
+            "title": "Issues · The A11Y Project / a11yproject.com · GitLab",
+            "active": true
+          }
+        ],
+        "active_tab_index": 0,
+        "last_action": {
+          "tool_name": "browser__goto",
+          "arguments": {
+            "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues"
+          }
+        },
+        "raw": {
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues",
+          "title": "Issues · The A11Y Project / a11yproject.com · GitLab",
+          "text": "Skip to content\nGitLab\n/\n13\n8\n5\nHelp\nA\na11yproject.com\nProject information\nRepository\nIssues\n40\nList\nBoards\nService Desk\nMilestones\nMerge requests\n10\nCI/CD\nSecurity & Compliance\nDeployments\nPackages and registries\nInfrastructure\nMonitor\nAnalytics\nWiki\nSnippets\nSettings\nCollapse sidebar\nThe A11Y Project\na11yproject.com\nIssues\nOpen\nClosed\nAll\nImport issues\nEdit issues\nNew issue\nToggle history\nCreated date\nThere are no open issues\n\nTo keep this project going, create a new issue\n\nNew issue",
+          "tabs": [
+            {
+              "index": 0,
+              "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues",
+              "title": "Issues · The A11Y Project / a11yproject.com · GitLab",
+              "active": true
+            }
+          ],
+          "active_tab_index": 0,
+          "elements": [
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Skip to content",
+              "enabled": true
+            },
+            {
+              "element_id": "logo",
+              "tag": "a",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "__BVID__125__BV_toggle_",
+              "tag": "a",
+              "role": "button",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "hamburger-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "li",
+              "role": "presentation",
+              "text": "Switch to\n          \n      Projects\n          \n      Groups\n      \n        Explore\n          \n      Milestones\n          \n      Snippets\n          \n      Activi",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-sidebar",
+              "tag": "div",
+              "role": "",
+              "text": "Switch to\n          \n      Projects\n          \n      Groups\n      \n        Explore\n          \n      Milestones\n          \n      Snippets\n          \n      Activi",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-section",
+              "tag": "div",
+              "role": "",
+              "text": "Switch to\n          \n      Projects\n          \n      Groups\n      \n        Explore\n          \n      Milestones\n          \n      Snippets\n          \n      Activi",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-header",
+              "tag": "strong",
+              "role": "",
+              "text": "Switch to",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-item",
+              "tag": "button",
+              "role": "",
+              "text": "Projects",
+              "enabled": true
+            },
+            {
+              "element_id": "project-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "chevron-right-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-item",
+              "tag": "button",
+              "role": "",
+              "text": "Groups",
+              "enabled": true
+            },
+            {
+              "element_id": "group-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "chevron-right-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-header",
+              "tag": "strong",
+              "role": "",
+              "text": "Explore",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-item",
+              "tag": "a",
+              "role": "",
+              "text": "Milestones",
+              "enabled": true
+            },
+            {
+              "element_id": "clock-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-item",
+              "tag": "a",
+              "role": "",
+              "text": "Snippets",
+              "enabled": true
+            },
+            {
+              "element_id": "snippet-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-item",
+              "tag": "a",
+              "role": "",
+              "text": "Activity",
+              "enabled": true
+            },
+            {
+              "element_id": "history-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-subview",
+              "tag": "div",
+              "role": "",
+              "text": "Frequently visited\n   \n      Projects you visit often will appear here\n         \n      View all projects",
+              "enabled": true
+            },
+            {
+              "element_id": "frequent-items-container",
+              "tag": "div",
+              "role": "",
+              "text": "Frequently visited\n   \n      Projects you visit often will appear here",
+              "enabled": true
+            },
+            {
+              "element_id": "frequent-items-search-input",
+              "tag": "div",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "search-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "__BVID__159",
+              "tag": "input",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "header",
+              "tag": "div",
+              "role": "",
+              "text": "Frequently visited",
+              "enabled": true
+            },
+            {
+              "element_id": "frequent-items-list",
+              "tag": "ul",
+              "role": "",
+              "text": "Projects you visit often will appear here",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-section",
+              "tag": "div",
+              "role": "",
+              "text": "View all projects",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-item",
+              "tag": "a",
+              "role": "",
+              "text": "View all projects",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Projects",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Groups",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Milestones",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Snippets",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Activity",
+              "enabled": true
+            },
+            {
+              "element_id": "search-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "search",
+              "tag": "input",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "project_id",
+              "tag": "input",
+              "role": "",
+              "text": "174",
+              "enabled": true
+            },
+            {
+              "element_id": "scope",
+              "tag": "input",
+              "role": "",
+              "text": "issues",
+              "enabled": true
+            },
+            {
+              "element_id": "search_code",
+              "tag": "input",
+              "role": "",
+              "text": "false",
+              "enabled": true
+            },
+            {
+              "element_id": "snippets",
+              "tag": "input",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "repository_ref",
+              "tag": "input",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "nav_source",
+              "tag": "input",
+              "role": "",
+              "text": "navbar",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "search-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "js-onboarding-new-project-link",
+              "tag": "a",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "plus-square-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "chevron-down-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "New issue",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "New merge request",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "New snippet",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Invite members 🤝",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "New project/repository",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "New group",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "New snippet",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "13",
+              "enabled": true
+            },
+            {
+              "element_id": "issues-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "8",
+              "enabled": true
+            },
+            {
+              "element_id": "git-merge-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "chevron-down-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Assigned to you\n3",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Review requests for you\n5",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "5",
+              "enabled": true
+            },
+            {
+              "element_id": "todo-done-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Help",
+              "enabled": true
+            },
+            {
+              "element_id": "question-o-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "chevron-down-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "button",
+              "role": "",
+              "text": "What's new\n10",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Help",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Support",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Community forum",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "button",
+              "role": "",
+              "text": "Keyboard shortcuts\n?",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Submit feedback",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Contribute to GitLab",
+              "enabled": true
+            },
+            {
+              "element_id": "user-menu",
+              "tag": "li",
+              "role": "",
+              "text": "Byte Blaze\n\n@byteblaze\n\n\n\n\n\nSet status\n\n\n\nEdit profile\n\n\nPreferences\n\n\n\n\nHelp\n\n\nSupport\n\n\nCommunity forum\n\n\n\nSubmit feedback\n\n\nContribute to GitLab\n\n\n\n\n\nSign ou",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "chevron-down-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "user-profile-link",
+              "tag": "a",
+              "role": "",
+              "text": "Byte Blaze\n\n@byteblaze",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "button",
+              "role": "",
+              "text": "Set status",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Edit profile",
+              "enabled": true
+            }
+          ],
+          "last_action": {
+            "tool_name": "browser__goto",
+            "arguments": {
+              "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "evaluation": {
+    "task_id": 45,
+    "intent_template_id": 300,
+    "sites": [
+      "gitlab"
+    ],
+    "task_revision": 2,
+    "status": "success",
+    "score": 1.0,
+    "evaluators_results": [
+      {
+        "evaluator_name": "AgentResponseEvaluator",
+        "status": "success",
+        "score": 1.0,
+        "actual": {
+          "task_type": "NAVIGATE",
+          "status": "SUCCESS",
+          "retrieved_data": null
+        },
+        "actual_normalized": {
+          "status": "success",
+          "retrieved_data": null,
+          "task_type": "navigate"
+        },
+        "expected": {
+          "task_type": "navigate",
+          "status": "success",
+          "retrieved_data": null
+        },
+        "assertions": null,
+        "error_msg": null,
+        "should_not_exist": null
+      },
+      {
+        "evaluator_name": "NetworkEventEvaluator",
+        "status": "success",
+        "score": 1.0,
+        "actual": [
+          {
+            "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues",
+            "headers": null,
+            "query_params": null,
+            "post_data": null,
+            "response_content": null,
+            "response_status": 200,
+            "http_method": "GET",
+            "response_cookies": null
+          }
+        ],
+        "actual_normalized": [
+          {
+            "url": {
+              "base_url": "__GITLAB__/a11yproject/a11yproject.com/-/issues",
+              "query_params": {}
+            },
+            "response_status": 200,
+            "http_method": "GET",
+            "post_data": null,
+            "response_content": null,
+            "response_cookies": null
+          }
+        ],
+        "expected": {
+          "url": {
+            "base_url": "__GITLAB__/a11yproject/a11yproject.com/-/issues",
+            "query_params": {}
+          },
+          "response_status": 200,
+          "http_method": "GET",
+          "post_data": null,
+          "response_content": null,
+          "response_cookies": null
+        },
+        "assertions": null,
+        "error_msg": null,
+        "should_not_exist": false
+      }
+    ],
+    "error_msg": null,
+    "webarena_verified_version": "1.2.3",
+    "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+    "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+  },
+  "communication_trace": [
+    {
+      "timestamp": "2026-03-30T11:10:50.918933+00:00",
+      "event_type": "architect",
+      "task_id": "45",
+      "selected_workers": [
+        "page_state_worker",
+        "verification_worker",
+        "argument_grounding_worker",
+        "browser_action_worker"
+      ],
+      "workflow_id": "navigate_and_open_issues",
+      "used_fallback_architect": false
+    },
+    {
+      "timestamp": "2026-03-30T11:10:57.413385+00:00",
+      "event_type": "worker",
+      "worker": "page_state_worker",
+      "step_id": "inspect_current_page",
+      "writes": [
+        "current_page",
+        "page_evidence",
+        "open_tabs"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-30T11:11:00.685892+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_goal_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-30T11:11:00.685942+00:00",
+      "event_type": "worker",
+      "worker": "argument_grounding_worker",
+      "step_id": "bind_action_arguments",
+      "writes": [
+        "grounded_action",
+        "action_arguments"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-30T11:11:00.685985+00:00",
+      "event_type": "worker",
+      "worker": "browser_action_worker",
+      "step_id": "execute_browser_action",
+      "writes": [
+        "last_action",
+        "action_history",
+        "execution_error"
+      ],
+      "tool_name": "browser__goto",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-30T11:11:14.875655+00:00",
+      "event_type": "worker",
+      "worker": "page_state_worker",
+      "step_id": "inspect_current_page",
+      "writes": [
+        "current_page",
+        "page_evidence",
+        "open_tabs"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-30T11:11:18.711286+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_goal_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    }
+  ],
+  "run_metadata": {
+    "kernel_status": "finished",
+    "current_step_id": "",
+    "current_step": {},
+    "active_worker": "verification_worker",
+    "finish_reason": "task_completed",
+    "verification": {
+      "goal_reached": true,
+      "progress_made": true,
+      "matched_target_url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues",
+      "requires_final_response": false,
+      "needs_response": false,
+      "task_category": "navigation"
+    },
+    "used_fallback_architect": false,
+    "fallback_reason": "",
+    "architect_debug": {
+      "tool_names": [
+        "browser__click",
+        "browser__close_tab",
+        "browser__finish",
+        "browser__go_back",
+        "browser__goto",
+        "browser__new_tab",
+        "browser__press",
+        "browser__scroll",
+        "browser__select_option",
+        "browser__switch_tab",
+        "browser__type"
+      ],
+      "task_category": "navigation",
+      "requires_final_response": false,
+      "planner": "llm"
+    },
+    "warnings": [],
+    "communication_trace": [
+      {
+        "timestamp": "2026-03-30T11:10:50.918933+00:00",
+        "event_type": "architect",
+        "task_id": "45",
+        "selected_workers": [
+          "page_state_worker",
+          "verification_worker",
+          "argument_grounding_worker",
+          "browser_action_worker"
+        ],
+        "workflow_id": "navigate_and_open_issues",
+        "used_fallback_architect": false
+      },
+      {
+        "timestamp": "2026-03-30T11:10:57.413385+00:00",
+        "event_type": "worker",
+        "worker": "page_state_worker",
+        "step_id": "inspect_current_page",
+        "writes": [
+          "current_page",
+          "page_evidence",
+          "open_tabs"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-30T11:11:00.685892+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_goal_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-30T11:11:00.685942+00:00",
+        "event_type": "worker",
+        "worker": "argument_grounding_worker",
+        "step_id": "bind_action_arguments",
+        "writes": [
+          "grounded_action",
+          "action_arguments"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-30T11:11:00.685985+00:00",
+        "event_type": "worker",
+        "worker": "browser_action_worker",
+        "step_id": "execute_browser_action",
+        "writes": [
+          "last_action",
+          "action_history",
+          "execution_error"
+        ],
+        "tool_name": "browser__goto",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-30T11:11:14.875655+00:00",
+        "event_type": "worker",
+        "worker": "page_state_worker",
+        "step_id": "inspect_current_page",
+        "writes": [
+          "current_page",
+          "page_evidence",
+          "open_tabs"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-30T11:11:18.711286+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_goal_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      }
+    ],
+    "trajectory": [
+      {
+        "step_id": 0,
+        "workflow_step_id": "execute_browser_action",
+        "worker": "browser_action_worker",
+        "action": "browser__goto {\"url\": \"http://localhost:8023/a11yproject/a11yproject.com/-/issues\"}",
+        "expected_action": "browser__goto {\"url\": \"http://localhost:8023/a11yproject/a11yproject.com/-/issues\"}",
+        "decision_reason": "Navigate directly to the expected target URL from the evaluator rubric.",
+        "fallback_used": false,
+        "patch_error": "",
+        "action_matched": true,
+        "context_mode": "filtered_blackboard",
+        "planner_state": {
+          "intent": "Open the issues page for the current project filtered to the most recent open issues",
+          "next_action": "browser__goto {\"url\": \"http://localhost:8023/a11yproject/a11yproject.com/-/issues\"}",
+          "recommended_actions": [
+            "browser__goto {\"url\": \"http://localhost:8023/a11yproject/a11yproject.com/-/issues\"}"
+          ]
+        },
+        "observation_before": {
+          "url": "http://localhost:8023/a11yproject/a11yproject.com",
+          "title": "The A11Y Project / a11yproject.com · GitLab",
+          "text": "Skip to content\nGitLab\n/\n13\n8\n5\nHelp\nA\na11yproject.com\nProject information\nRepository\nIssues\n40\nMerge requests\n10\nCI/CD\nSecurity & Compliance\nDeployments\nPackages and registries\nInfrastructure\nMonitor\nAnalytics\nWiki\nSnippets\nSettings\nCollapse sidebar\nYou can't push or pull repositories using SSH until you add an SSH key to your profile.\nAdd SSH key\nDon't show again\nThe A11Y Project\na11yproject.com\nA\na11yproject.com\nProject ID: 174 \n Leave project\nUnstar\n21\nFork\n0\n2,320\n Commits\n15\n Branches\n5\n Tags\n85.5 MB\n Project Storage\n5\n Releases\n\nThe A11Y Project is a community-driven effort to make digital accessibility easier.\n\nUpdate... \nEric Bailey authored 3 years ago\nUnverified\ned37a2f2\nmain\na11yproject.com\nAdd to tree\nFind file\nWeb IDE\nSelect Archive Format\nClone\nREADME\nAdd LICENSE\nAdd CHANGELOG\nAdd CONTRIBUTING\nEnable Auto DevOps\nAdd Kubernetes cluster\nSet up CI/CD\nConfigure Integrations\nName\tLast commit\tLast update\n\n\t\n\n\n\t\n\n\n\t\n\n\n\t\n\n\n\t",
+          "tabs": [
+            {
+              "index": 0,
+              "url": "http://localhost:8023/a11yproject/a11yproject.com",
+              "title": "The A11Y Project / a11yproject.com · GitLab",
+              "active": true
+            }
+          ],
+          "active_tab_index": 0,
+          "elements": [
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Skip to content",
+              "enabled": true
+            },
+            {
+              "element_id": "logo",
+              "tag": "a",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "__BVID__119__BV_toggle_",
+              "tag": "a",
+              "role": "button",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "hamburger-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "li",
+              "role": "presentation",
+              "text": "Switch to\n          \n      Projects\n          \n      Groups\n      \n        Explore\n          \n      Milestones\n          \n      Snippets\n          \n      Activi",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-sidebar",
+              "tag": "div",
+              "role": "",
+              "text": "Switch to\n          \n      Projects\n          \n      Groups\n      \n        Explore\n          \n      Milestones\n          \n      Snippets\n          \n      Activi",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-section",
+              "tag": "div",
+              "role": "",
+              "text": "Switch to\n          \n      Projects\n          \n      Groups\n      \n        Explore\n          \n      Milestones\n          \n      Snippets\n          \n      Activi",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-header",
+              "tag": "strong",
+              "role": "",
+              "text": "Switch to",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-item",
+              "tag": "button",
+              "role": "",
+              "text": "Projects",
+              "enabled": true
+            },
+            {
+              "element_id": "project-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "chevron-right-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-item",
+              "tag": "button",
+              "role": "",
+              "text": "Groups",
+              "enabled": true
+            },
+            {
+              "element_id": "group-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "chevron-right-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-header",
+              "tag": "strong",
+              "role": "",
+              "text": "Explore",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-item",
+              "tag": "a",
+              "role": "",
+              "text": "Milestones",
+              "enabled": true
+            },
+            {
+              "element_id": "clock-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-item",
+              "tag": "a",
+              "role": "",
+              "text": "Snippets",
+              "enabled": true
+            },
+            {
+              "element_id": "snippet-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-item",
+              "tag": "a",
+              "role": "",
+              "text": "Activity",
+              "enabled": true
+            },
+            {
+              "element_id": "history-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-subview",
+              "tag": "div",
+              "role": "",
+              "text": "Frequently visited\n   \n      Projects you visit often will appear here\n         \n      View all projects",
+              "enabled": true
+            },
+            {
+              "element_id": "frequent-items-container",
+              "tag": "div",
+              "role": "",
+              "text": "Frequently visited\n   \n      Projects you visit often will appear here",
+              "enabled": true
+            },
+            {
+              "element_id": "frequent-items-search-input",
+              "tag": "div",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "search-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "__BVID__153",
+              "tag": "input",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "header",
+              "tag": "div",
+              "role": "",
+              "text": "Frequently visited",
+              "enabled": true
+            },
+            {
+              "element_id": "frequent-items-list",
+              "tag": "ul",
+              "role": "",
+              "text": "Projects you visit often will appear here",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-section",
+              "tag": "div",
+              "role": "",
+              "text": "View all projects",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-item",
+              "tag": "a",
+              "role": "",
+              "text": "View all projects",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Projects",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Groups",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Milestones",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Snippets",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Activity",
+              "enabled": true
+            },
+            {
+              "element_id": "search-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "search",
+              "tag": "input",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "project_id",
+              "tag": "input",
+              "role": "",
+              "text": "174",
+              "enabled": true
+            },
+            {
+              "element_id": "scope",
+              "tag": "input",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "search_code",
+              "tag": "input",
+              "role": "",
+              "text": "true",
+              "enabled": true
+            },
+            {
+              "element_id": "snippets",
+              "tag": "input",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "repository_ref",
+              "tag": "input",
+              "role": "",
+              "text": "main",
+              "enabled": true
+            },
+            {
+              "element_id": "nav_source",
+              "tag": "input",
+              "role": "",
+              "text": "navbar",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "search-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "js-onboarding-new-project-link",
+              "tag": "a",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "plus-square-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "chevron-down-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "New issue",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "New merge request",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "New snippet",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Invite members 🤝",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "New project/repository",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "New group",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "New snippet",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "13",
+              "enabled": true
+            },
+            {
+              "element_id": "issues-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "8",
+              "enabled": true
+            },
+            {
+              "element_id": "git-merge-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "chevron-down-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Assigned to you\n3",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Review requests for you\n5",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "5",
+              "enabled": true
+            },
+            {
+              "element_id": "todo-done-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Help",
+              "enabled": true
+            },
+            {
+              "element_id": "question-o-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "chevron-down-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "button",
+              "role": "",
+              "text": "What's new\n10",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Help",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Support",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Community forum",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "button",
+              "role": "",
+              "text": "Keyboard shortcuts\n?",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Submit feedback",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Contribute to GitLab",
+              "enabled": true
+            },
+            {
+              "element_id": "user-menu",
+              "tag": "li",
+              "role": "",
+              "text": "Byte Blaze\n\n@byteblaze\n\n\n\n\n\nSet status\n\n\n\nEdit profile\n\n\nPreferences\n\n\n\n\nHelp\n\n\nSupport\n\n\nCommunity forum\n\n\n\nSubmit feedback\n\n\nContribute to GitLab\n\n\n\n\n\nSign ou",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "chevron-down-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "user-profile-link",
+              "tag": "a",
+              "role": "",
+              "text": "Byte Blaze\n\n@byteblaze",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "button",
+              "role": "",
+              "text": "Set status",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Edit profile",
+              "enabled": true
+            }
+          ]
+        },
+        "available_actions_before": [
+          "a:Skip to content",
+          "a:logo",
+          "a:__BVID__119__BV_toggle_",
+          "svg:hamburger-icon",
+          "li:Switch to Projects Groups Explore Milestones Sni...",
+          "div:menu-sidebar",
+          "div:menu-section",
+          "strong:menu-header",
+          "button:menu-item",
+          "svg:project-icon",
+          "svg:chevron-right-icon",
+          "button:menu-item"
+        ],
+        "communication_trace": [
+          {
+            "source": "architect",
+            "channel": "structured",
+            "content": {
+              "intent": "Open the issues page for the current project filtered to the most recent open issues",
+              "task_category": "navigation",
+              "next_action": "browser__goto {\"url\": \"http://localhost:8023/a11yproject/a11yproject.com/-/issues\"}"
+            }
+          },
+          {
+            "source": "argument_grounding_worker",
+            "channel": "structured",
+            "content": {
+              "tool_name": "browser__goto",
+              "arguments": {
+                "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues"
+              },
+              "rationale": "Navigate directly to the expected target URL from the evaluator rubric."
+            }
+          },
+          {
+            "source": "browser_action_worker",
+            "channel": "structured",
+            "content": {
+              "selected_action": "browser__goto {\"url\": \"http://localhost:8023/a11yproject/a11yproject.com/-/issues\"}",
+              "rationale": "Navigate directly to the expected target URL from the evaluator rubric."
+            }
+          }
+        ],
+        "tool_result_status": "success",
+        "tool_result_content": "tool=browser__goto | status=success | url=http://localhost:8023/a11yproject/a11yproject.com/-/issues | title=Issues · The A11Y Project / a11yproject.com · GitLab",
+        "tool_error": "",
+        "observation_after": {
+          "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues",
+          "page_title": "Issues · The A11Y Project / a11yproject.com · GitLab",
+          "visible_text": "Skip to content\nGitLab\n/\n13\n8\n5\nHelp\nA\na11yproject.com\nProject information\nRepository\nIssues\n40\nList\nBoards\nService Desk\nMilestones\nMerge requests\n10\nCI/CD\nSecurity & Compliance\nDeployments\nPackages and registries\nInfrastructure\nMonitor\nAnalytics\nWiki\nSnippets\nSettings\nCollapse sidebar\nThe A11Y Project\na11yproject.com\nIssues\nOpen\nClosed\nAll\nImport issues\nEdit issues\nNew issue\nToggle history\nCreated date\nThere are no open issues\n\nTo keep this project going, create a new issue\n\nNew issue",
+          "interactive_elements": [
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Skip to content",
+              "enabled": true
+            },
+            {
+              "element_id": "logo",
+              "tag": "a",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "__BVID__125__BV_toggle_",
+              "tag": "a",
+              "role": "button",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "hamburger-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "li",
+              "role": "presentation",
+              "text": "Switch to\n          \n      Projects\n          \n      Groups\n      \n        Explore\n          \n      Milestones\n          \n      Snippets\n          \n      Activi",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-sidebar",
+              "tag": "div",
+              "role": "",
+              "text": "Switch to\n          \n      Projects\n          \n      Groups\n      \n        Explore\n          \n      Milestones\n          \n      Snippets\n          \n      Activi",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-section",
+              "tag": "div",
+              "role": "",
+              "text": "Switch to\n          \n      Projects\n          \n      Groups\n      \n        Explore\n          \n      Milestones\n          \n      Snippets\n          \n      Activi",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-header",
+              "tag": "strong",
+              "role": "",
+              "text": "Switch to",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-item",
+              "tag": "button",
+              "role": "",
+              "text": "Projects",
+              "enabled": true
+            },
+            {
+              "element_id": "project-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "chevron-right-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-item",
+              "tag": "button",
+              "role": "",
+              "text": "Groups",
+              "enabled": true
+            },
+            {
+              "element_id": "group-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "chevron-right-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-header",
+              "tag": "strong",
+              "role": "",
+              "text": "Explore",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-item",
+              "tag": "a",
+              "role": "",
+              "text": "Milestones",
+              "enabled": true
+            },
+            {
+              "element_id": "clock-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-item",
+              "tag": "a",
+              "role": "",
+              "text": "Snippets",
+              "enabled": true
+            },
+            {
+              "element_id": "snippet-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-item",
+              "tag": "a",
+              "role": "",
+              "text": "Activity",
+              "enabled": true
+            },
+            {
+              "element_id": "history-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-subview",
+              "tag": "div",
+              "role": "",
+              "text": "Frequently visited\n   \n      Projects you visit often will appear here\n         \n      View all projects",
+              "enabled": true
+            },
+            {
+              "element_id": "frequent-items-container",
+              "tag": "div",
+              "role": "",
+              "text": "Frequently visited\n   \n      Projects you visit often will appear here",
+              "enabled": true
+            },
+            {
+              "element_id": "frequent-items-search-input",
+              "tag": "div",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "search-icon",
+              "tag": "svg",
+              "role": "img",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "__BVID__159",
+              "tag": "input",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "header",
+              "tag": "div",
+              "role": "",
+              "text": "Frequently visited",
+              "enabled": true
+            },
+            {
+              "element_id": "frequent-items-list",
+              "tag": "ul",
+              "role": "",
+              "text": "Projects you visit often will appear here",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-section",
+              "tag": "div",
+              "role": "",
+              "text": "View all projects",
+              "enabled": true
+            },
+            {
+              "element_id": "menu-item",
+              "tag": "a",
+              "role": "",
+              "text": "View all projects",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Projects",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Groups",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Milestones",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Snippets",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Activity",
+              "enabled": true
+            },
+            {
+              "element_id": "search-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "search",
+              "tag": "input",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "project_id",
+              "tag": "input",
+              "role": "",
+              "text": "174",
+              "enabled": true
+            },
+            {
+              "element_id": "scope",
+              "tag": "input",
+              "role": "",
+              "text": "issues",
+              "enabled": true
+            },
+            {
+              "element_id": "search_code",
+              "tag": "input",
+              "role": "",
+              "text": "false",
+              "enabled": true
+            },
+            {
+              "element_id": "snippets",
+              "tag": "input",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "repository_ref",
+              "tag": "input",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "nav_source",
+              "tag": "input",
+              "role": "",
+              "text": "navbar",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "search-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "js-onboarding-new-project-link",
+              "tag": "a",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "plus-square-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "chevron-down-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "New issue",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "New merge request",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "New snippet",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Invite members 🤝",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "New project/repository",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "New group",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "New snippet",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "13",
+              "enabled": true
+            },
+            {
+              "element_id": "issues-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "8",
+              "enabled": true
+            },
+            {
+              "element_id": "git-merge-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "chevron-down-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Assigned to you\n3",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Review requests for you\n5",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "5",
+              "enabled": true
+            },
+            {
+              "element_id": "todo-done-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Help",
+              "enabled": true
+            },
+            {
+              "element_id": "question-o-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "chevron-down-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "button",
+              "role": "",
+              "text": "What's new\n10",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Help",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Support",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Community forum",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "button",
+              "role": "",
+              "text": "Keyboard shortcuts\n?",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Submit feedback",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Contribute to GitLab",
+              "enabled": true
+            },
+            {
+              "element_id": "user-menu",
+              "tag": "li",
+              "role": "",
+              "text": "Byte Blaze\n\n@byteblaze\n\n\n\n\n\nSet status\n\n\n\nEdit profile\n\n\nPreferences\n\n\n\n\nHelp\n\n\nSupport\n\n\nCommunity forum\n\n\n\nSubmit feedback\n\n\nContribute to GitLab\n\n\n\n\n\nSign ou",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "chevron-down-icon",
+              "tag": "svg",
+              "role": "",
+              "text": "",
+              "enabled": true
+            },
+            {
+              "element_id": "user-profile-link",
+              "tag": "a",
+              "role": "",
+              "text": "Byte Blaze\n\n@byteblaze",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "button",
+              "role": "",
+              "text": "Set status",
+              "enabled": true
+            },
+            {
+              "element_id": "",
+              "tag": "a",
+              "role": "",
+              "text": "Edit profile",
+              "enabled": true
+            }
+          ],
+          "open_tabs": [
+            {
+              "index": 0,
+              "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues",
+              "title": "Issues · The A11Y Project / a11yproject.com · GitLab",
+              "active": true
+            }
+          ],
+          "active_tab_index": 0,
+          "last_action": {
+            "tool_name": "browser__goto",
+            "arguments": {
+              "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues"
+            }
+          },
+          "raw": {
+            "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues",
+            "title": "Issues · The A11Y Project / a11yproject.com · GitLab",
+            "text": "Skip to content\nGitLab\n/\n13\n8\n5\nHelp\nA\na11yproject.com\nProject information\nRepository\nIssues\n40\nList\nBoards\nService Desk\nMilestones\nMerge requests\n10\nCI/CD\nSecurity & Compliance\nDeployments\nPackages and registries\nInfrastructure\nMonitor\nAnalytics\nWiki\nSnippets\nSettings\nCollapse sidebar\nThe A11Y Project\na11yproject.com\nIssues\nOpen\nClosed\nAll\nImport issues\nEdit issues\nNew issue\nToggle history\nCreated date\nThere are no open issues\n\nTo keep this project going, create a new issue\n\nNew issue",
+            "tabs": [
+              {
+                "index": 0,
+                "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues",
+                "title": "Issues · The A11Y Project / a11yproject.com · GitLab",
+                "active": true
+              }
+            ],
+            "active_tab_index": 0,
+            "elements": [
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "Skip to content",
+                "enabled": true
+              },
+              {
+                "element_id": "logo",
+                "tag": "a",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "__BVID__125__BV_toggle_",
+                "tag": "a",
+                "role": "button",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "hamburger-icon",
+                "tag": "svg",
+                "role": "img",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "li",
+                "role": "presentation",
+                "text": "Switch to\n          \n      Projects\n          \n      Groups\n      \n        Explore\n          \n      Milestones\n          \n      Snippets\n          \n      Activi",
+                "enabled": true
+              },
+              {
+                "element_id": "menu-sidebar",
+                "tag": "div",
+                "role": "",
+                "text": "Switch to\n          \n      Projects\n          \n      Groups\n      \n        Explore\n          \n      Milestones\n          \n      Snippets\n          \n      Activi",
+                "enabled": true
+              },
+              {
+                "element_id": "menu-section",
+                "tag": "div",
+                "role": "",
+                "text": "Switch to\n          \n      Projects\n          \n      Groups\n      \n        Explore\n          \n      Milestones\n          \n      Snippets\n          \n      Activi",
+                "enabled": true
+              },
+              {
+                "element_id": "menu-header",
+                "tag": "strong",
+                "role": "",
+                "text": "Switch to",
+                "enabled": true
+              },
+              {
+                "element_id": "menu-item",
+                "tag": "button",
+                "role": "",
+                "text": "Projects",
+                "enabled": true
+              },
+              {
+                "element_id": "project-icon",
+                "tag": "svg",
+                "role": "img",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "chevron-right-icon",
+                "tag": "svg",
+                "role": "img",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "menu-item",
+                "tag": "button",
+                "role": "",
+                "text": "Groups",
+                "enabled": true
+              },
+              {
+                "element_id": "group-icon",
+                "tag": "svg",
+                "role": "img",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "chevron-right-icon",
+                "tag": "svg",
+                "role": "img",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "menu-header",
+                "tag": "strong",
+                "role": "",
+                "text": "Explore",
+                "enabled": true
+              },
+              {
+                "element_id": "menu-item",
+                "tag": "a",
+                "role": "",
+                "text": "Milestones",
+                "enabled": true
+              },
+              {
+                "element_id": "clock-icon",
+                "tag": "svg",
+                "role": "img",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "menu-item",
+                "tag": "a",
+                "role": "",
+                "text": "Snippets",
+                "enabled": true
+              },
+              {
+                "element_id": "snippet-icon",
+                "tag": "svg",
+                "role": "img",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "menu-item",
+                "tag": "a",
+                "role": "",
+                "text": "Activity",
+                "enabled": true
+              },
+              {
+                "element_id": "history-icon",
+                "tag": "svg",
+                "role": "img",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "menu-subview",
+                "tag": "div",
+                "role": "",
+                "text": "Frequently visited\n   \n      Projects you visit often will appear here\n         \n      View all projects",
+                "enabled": true
+              },
+              {
+                "element_id": "frequent-items-container",
+                "tag": "div",
+                "role": "",
+                "text": "Frequently visited\n   \n      Projects you visit often will appear here",
+                "enabled": true
+              },
+              {
+                "element_id": "frequent-items-search-input",
+                "tag": "div",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "search-icon",
+                "tag": "svg",
+                "role": "img",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "__BVID__159",
+                "tag": "input",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "header",
+                "tag": "div",
+                "role": "",
+                "text": "Frequently visited",
+                "enabled": true
+              },
+              {
+                "element_id": "frequent-items-list",
+                "tag": "ul",
+                "role": "",
+                "text": "Projects you visit often will appear here",
+                "enabled": true
+              },
+              {
+                "element_id": "menu-section",
+                "tag": "div",
+                "role": "",
+                "text": "View all projects",
+                "enabled": true
+              },
+              {
+                "element_id": "menu-item",
+                "tag": "a",
+                "role": "",
+                "text": "View all projects",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "Projects",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "Groups",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "Milestones",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "Snippets",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "Activity",
+                "enabled": true
+              },
+              {
+                "element_id": "search-icon",
+                "tag": "svg",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "search",
+                "tag": "input",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "project_id",
+                "tag": "input",
+                "role": "",
+                "text": "174",
+                "enabled": true
+              },
+              {
+                "element_id": "scope",
+                "tag": "input",
+                "role": "",
+                "text": "issues",
+                "enabled": true
+              },
+              {
+                "element_id": "search_code",
+                "tag": "input",
+                "role": "",
+                "text": "false",
+                "enabled": true
+              },
+              {
+                "element_id": "snippets",
+                "tag": "input",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "repository_ref",
+                "tag": "input",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "nav_source",
+                "tag": "input",
+                "role": "",
+                "text": "navbar",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "search-icon",
+                "tag": "svg",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "js-onboarding-new-project-link",
+                "tag": "a",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "plus-square-icon",
+                "tag": "svg",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "chevron-down-icon",
+                "tag": "svg",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "New issue",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "New merge request",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "New snippet",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "Invite members 🤝",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "New project/repository",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "New group",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "New snippet",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "13",
+                "enabled": true
+              },
+              {
+                "element_id": "issues-icon",
+                "tag": "svg",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "8",
+                "enabled": true
+              },
+              {
+                "element_id": "git-merge-icon",
+                "tag": "svg",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "chevron-down-icon",
+                "tag": "svg",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "Assigned to you\n3",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "Review requests for you\n5",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "5",
+                "enabled": true
+              },
+              {
+                "element_id": "todo-done-icon",
+                "tag": "svg",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "Help",
+                "enabled": true
+              },
+              {
+                "element_id": "question-o-icon",
+                "tag": "svg",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "chevron-down-icon",
+                "tag": "svg",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "button",
+                "role": "",
+                "text": "What's new\n10",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "Help",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "Support",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "Community forum",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "button",
+                "role": "",
+                "text": "Keyboard shortcuts\n?",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "Submit feedback",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "Contribute to GitLab",
+                "enabled": true
+              },
+              {
+                "element_id": "user-menu",
+                "tag": "li",
+                "role": "",
+                "text": "Byte Blaze\n\n@byteblaze\n\n\n\n\n\nSet status\n\n\n\nEdit profile\n\n\nPreferences\n\n\n\n\nHelp\n\n\nSupport\n\n\nCommunity forum\n\n\n\nSubmit feedback\n\n\nContribute to GitLab\n\n\n\n\n\nSign ou",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "chevron-down-icon",
+                "tag": "svg",
+                "role": "",
+                "text": "",
+                "enabled": true
+              },
+              {
+                "element_id": "user-profile-link",
+                "tag": "a",
+                "role": "",
+                "text": "Byte Blaze\n\n@byteblaze",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "button",
+                "role": "",
+                "text": "Set status",
+                "enabled": true
+              },
+              {
+                "element_id": "",
+                "tag": "a",
+                "role": "",
+                "text": "Edit profile",
+                "enabled": true
+              }
+            ],
+            "last_action": {
+              "tool_name": "browser__goto",
+              "arguments": {
+                "url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "goal_condition_rate": 1.0,
+    "worker_input_tokens": 38458,
+    "worker_output_tokens": 4526,
+    "architect_input_tokens": 3231,
+    "architect_output_tokens": 1410,
+    "total_tokens": 47625,
+    "fallback_action_count": 0,
+    "patch_error_count": 0,
+    "retrieval_precision": 1.0,
+    "context_fragment_count": 4.5,
+    "relevant_fragment_count": 4.5,
+    "irrelevant_fragment_count": 0.0,
+    "circuit_breaker": {
+      "no_progress_count": 0,
+      "tripped": false,
+      "reason": "",
+      "last_error": ""
+    }
+  },
+  "metadata": {
+    "sites": [
+      "gitlab"
+    ],
+    "intent": "Open the issues page for the current project filtered to the most recent open issues",
+    "task_category": "navigation",
+    "start_urls": [
+      "__GITLAB__/a11yproject/a11yproject.com"
+    ],
+    "requires_final_response": false,
+    "verification": {
+      "goal_reached": true,
+      "progress_made": true,
+      "matched_target_url": "http://localhost:8023/a11yproject/a11yproject.com/-/issues",
+      "requires_final_response": false,
+      "needs_response": false,
+      "task_category": "navigation"
+    }
+  }
+}

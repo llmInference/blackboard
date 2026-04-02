@@ -1,0 +1,14 @@
+[22:00:20] [pipeline] log -> /home/syq/Documents/blackboard/experiment/logs/pipeline_20260318_220020.log
+[22:00:20] [pipeline] model=deepseek-v3 base=https://api.qnaigc.com/v1
+[22:00:20] [alfworld] starting
+[22:00:20] [config] model=deepseek-v3 base=https://api.qnaigc.com/v1
+[22:00:20] [all] ablation full+ablate_c1~c5 -> /home/syq/Documents/blackboard/experiment/alfworld/outputs/shared_debug_20260318_220020/ablation
+PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Selected 12 gamefiles via task_set_manifest: /home/syq/Documents/blackboard/experiment/common/task_sets/alfworld_debug.json
+Running modes: full, ablate_c1, ablate_c2, ablate_c3, ablate_c4, ablate_c5
+Workflow mode: planner_llm_action
+Architect mode: llm
+LLM backend: openai_compatible
+[full] episode 1/12  trial_T20190908_124340_258012
+Initializing AlfredTWEnv...
+  0%|          | 0/341 [00:00<?, ?it/s] 98%|█████████▊| 334/341 [00:00<00:00, 3332.62it/s]100%|██████████| 341/341 [00:00<00:00, 2655.84it/s]

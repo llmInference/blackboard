@@ -1,0 +1,17 @@
+{
+  "env_name": "webarena",
+  "task_set": "formal",
+  "root_dir": "../../../webarena-verified/assets/dataset",
+  "selection": {
+    "mode": "explicit",
+    "items": [
+      "webarena-verified.json"
+    ],
+    "seed": 42
+  },
+  "metadata": {
+    "benchmark_variant": "webarena-verified",
+    "dataset_file": "webarena-verified.json",
+    "description": "WebArena-Verified 正式数据入口。当前 manifest 指向官方 812 任务数据集 JSON；后续由 WebArena task loader 负责按需要选择 full / hard subset。"
+  }
+}

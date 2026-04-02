@@ -1,0 +1,43 @@
+{
+  "env_name": "webarena",
+  "overall": {
+    "n_records": 11,
+    "semantic_drift_count": 0,
+    "semantic_drift_rate": 0.0,
+    "heuristic_alignment_rate": 1.0,
+    "fallback_drift_count": 0,
+    "patch_error_drift_count": 0,
+    "expected_action_mismatch_count": 0,
+    "recommended_action_mismatch_count": 0,
+    "judge_ready_count": 11,
+    "channel_breakdown": {
+      "structured": 11
+    },
+    "source_breakdown": {
+      "architect": 11
+    }
+  },
+  "by_group": {
+    "full": {
+      "group_type": "mode",
+      "episodes_path": "/home/syq/Documents/blackboard/experiment/webarena/outputs/ablation_20260331_110032/full/episode_results.jsonl",
+      "summary": {
+        "n_records": 11,
+        "semantic_drift_count": 0,
+        "semantic_drift_rate": 0.0,
+        "heuristic_alignment_rate": 1.0,
+        "fallback_drift_count": 0,
+        "patch_error_drift_count": 0,
+        "expected_action_mismatch_count": 0,
+        "recommended_action_mismatch_count": 0,
+        "judge_ready_count": 11,
+        "channel_breakdown": {
+          "structured": 11
+        },
+        "source_breakdown": {
+          "architect": 11
+        }
+      }
+    }
+  }
+}

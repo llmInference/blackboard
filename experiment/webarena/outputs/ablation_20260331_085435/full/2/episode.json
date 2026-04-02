@@ -1,0 +1,434 @@
+{
+  "run_id": "ablation_20260331_085435",
+  "system_id": "full",
+  "system_family": "blackboard",
+  "episode_id": "full:2",
+  "task_id": "2",
+  "success": false,
+  "finished": true,
+  "steps": 1,
+  "goal_condition_rate": 0.0,
+  "worker_input_tokens": 24747,
+  "worker_output_tokens": 938,
+  "architect_input_tokens": 2408,
+  "architect_output_tokens": 1810,
+  "total_tokens": 29903,
+  "fallback_action_count": 0,
+  "patch_error_count": 0,
+  "retrieval_precision": 0.0,
+  "context_fragment_count": 5.625,
+  "relevant_fragment_count": 5.625,
+  "irrelevant_fragment_count": 0.0,
+  "task_category": "retrieval",
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Get the top-1 best-selling product type name(s) in Quarter 1 2022",
+  "tool_call_count": 0,
+  "assistant_message_count": 0,
+  "finish_reason": "no_progress_threshold_exceeded",
+  "termination_reason": "no_progress_threshold_exceeded",
+  "trajectory": [],
+  "evaluation": {
+    "task_id": 2,
+    "intent_template_id": 279,
+    "sites": [
+      "shopping_admin"
+    ],
+    "task_revision": 2,
+    "status": "failure",
+    "score": 0.0,
+    "evaluators_results": [
+      {
+        "evaluator_name": "AgentResponseEvaluator",
+        "status": "failure",
+        "score": 0.0,
+        "actual": "",
+        "actual_normalized": null,
+        "expected": {
+          "task_type": "retrieve",
+          "status": "success",
+          "retrieved_data": [
+            "digital watch"
+          ]
+        },
+        "assertions": [
+          {
+            "assertion_name": "agent_response_none_mismatch",
+            "status": "failure",
+            "assertion_msgs": [
+              "Expected {'task_type': NormalizedString('RETRIEVE' -> 'retrieve'), 'status': NormalizedString('SUCCESS' -> 'success'), 'retrieved_data': (NormalizedString(['Digital Watch', 'Band', 'Stasis Ball', 'Yoga Strap'] -> 'digital watch, or band, or stasis ball, or yoga strap'),)}, got None"
+            ],
+            "error_msg": null
+          }
+        ],
+        "error_msg": null,
+        "should_not_exist": null
+      }
+    ],
+    "error_msg": null,
+    "webarena_verified_version": "1.2.3",
+    "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+    "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+  },
+  "communication_trace": [
+    {
+      "timestamp": "2026-03-31T00:58:42.627816+00:00",
+      "event_type": "architect",
+      "task_id": "2",
+      "selected_workers": [
+        "page_state_worker",
+        "verification_worker",
+        "argument_grounding_worker",
+        "browser_action_worker",
+        "response_worker"
+      ],
+      "workflow_id": "webarena_retrieval_shopping_admin_q1_2022_top1",
+      "used_fallback_architect": false
+    },
+    {
+      "timestamp": "2026-03-31T00:58:50.923719+00:00",
+      "event_type": "worker",
+      "worker": "page_state_worker",
+      "step_id": "inspect_page_state",
+      "writes": [
+        "current_page",
+        "page_evidence",
+        "open_tabs"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-31T00:58:54.034181+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_retrieval_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-31T00:58:54.034257+00:00",
+      "event_type": "worker",
+      "worker": "argument_grounding_worker",
+      "step_id": "ground_next_action",
+      "writes": [
+        "grounded_action",
+        "action_arguments"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-31T00:58:59.669526+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_retrieval_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-31T00:58:59.669772+00:00",
+      "event_type": "worker",
+      "worker": "argument_grounding_worker",
+      "step_id": "ground_next_action",
+      "writes": [
+        "grounded_action",
+        "action_arguments"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-31T00:59:03.007440+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_retrieval_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-31T00:59:03.007759+00:00",
+      "event_type": "worker",
+      "worker": "argument_grounding_worker",
+      "step_id": "ground_next_action",
+      "writes": [
+        "grounded_action",
+        "action_arguments"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-31T00:59:07.628616+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_retrieval_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    }
+  ],
+  "run_metadata": {
+    "kernel_status": "finished",
+    "current_step_id": "verify_retrieval_progress",
+    "current_step": {
+      "id": "verify_retrieval_progress",
+      "worker": "verification_worker",
+      "purpose": "Check whether evidence already contains top-1 best-selling product type(s) for Quarter 1 2022, otherwise require navigation/filtering actions.",
+      "reads": [
+        "task_constraints",
+        "current_page",
+        "page_evidence",
+        "last_observation",
+        "action_history"
+      ],
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "exit_conditions": [
+        "verification status updated with answer_ready or needs_action"
+      ],
+      "next": [
+        {
+          "condition": "answer_ready",
+          "step": "compose_response"
+        },
+        {
+          "condition": "goal_reached_and_requires_response",
+          "step": "compose_response"
+        },
+        {
+          "condition": "needs_action",
+          "step": "ground_next_action"
+        }
+      ]
+    },
+    "active_worker": "verification_worker",
+    "finish_reason": "no_progress_threshold_exceeded",
+    "verification": {
+      "goal_reached": false,
+      "progress_made": false,
+      "matched_target_url": false,
+      "requires_final_response": true,
+      "needs_response": false,
+      "task_category": "retrieval",
+      "evidence_ready": false,
+      "answer_ready": false,
+      "phase": "evidence"
+    },
+    "used_fallback_architect": false,
+    "fallback_reason": "",
+    "architect_debug": {
+      "tool_names": [
+        "browser__click",
+        "browser__close_tab",
+        "browser__finish",
+        "browser__go_back",
+        "browser__goto",
+        "browser__new_tab",
+        "browser__press",
+        "browser__scroll",
+        "browser__select_option",
+        "browser__switch_tab",
+        "browser__type"
+      ],
+      "task_category": "retrieval",
+      "requires_final_response": true,
+      "planner": "llm",
+      "stage_policy": {
+        "phase_order": [
+          "evidence",
+          "respond"
+        ],
+        "initial_phase": "evidence"
+      },
+      "retry_attempt": 1,
+      "retry_max": 3
+    },
+    "warnings": [
+      "Potential ambiguity in UI terminology between product, product type, and category; verification must confirm product type field explicitly.",
+      "Top-1 may have ties; response should include all tied type names if evidence shows equal top rank.",
+      "Do not finalize from partial or stale evidence before Q1 2022 filter is confirmed."
+    ],
+    "communication_trace": [
+      {
+        "timestamp": "2026-03-31T00:58:42.627816+00:00",
+        "event_type": "architect",
+        "task_id": "2",
+        "selected_workers": [
+          "page_state_worker",
+          "verification_worker",
+          "argument_grounding_worker",
+          "browser_action_worker",
+          "response_worker"
+        ],
+        "workflow_id": "webarena_retrieval_shopping_admin_q1_2022_top1",
+        "used_fallback_architect": false
+      },
+      {
+        "timestamp": "2026-03-31T00:58:50.923719+00:00",
+        "event_type": "worker",
+        "worker": "page_state_worker",
+        "step_id": "inspect_page_state",
+        "writes": [
+          "current_page",
+          "page_evidence",
+          "open_tabs"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-31T00:58:54.034181+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_retrieval_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-31T00:58:54.034257+00:00",
+        "event_type": "worker",
+        "worker": "argument_grounding_worker",
+        "step_id": "ground_next_action",
+        "writes": [
+          "grounded_action",
+          "action_arguments"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-31T00:58:59.669526+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_retrieval_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-31T00:58:59.669772+00:00",
+        "event_type": "worker",
+        "worker": "argument_grounding_worker",
+        "step_id": "ground_next_action",
+        "writes": [
+          "grounded_action",
+          "action_arguments"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-31T00:59:03.007440+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_retrieval_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-31T00:59:03.007759+00:00",
+        "event_type": "worker",
+        "worker": "argument_grounding_worker",
+        "step_id": "ground_next_action",
+        "writes": [
+          "grounded_action",
+          "action_arguments"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-31T00:59:07.628616+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_retrieval_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      }
+    ],
+    "trajectory": [],
+    "goal_condition_rate": 0.0,
+    "worker_input_tokens": 24747,
+    "worker_output_tokens": 938,
+    "architect_input_tokens": 2408,
+    "architect_output_tokens": 1810,
+    "total_tokens": 29903,
+    "fallback_action_count": 0,
+    "patch_error_count": 0,
+    "retrieval_precision": 0.0,
+    "context_fragment_count": 5.625,
+    "relevant_fragment_count": 5.625,
+    "irrelevant_fragment_count": 0.0,
+    "circuit_breaker": {
+      "no_progress_count": 3,
+      "tripped": true,
+      "reason": "no_progress_threshold_exceeded",
+      "last_error": ""
+    }
+  },
+  "metadata": {
+    "sites": [
+      "shopping_admin"
+    ],
+    "intent": "Get the top-1 best-selling product type name(s) in Quarter 1 2022",
+    "task_category": "retrieval",
+    "start_urls": [
+      "__SHOPPING_ADMIN__"
+    ],
+    "requires_final_response": true,
+    "verification": {
+      "goal_reached": false,
+      "progress_made": false,
+      "matched_target_url": false,
+      "requires_final_response": true,
+      "needs_response": false,
+      "task_category": "retrieval",
+      "evidence_ready": false,
+      "answer_ready": false,
+      "phase": "evidence"
+    }
+  }
+}

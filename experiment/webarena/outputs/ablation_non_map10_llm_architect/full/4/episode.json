@@ -1,0 +1,269 @@
+{
+  "run_id": "ablation_non_map10_llm_architect",
+  "system_id": "full",
+  "system_family": "blackboard",
+  "episode_id": "full:4",
+  "task_id": "4",
+  "success": false,
+  "finished": true,
+  "steps": 1,
+  "goal_condition_rate": 0.0,
+  "worker_input_tokens": 0,
+  "worker_output_tokens": 0,
+  "architect_input_tokens": 0,
+  "architect_output_tokens": 0,
+  "total_tokens": 0,
+  "fallback_action_count": 0,
+  "patch_error_count": 0,
+  "retrieval_precision": 0.0,
+  "context_fragment_count": 9.0,
+  "relevant_fragment_count": 9.0,
+  "irrelevant_fragment_count": 0.0,
+  "task_category": "retrieval",
+  "sites": [
+    "shopping_admin"
+  ],
+  "intent": "Get the top-3 best-selling product name(s) in Jan 2023",
+  "tool_call_count": 0,
+  "assistant_message_count": 0,
+  "finish_reason": "worker_error",
+  "termination_reason": "worker_error",
+  "trajectory": [],
+  "evaluation": {
+    "task_id": 4,
+    "intent_template_id": 279,
+    "sites": [
+      "shopping_admin"
+    ],
+    "task_revision": 2,
+    "status": "failure",
+    "score": 0.0,
+    "evaluators_results": [
+      {
+        "evaluator_name": "AgentResponseEvaluator",
+        "status": "failure",
+        "score": 0.0,
+        "actual": "",
+        "actual_normalized": null,
+        "expected": {
+          "task_type": "retrieve",
+          "status": "success",
+          "retrieved_data": [
+            "impulse duffle",
+            "overnight duffle",
+            "hawkeye yoga short 32 blue"
+          ]
+        },
+        "assertions": [
+          {
+            "assertion_name": "agent_response_none_mismatch",
+            "status": "failure",
+            "assertion_msgs": [
+              "Expected {'task_type': NormalizedString('RETRIEVE' -> 'retrieve'), 'status': NormalizedString('SUCCESS' -> 'success'), 'retrieved_data': (NormalizedString('Impulse Duffle' -> 'impulse duffle'), NormalizedString('Overnight Duffle' -> 'overnight duffle'), NormalizedString('Hawkeye Yoga Short-32-Blue' -> 'hawkeye yoga short 32 blue'))}, got None"
+            ],
+            "error_msg": null
+          }
+        ],
+        "error_msg": null,
+        "should_not_exist": null
+      }
+    ],
+    "error_msg": null,
+    "webarena_verified_version": "1.2.3",
+    "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+    "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+  },
+  "communication_trace": [
+    {
+      "timestamp": "2026-03-31T08:35:00.975290+00:00",
+      "event_type": "architect",
+      "task_id": "4",
+      "selected_workers": [
+        "page_state_worker",
+        "argument_grounding_worker",
+        "browser_action_worker",
+        "response_worker"
+      ],
+      "workflow_id": "webarena_retrieval",
+      "used_fallback_architect": true
+    },
+    {
+      "timestamp": "2026-03-31T08:35:01.929855+00:00",
+      "event_type": "worker_retry",
+      "worker": "page_state_worker",
+      "step_id": "inspect_current_page",
+      "reason": "worker_exception",
+      "error": "Error code: 401 - {'error': {'code': '', 'message': '无效的令牌 (request id: 20260331083501664958414o4Vb1XNQ)', 'type': 'new_api_error'}}",
+      "retry_attempt": 1,
+      "retry_max": 2
+    },
+    {
+      "timestamp": "2026-03-31T08:35:02.889030+00:00",
+      "event_type": "worker_retry",
+      "worker": "page_state_worker",
+      "step_id": "inspect_current_page",
+      "reason": "worker_exception",
+      "error": "Error code: 401 - {'error': {'code': '', 'message': '无效的令牌 (request id: 20260331083502613785160zaMr8RSd)', 'type': 'new_api_error'}}",
+      "retry_attempt": 2,
+      "retry_max": 2
+    },
+    {
+      "timestamp": "2026-03-31T08:35:03.822324+00:00",
+      "event_type": "worker_retry",
+      "worker": "page_state_worker",
+      "step_id": "inspect_current_page",
+      "reason": "worker_exception",
+      "error": "Error code: 401 - {'error': {'code': '', 'message': '无效的令牌 (request id: 20260331083503579240219QXJIO6jm)', 'type': 'new_api_error'}}",
+      "retry_attempt": 3,
+      "retry_max": 2
+    }
+  ],
+  "run_metadata": {
+    "kernel_status": "finished",
+    "current_step_id": "inspect_current_page",
+    "current_step": {
+      "id": "inspect_current_page",
+      "worker": "page_state_worker",
+      "purpose": "Normalize latest browser observation into shared page state.",
+      "reads": [
+        "last_observation"
+      ],
+      "writes": [
+        "current_page",
+        "page_evidence",
+        "open_tabs",
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "exit_conditions": [
+        "page state extracted"
+      ],
+      "next": [
+        {
+          "condition": "answer_ready",
+          "step": "compose_final_answer"
+        },
+        {
+          "condition": "needs_action",
+          "step": "bind_action_arguments"
+        }
+      ]
+    },
+    "active_worker": "page_state_worker",
+    "finish_reason": "worker_error",
+    "verification": {},
+    "used_fallback_architect": true,
+    "fallback_reason": "architect_llm_retry_exhausted",
+    "architect_debug": {
+      "tool_names": [
+        "browser__click",
+        "browser__close_tab",
+        "browser__finish",
+        "browser__go_back",
+        "browser__goto",
+        "browser__new_tab",
+        "browser__press",
+        "browser__scroll",
+        "browser__select_option",
+        "browser__switch_tab",
+        "browser__type"
+      ],
+      "task_category": "retrieval",
+      "requires_final_response": true,
+      "planner": "heuristic",
+      "stage_policy": {
+        "phase_order": [
+          "evidence",
+          "respond"
+        ],
+        "initial_phase": "evidence"
+      },
+      "llm_error": "attempt 3: AuthenticationError: Error code: 401 - {'error': {'code': '', 'message': '无效的令牌 (request id: 20260331083500921199171C8wYbY2o)', 'type': 'new_api_error'}}",
+      "retry_max": 3
+    },
+    "warnings": [
+      "architect llm planning failed after retries; heuristic fallback applied",
+      "attempt 1: AuthenticationError: Error code: 401 - {'error': {'code': '', 'message': '无效的令牌 (request id: 20260331083459321940800eB74Bp4o)', 'type': 'new_api_error'}}",
+      "attempt 2: AuthenticationError: Error code: 401 - {'error': {'code': '', 'message': '无效的令牌 (request id: 20260331083500212127823CTMpHzPT)', 'type': 'new_api_error'}}",
+      "attempt 3: AuthenticationError: Error code: 401 - {'error': {'code': '', 'message': '无效的令牌 (request id: 20260331083500921199171C8wYbY2o)', 'type': 'new_api_error'}}"
+    ],
+    "communication_trace": [
+      {
+        "timestamp": "2026-03-31T08:35:00.975290+00:00",
+        "event_type": "architect",
+        "task_id": "4",
+        "selected_workers": [
+          "page_state_worker",
+          "argument_grounding_worker",
+          "browser_action_worker",
+          "response_worker"
+        ],
+        "workflow_id": "webarena_retrieval",
+        "used_fallback_architect": true
+      },
+      {
+        "timestamp": "2026-03-31T08:35:01.929855+00:00",
+        "event_type": "worker_retry",
+        "worker": "page_state_worker",
+        "step_id": "inspect_current_page",
+        "reason": "worker_exception",
+        "error": "Error code: 401 - {'error': {'code': '', 'message': '无效的令牌 (request id: 20260331083501664958414o4Vb1XNQ)', 'type': 'new_api_error'}}",
+        "retry_attempt": 1,
+        "retry_max": 2
+      },
+      {
+        "timestamp": "2026-03-31T08:35:02.889030+00:00",
+        "event_type": "worker_retry",
+        "worker": "page_state_worker",
+        "step_id": "inspect_current_page",
+        "reason": "worker_exception",
+        "error": "Error code: 401 - {'error': {'code': '', 'message': '无效的令牌 (request id: 20260331083502613785160zaMr8RSd)', 'type': 'new_api_error'}}",
+        "retry_attempt": 2,
+        "retry_max": 2
+      },
+      {
+        "timestamp": "2026-03-31T08:35:03.822324+00:00",
+        "event_type": "worker_retry",
+        "worker": "page_state_worker",
+        "step_id": "inspect_current_page",
+        "reason": "worker_exception",
+        "error": "Error code: 401 - {'error': {'code': '', 'message': '无效的令牌 (request id: 20260331083503579240219QXJIO6jm)', 'type': 'new_api_error'}}",
+        "retry_attempt": 3,
+        "retry_max": 2
+      }
+    ],
+    "trajectory": [],
+    "goal_condition_rate": 0.0,
+    "worker_input_tokens": 0,
+    "worker_output_tokens": 0,
+    "architect_input_tokens": 0,
+    "architect_output_tokens": 0,
+    "total_tokens": 0,
+    "fallback_action_count": 0,
+    "patch_error_count": 0,
+    "worker_retry_count": 3,
+    "retrieval_precision": 0.0,
+    "context_fragment_count": 9.0,
+    "relevant_fragment_count": 9.0,
+    "irrelevant_fragment_count": 0.0,
+    "circuit_breaker": {
+      "no_progress_count": 0,
+      "tripped": true,
+      "reason": "worker_error",
+      "last_error": "Error code: 401 - {'error': {'code': '', 'message': '无效的令牌 (request id: 20260331083503579240219QXJIO6jm)', 'type': 'new_api_error'}}"
+    }
+  },
+  "metadata": {
+    "sites": [
+      "shopping_admin"
+    ],
+    "intent": "Get the top-3 best-selling product name(s) in Jan 2023",
+    "task_category": "retrieval",
+    "start_urls": [
+      "__SHOPPING_ADMIN__"
+    ],
+    "requires_final_response": true,
+    "verification": {}
+  }
+}

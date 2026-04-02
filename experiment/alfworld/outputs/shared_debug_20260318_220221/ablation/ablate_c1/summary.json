@@ -1,0 +1,36 @@
+{
+  "n_episodes": 12,
+  "success_rate": 0.0,
+  "mean_steps": 3.0,
+  "mean_total_tokens": 12682.416666666666,
+  "mean_worker_input_tokens": 7872.75,
+  "mean_worker_output_tokens": 457.1666666666667,
+  "mean_architect_input_tokens": 3587.5833333333335,
+  "mean_architect_output_tokens": 764.9166666666666,
+  "mean_architect_total_tokens": 4352.5,
+  "mean_goal_condition_rate": 0.0,
+  "mean_fallback_rate": 1.0,
+  "mean_patch_error_rate": 0.0,
+  "mean_no_update_rate": 0.0,
+  "mean_repeat_action_rate": 0.6666666666666666,
+  "mean_repeat_observation_rate": 0.6666666666666666,
+  "mean_stagnation_rate": 0.6666666666666666,
+  "circuit_breaker_trigger_rate": 1.0,
+  "waiting_for_user_rate": 0.0,
+  "stop_reason_breakdown": {
+    "stagnation_detected": 12
+  },
+  "final_status_breakdown": {
+    "stagnation": 12
+  },
+  "workflow_final_status_breakdown": {
+    "completed": 12
+  },
+  "schema_version": "experiment_result.v1",
+  "record_type": "summary",
+  "run_id": "ablate_c1",
+  "system_id": "blackboard_ablate_c1",
+  "system_family": "blackboard",
+  "env_name": "alfworld",
+  "metadata": {}
+}

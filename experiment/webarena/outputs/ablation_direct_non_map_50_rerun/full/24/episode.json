@@ -1,0 +1,376 @@
+{
+  "run_id": "ablation_direct_non_map_50_rerun",
+  "system_id": "full",
+  "system_family": "blackboard",
+  "episode_id": "full:24",
+  "task_id": "24",
+  "success": false,
+  "finished": true,
+  "steps": 1,
+  "goal_condition_rate": 0.0,
+  "worker_input_tokens": 34900,
+  "worker_output_tokens": 8173,
+  "architect_input_tokens": 3219,
+  "architect_output_tokens": 1617,
+  "total_tokens": 47909,
+  "fallback_action_count": 0,
+  "patch_error_count": 0,
+  "retrieval_precision": 0.0,
+  "context_fragment_count": 5.166666666666667,
+  "relevant_fragment_count": 5.166666666666667,
+  "irrelevant_fragment_count": 0.0,
+  "task_category": "interaction",
+  "sites": [
+    "shopping"
+  ],
+  "intent": "Get name(s) of reviewer(s) who mention price being unfair for the product on the current page",
+  "tool_call_count": 0,
+  "assistant_message_count": 0,
+  "finish_reason": "no_progress_threshold_exceeded",
+  "termination_reason": "no_progress_threshold_exceeded",
+  "trajectory": [],
+  "evaluation": {
+    "task_id": 24,
+    "intent_template_id": 222,
+    "sites": [
+      "shopping"
+    ],
+    "task_revision": 2,
+    "status": "failure",
+    "score": 0.0,
+    "evaluators_results": [
+      {
+        "evaluator_name": "AgentResponseEvaluator",
+        "status": "failure",
+        "score": 0.0,
+        "actual": {
+          "task_type": "MUTATE",
+          "status": "UNKNOWN_ERROR",
+          "retrieved_data": null,
+          "error_details": "Expected one of [] but the final URL was <empty>."
+        },
+        "actual_normalized": {
+          "status": "unknown_error",
+          "retrieved_data": null,
+          "task_type": "mutate"
+        },
+        "expected": {
+          "task_type": "retrieve",
+          "status": "not_found_error",
+          "retrieved_data": null
+        },
+        "assertions": [
+          {
+            "assertion_name": "agent_response.status_mismatch",
+            "status": "failure",
+            "assertion_msgs": [
+              "Expected not_found_error, got unknown_error"
+            ],
+            "error_msg": null
+          },
+          {
+            "assertion_name": "agent_response.task_type_mismatch",
+            "status": "failure",
+            "assertion_msgs": [
+              "Expected retrieve, got mutate"
+            ],
+            "error_msg": null
+          }
+        ],
+        "error_msg": null,
+        "should_not_exist": null
+      }
+    ],
+    "error_msg": null,
+    "webarena_verified_version": "1.2.3",
+    "webarena_verified_evaluator_checksum": "35c3385b1db4b3378657589f95f50defd4234bd36e5b93d44733fd561b01db4e",
+    "webarena_verified_data_checksum": "d65275660814663375028e9017e1f929e3c38321041b125795e2713b52243d30"
+  },
+  "communication_trace": [
+    {
+      "timestamp": "2026-03-30T11:04:38.113806+00:00",
+      "event_type": "architect",
+      "task_id": "24",
+      "selected_workers": [
+        "page_state_worker",
+        "verification_worker",
+        "argument_grounding_worker",
+        "browser_action_worker"
+      ],
+      "workflow_id": "webarena_interaction",
+      "used_fallback_architect": false
+    },
+    {
+      "timestamp": "2026-03-30T11:05:10.306446+00:00",
+      "event_type": "worker",
+      "worker": "page_state_worker",
+      "step_id": "inspect_current_page",
+      "writes": [
+        "current_page",
+        "page_evidence",
+        "open_tabs"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-30T11:05:12.929984+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_goal_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-30T11:05:12.930220+00:00",
+      "event_type": "worker",
+      "worker": "argument_grounding_worker",
+      "step_id": "bind_action_arguments",
+      "writes": [
+        "grounded_action",
+        "action_arguments"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-30T11:05:16.205305+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_goal_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-30T11:05:16.205357+00:00",
+      "event_type": "worker",
+      "worker": "argument_grounding_worker",
+      "step_id": "bind_action_arguments",
+      "writes": [
+        "grounded_action",
+        "action_arguments"
+      ],
+      "tool_name": "",
+      "finished": false
+    },
+    {
+      "timestamp": "2026-03-30T11:05:18.664096+00:00",
+      "event_type": "worker",
+      "worker": "verification_worker",
+      "step_id": "verify_goal_progress",
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "tool_name": "",
+      "finished": false
+    }
+  ],
+  "run_metadata": {
+    "kernel_status": "finished",
+    "current_step_id": "verify_goal_progress",
+    "current_step": {
+      "id": "verify_goal_progress",
+      "worker": "verification_worker",
+      "purpose": "Check if the goal (identify reviewer names mentioning unfair price) is achieved or more action is needed.",
+      "reads": [
+        "task_constraints",
+        "current_page",
+        "page_evidence",
+        "last_observation",
+        "action_history"
+      ],
+      "writes": [
+        "verification",
+        "finish",
+        "finish_reason"
+      ],
+      "exit_conditions": [
+        "verification updated"
+      ],
+      "next": [
+        {
+          "condition": "goal_reached",
+          "step": ""
+        },
+        {
+          "condition": "needs_action",
+          "step": "bind_action_arguments"
+        }
+      ]
+    },
+    "active_worker": "verification_worker",
+    "finish_reason": "no_progress_threshold_exceeded",
+    "verification": {
+      "goal_reached": false,
+      "progress_made": false,
+      "matched_target_url": "",
+      "requires_final_response": false,
+      "needs_response": false,
+      "task_category": "interaction"
+    },
+    "used_fallback_architect": false,
+    "fallback_reason": "",
+    "architect_debug": {
+      "tool_names": [
+        "browser__click",
+        "browser__close_tab",
+        "browser__finish",
+        "browser__go_back",
+        "browser__goto",
+        "browser__new_tab",
+        "browser__press",
+        "browser__scroll",
+        "browser__select_option",
+        "browser__switch_tab",
+        "browser__type"
+      ],
+      "task_category": "interaction",
+      "requires_final_response": false,
+      "planner": "llm"
+    },
+    "warnings": [
+      "invalid next step id dropped: compose_final_answer"
+    ],
+    "communication_trace": [
+      {
+        "timestamp": "2026-03-30T11:04:38.113806+00:00",
+        "event_type": "architect",
+        "task_id": "24",
+        "selected_workers": [
+          "page_state_worker",
+          "verification_worker",
+          "argument_grounding_worker",
+          "browser_action_worker"
+        ],
+        "workflow_id": "webarena_interaction",
+        "used_fallback_architect": false
+      },
+      {
+        "timestamp": "2026-03-30T11:05:10.306446+00:00",
+        "event_type": "worker",
+        "worker": "page_state_worker",
+        "step_id": "inspect_current_page",
+        "writes": [
+          "current_page",
+          "page_evidence",
+          "open_tabs"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-30T11:05:12.929984+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_goal_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-30T11:05:12.930220+00:00",
+        "event_type": "worker",
+        "worker": "argument_grounding_worker",
+        "step_id": "bind_action_arguments",
+        "writes": [
+          "grounded_action",
+          "action_arguments"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-30T11:05:16.205305+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_goal_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-30T11:05:16.205357+00:00",
+        "event_type": "worker",
+        "worker": "argument_grounding_worker",
+        "step_id": "bind_action_arguments",
+        "writes": [
+          "grounded_action",
+          "action_arguments"
+        ],
+        "tool_name": "",
+        "finished": false
+      },
+      {
+        "timestamp": "2026-03-30T11:05:18.664096+00:00",
+        "event_type": "worker",
+        "worker": "verification_worker",
+        "step_id": "verify_goal_progress",
+        "writes": [
+          "verification",
+          "finish",
+          "finish_reason"
+        ],
+        "tool_name": "",
+        "finished": false
+      }
+    ],
+    "trajectory": [],
+    "goal_condition_rate": 0.0,
+    "worker_input_tokens": 34900,
+    "worker_output_tokens": 8173,
+    "architect_input_tokens": 3219,
+    "architect_output_tokens": 1617,
+    "total_tokens": 47909,
+    "fallback_action_count": 0,
+    "patch_error_count": 0,
+    "retrieval_precision": 0.0,
+    "context_fragment_count": 5.166666666666667,
+    "relevant_fragment_count": 5.166666666666667,
+    "irrelevant_fragment_count": 0.0,
+    "circuit_breaker": {
+      "no_progress_count": 3,
+      "tripped": true,
+      "reason": "no_progress_threshold_exceeded",
+      "last_error": ""
+    }
+  },
+  "metadata": {
+    "sites": [
+      "shopping"
+    ],
+    "intent": "Get name(s) of reviewer(s) who mention price being unfair for the product on the current page",
+    "task_category": "interaction",
+    "start_urls": [
+      "__SHOPPING__/haflinger-men-s-wool-felt-open-back-slippers-beige-550-peat-us-7.html"
+    ],
+    "requires_final_response": false,
+    "verification": {
+      "goal_reached": false,
+      "progress_made": false,
+      "matched_target_url": "",
+      "requires_final_response": false,
+      "needs_response": false,
+      "task_category": "interaction"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+[
+  {
+    "sites": ["map"],
+    "task_id": 7,
+    "intent_template_id": 79,
+    "start_urls": ["http://localhost:3000"],
+    "intent": "Get the name, state, and zip code of all international airports that are within a driving distance of 50 km to Carnegie Mellon University. Return a list of objects with keys \"name\", \"state\", and \"postcode\". (Use the OSRM direction service.)"
+  }
+]

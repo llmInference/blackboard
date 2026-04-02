@@ -1,0 +1,41 @@
+{
+  "schema_version": "experiment_result.v1",
+  "record_type": "config_snapshot",
+  "run_id": "ablation_suite",
+  "system_id": "ablation_suite",
+  "system_family": "experiment_suite",
+  "env_name": "alfworld",
+  "config": {
+    "gamefiles": [
+      "/home/llminference/syq/blackboard/experiment/alfworld/data/alfworld/json_2.1.1/valid_seen/pick_and_place_simple-CreditCard-None-ArmChair-201/trial_T20190908_124340_258012/game.tw-pddl",
+      "/home/llminference/syq/blackboard/experiment/alfworld/data/alfworld/json_2.1.1/valid_seen/pick_and_place_simple-Knife-None-SideTable-3/trial_T20190918_184236_557252/game.tw-pddl",
+      "/home/llminference/syq/blackboard/experiment/alfworld/data/alfworld/json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Ladle-None-DiningTable-27/trial_T20190911_131350_027076/game.tw-pddl",
+      "/home/llminference/syq/blackboard/experiment/alfworld/data/alfworld/json_2.1.1/valid_seen/pick_clean_then_place_in_recep-Ladle-None-DiningTable-16/trial_T20190909_183724_205399/game.tw-pddl",
+      "/home/llminference/syq/blackboard/experiment/alfworld/data/alfworld/json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Tomato-None-Fridge-23/trial_T20190909_082320_103350/game.tw-pddl",
+      "/home/llminference/syq/blackboard/experiment/alfworld/data/alfworld/json_2.1.1/valid_seen/pick_heat_then_place_in_recep-Potato-None-Fridge-12/trial_T20190908_014451_271080/game.tw-pddl",
+      "/home/llminference/syq/blackboard/experiment/alfworld/data/alfworld/json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Pan-None-DiningTable-7/trial_T20190908_232648_241836/game.tw-pddl",
+      "/home/llminference/syq/blackboard/experiment/alfworld/data/alfworld/json_2.1.1/valid_seen/pick_cool_then_place_in_recep-Mug-None-CoffeeMachine-16/trial_T20190908_184242_348366/game.tw-pddl",
+      "/home/llminference/syq/blackboard/experiment/alfworld/data/alfworld/json_2.1.1/valid_seen/look_at_obj_in_light-CD-None-DeskLamp-302/trial_T20190907_154618_526741/game.tw-pddl",
+      "/home/llminference/syq/blackboard/experiment/alfworld/data/alfworld/json_2.1.1/valid_seen/look_at_obj_in_light-Laptop-None-DeskLamp-328/trial_T20190908_201550_622420/game.tw-pddl",
+      "/home/llminference/syq/blackboard/experiment/alfworld/data/alfworld/json_2.1.1/valid_seen/pick_two_obj_and_place-CD-None-Drawer-304/trial_T20190907_230232_832893/game.tw-pddl",
+      "/home/llminference/syq/blackboard/experiment/alfworld/data/alfworld/json_2.1.1/valid_seen/pick_two_obj_and_place-ToiletPaper-None-Toilet-408/trial_T20190909_080302_174780/game.tw-pddl"
+    ],
+    "modes": [
+      "full",
+      "ablate_c1",
+      "ablate_c2",
+      "ablate_c3",
+      "ablate_c4",
+      "ablate_c5",
+      "ablate_c6"
+    ],
+    "max_steps": 20,
+    "model_name": "deepseek-v3",
+    "workflow_mode": "planner_llm_action",
+    "architect_mode": "llm"
+  },
+  "artifacts": {
+    "selected_gamefiles_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260319_170029/ablation/selected_gamefiles.json",
+    "ablation_summary_path": "/home/llminference/syq/blackboard/experiment/alfworld/outputs/shared_debug_20260319_170029/ablation/ablation_summary.json"
+  }
+}

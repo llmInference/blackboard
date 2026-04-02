@@ -1,0 +1,19 @@
+{
+  "env_name": "webarena",
+  "task_set": "debug",
+  "root_dir": "../../../webarena-verified/assets/dataset",
+  "selection": {
+    "mode": "explicit",
+    "items": [
+      "webarena-verified.json"
+    ],
+    "seed": 42
+  },
+  "metadata": {
+    "benchmark_variant": "webarena-verified",
+    "dataset_file": "webarena-verified.json",
+    "task_ids": [44, 45, 46],
+    "config_template": "../configs/webarena_verified_local.example.json",
+    "description": "WebArena-Verified 本地 debug 子集。当前默认使用 GitLab 单站点任务 44/45/46。"
+  }
+}

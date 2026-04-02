@@ -1,0 +1,49 @@
+  webarena-verified env start --site shopping_admin --port 7780 --env-ctrl-port 7781 --timeout 300
+  webarena-verified env start --site shopping --port 7770 --env-ctrl-port 7771 --timeout 300
+  webarena-verified env start --site reddit --port 9999 --env-ctrl-port 9998 --timeout 300
+  webarena-verified env start --site gitlab --port 8023 --env-ctrl-port 8013 --timeout 300
+
+experiment/run/run_webarena_experiments.sh ablation \
+    --conda-env exp \
+    --task-set-ablation /home/syq/Documents/blackboard/experiment/common/task_sets/webarena_non_map_50.json \
+    --limit 10 \
+    --ablation-modes full \
+    --max-steps 10 \
+    --max-kernel-steps 12 \
+    --llm-backend openai_compatible \
+    --llm-model openai/gpt-5.3-codex \
+    --llm-base-url https://api.qnaigc.com/v1
+
+
+  1. architect（编排）
+     在任务开始时生成 workflow，选了这 5 个 worker：page_state_worker -> verification_worker ->
+     argument_grounding_worker -> browser_action_worker -> response_worker。这次是 LLM architect（不
+     是 fallback）。
+  2. page_state_worker（inspect_page_state）
+     位置：http://localhost:7780/admin/admin/dashboard/。
+     操作：读取最新页面观察，写入 current_page、page_evidence、open_tabs（把当前 URL、可见文本、可交
+     互元素归一化）。
+  3. verification_worker（verify_evidence_progress，第 1 次）
+     位置：同一 dashboard 页。
+     操作：写入 verification、finish、finish_reason。
+     结果：判定还需要动作（所以流程继续到 grounding，而不是直接 response）。
+  4. argument_grounding_worker（ground_next_action）
+     位置：仍在 dashboard 上，根据当前页面元素选动作。
+     操作：写入 grounded_action、action_arguments。
+     产出动作：browser__click {"element_id":"text=Products"}，理由是先打开任务相关入口取证。
+  5. browser_action_worker（execute_action）
+     结果：工具报错（Locator.click timeout，目标元素不可见），动作失败；URL 仍是 dashboard。
+  6. page_state_worker（inspect_page_state，第 2 次）
+     位置：动作失败后的页面（还是 dashboard）。
+     操作：再次更新 current_page、page_evidence、open_tabs。
+     关键点：页面可见文本里已有 Bestsellers 表，含 Quest Lumaflex™ Band。
+  7. verification_worker（verify_evidence_progress，第 2 次）
+     位置：仍在 dashboard。
+     操作：再次更新 verification、finish、finish_reason。
+     结果：evidence_ready=true、answer_ready=true、phase=respond、needs_response=true，流程转入
+     response_worker。
+  8. response_worker（compose_response）
+     位置：根据当前 page_evidence 生成最终回答。
+     操作：写入 assistant_response，输出
+     {"task_type":"RETRIEVE","status":"SUCCESS","retrieved_data":["Quest Lumaflex™
+     Band"],"error_details":null}，任务结束为 task_completed。

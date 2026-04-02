@@ -1,0 +1,41 @@
+{
+  "n_episodes": 12,
+  "success_rate": 0.4166666666666667,
+  "mean_steps": 11.75,
+  "mean_total_tokens": 66233.41666666667,
+  "mean_worker_input_tokens": 47652.916666666664,
+  "mean_worker_output_tokens": 1218.25,
+  "mean_architect_input_tokens": 14231.166666666666,
+  "mean_architect_output_tokens": 3131.0833333333335,
+  "mean_architect_total_tokens": 17362.25,
+  "mean_goal_condition_rate": 0.4166666666666667,
+  "mean_fallback_rate": 0.10540824915824916,
+  "mean_patch_error_rate": 0.07093855218855219,
+  "mean_no_update_rate": 0.0,
+  "mean_repeat_action_rate": 0.019318181818181818,
+  "mean_repeat_observation_rate": 0.019318181818181818,
+  "mean_stagnation_rate": 0.06797014260249555,
+  "circuit_breaker_trigger_rate": 0.4166666666666667,
+  "waiting_for_user_rate": 0.0,
+  "stop_reason_breakdown": {
+    "environment_done": 5,
+    "stagnation_detected": 5,
+    "max_steps_reached": 2
+  },
+  "final_status_breakdown": {
+    "success": 5,
+    "stagnation": 5,
+    "incomplete": 2
+  },
+  "workflow_final_status_breakdown": {
+    "completed": 11,
+    "acting": 1
+  },
+  "schema_version": "experiment_result.v1",
+  "record_type": "summary",
+  "run_id": "ablate_c4",
+  "system_id": "blackboard_ablate_c4",
+  "system_family": "blackboard",
+  "env_name": "alfworld",
+  "metadata": {}
+}

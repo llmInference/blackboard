@@ -1,0 +1,1 @@
+{"task_type": "NAVIGATE", "status": "UNKNOWN_ERROR", "retrieved_data": null, "error_details": "Expected one of ['', '-', '.', '1', 'A', 'B', 'G', 'I', 'L', 'T', '_', 'a', 'c', 'e', 'i', 'j', 'm', 'o', 'p', 'r', 's', 't', 'u', 'y'] but the final URL was http://localhost:8023/a11yproject/a11yproject.com."}

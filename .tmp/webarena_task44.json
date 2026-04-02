@@ -1,0 +1,9 @@
+[
+  {
+    "sites": ["gitlab"],
+    "task_id": 44,
+    "intent_template_id": 303,
+    "start_urls": ["http://localhost:8012"],
+    "intent": "Open my todos page"
+  }
+]

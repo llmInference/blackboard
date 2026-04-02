@@ -1,0 +1,35 @@
+{
+  "env_name": "webarena",
+  "overall": {
+    "n_records": 0,
+    "semantic_drift_count": 0,
+    "semantic_drift_rate": 0.0,
+    "heuristic_alignment_rate": 0.0,
+    "fallback_drift_count": 0,
+    "patch_error_drift_count": 0,
+    "expected_action_mismatch_count": 0,
+    "recommended_action_mismatch_count": 0,
+    "judge_ready_count": 0,
+    "channel_breakdown": {},
+    "source_breakdown": {}
+  },
+  "by_group": {
+    "full": {
+      "group_type": "mode",
+      "episodes_path": "/home/syq/Documents/blackboard/experiment/webarena/outputs/ablation_non_map10_llm_architect/full/episode_results.jsonl",
+      "summary": {
+        "n_records": 0,
+        "semantic_drift_count": 0,
+        "semantic_drift_rate": 0.0,
+        "heuristic_alignment_rate": 0.0,
+        "fallback_drift_count": 0,
+        "patch_error_drift_count": 0,
+        "expected_action_mismatch_count": 0,
+        "recommended_action_mismatch_count": 0,
+        "judge_ready_count": 0,
+        "channel_breakdown": {},
+        "source_breakdown": {}
+      }
+    }
+  }
+}
